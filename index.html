@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>英単語トレーニング</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     SCREEN: HOME
+══════════════════════════════════ -->
+<div id="screen-home" class="screen active">
+  <div class="home-header">
+    <div class="home-logo">英</div>
+    <h1 class="home-title">英単語トレーニング</h1>
+    <p class="home-sub">難関私立高校入試レベル</p>
+  </div>
+
+  <div class="stats-row" id="home-stats">
+    <div class="stat-box">
+      <span class="stat-num" id="stat-total">0</span>
+      <span class="stat-label">総単語数</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="stat-studied">0</span>
+      <span class="stat-label">学習済み</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="stat-acc">0%</span>
+      <span class="stat-label">正答率</span>
+    </div>
+  </div>
+
+  <div class="menu-grid">
+    <button class="menu-card card-blue" onclick="App.openWordList()">
+      <span class="menu-icon">📚</span>
+      <span class="menu-title">単語一覧</span>
+      <span class="menu-sub">全カテゴリ</span>
+    </button>
+    <button class="menu-card card-green" onclick="App.openFlashcard(null)">
+      <span class="menu-icon">🃏</span>
+      <span class="menu-title">フラッシュカード</span>
+      <span class="menu-sub">全単語</span>
+    </button>
+    <button class="menu-card card-purple" onclick="App.openQuiz(null)">
+      <span class="menu-icon">❓</span>
+      <span class="menu-title">4択クイズ</span>
+      <span class="menu-sub">ランダム20問</span>
+    </button>
+    <button class="menu-card card-orange" onclick="App.openTimeAttack()">
+      <span class="menu-icon">⏱</span>
+      <span class="menu-title">タイムアタック</span>
+      <span class="menu-sub">60秒で何問？</span>
+    </button>
+  </div>
+
+  <div class="category-section">
+    <h2 class="section-title">カテゴリ別</h2>
+    <div class="category-grid" id="category-grid"></div>
+  </div>
+
+  <div class="weak-section" id="weak-section" style="display:none">
+    <button class="menu-card card-red" onclick="App.openQuiz('weak')" style="width:100%">
+      <span class="menu-icon">⚠️</span>
+      <span class="menu-title">苦手単語クイズ</span>
+      <span class="menu-sub" id="weak-count-label">―</span>
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: WORD LIST
+══════════════════════════════════ -->
+<div id="screen-wordlist" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title" id="wordlist-title">単語一覧</span>
+    <div style="width:60px"></div>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="🔍 検索..." oninput="App.filterWords()">
+    <select id="cat-filter" onchange="App.filterWords()">
+      <option value="">すべて</option>
+    </select>
+  </div>
+  <div id="word-list-container"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: FLASHCARD
+══════════════════════════════════ -->
+<div id="screen-flashcard" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title" id="fc-title">フラッシュカード</span>
+    <span class="nav-counter" id="fc-counter"></span>
+  </div>
+  <div class="fc-progress-bar"><div id="fc-progress-fill"></div></div>
+
+  <div class="fc-area">
+    <div class="card-3d" id="fc-card" onclick="App.flipCard()">
+      <div class="card-front" id="fc-front">
+        <div class="card-category" id="fc-front-cat"></div>
+        <div class="card-word" id="fc-front-word"></div>
+        <div class="card-hint">タップして裏返す</div>
+      </div>
+      <div class="card-back" id="fc-back">
+        <div class="card-category" id="fc-back-cat"></div>
+        <div class="card-word" id="fc-back-word"></div>
+        <div class="card-example" id="fc-example"></div>
+        <div class="card-example-ja" id="fc-example-ja"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fc-actions">
+    <button class="fc-btn btn-wrong" onclick="App.fcRecord(false)">✗ わからない</button>
+    <button class="fc-btn btn-speak" onclick="App.speakCurrent()">🔊</button>
+    <button class="fc-btn btn-correct" onclick="App.fcRecord(true)">✓ わかった</button>
+  </div>
+  <div class="fc-nav-row">
+    <button class="fc-nav-btn" onclick="App.fcPrev()">‹ 前へ</button>
+    <button class="fc-nav-btn" onclick="App.fcNext()">次へ ›</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: QUIZ
+══════════════════════════════════ -->
+<div id="screen-quiz" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title">4択クイズ</span>
+    <span class="nav-counter" id="quiz-counter"></span>
+  </div>
+  <div class="fc-progress-bar"><div id="quiz-progress-fill"></div></div>
+
+  <div class="quiz-body">
+    <div class="quiz-mode-row">
+      <button class="mode-toggle" id="quiz-mode-btn" onclick="App.toggleQuizMode()">英→日</button>
+      <button class="fc-btn btn-speak" onclick="App.speakQuizWord()" style="padding:6px 14px;font-size:18px">🔊</button>
+    </div>
+
+    <div class="quiz-question" id="quiz-question"></div>
+
+    <div class="quiz-choices" id="quiz-choices"></div>
+
+    <div class="quiz-example" id="quiz-example" style="display:none">
+      <div class="example-en" id="qex-en"></div>
+      <div class="example-ja" id="qex-ja"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: QUIZ RESULT
+══════════════════════════════════ -->
+<div id="screen-quiz-result" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title">クイズ結果</span>
+    <div style="width:60px"></div>
+  </div>
+  <div class="result-body">
+    <div class="result-score-circle" id="result-circle">
+      <span id="result-score-num">0</span>
+      <span id="result-score-denom">/20</span>
+    </div>
+    <div class="result-msg" id="result-msg"></div>
+    <div class="result-wrong-section" id="result-wrong-section"></div>
+    <div class="result-btns">
+      <button class="btn-primary" onclick="App.retryQuiz()">もう一度</button>
+      <button class="btn-secondary" onclick="App.goHome()">ホームに戻る</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: TIME ATTACK
+══════════════════════════════════ -->
+<div id="screen-timeattack" class="screen">
+  <div id="ta-countdown-overlay" class="ta-overlay">
+    <div class="ta-countdown-num" id="ta-countdown-num">3</div>
+    <div style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:8px">準備はいい？</div>
+  </div>
+
+  <div id="ta-game-area" style="display:none;height:100%;display:flex;flex-direction:column">
+    <div class="ta-top-bar">
+      <div class="ta-stat">
+        <span class="ta-stat-num" id="ta-score">0</span>
+        <span class="ta-stat-label">スコア</span>
+      </div>
+      <div class="ta-timer-wrap">
+        <svg class="ta-timer-ring" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="34" class="ring-bg"/>
+          <circle cx="40" cy="40" r="34" class="ring-fill" id="ta-ring"/>
+        </svg>
+        <span class="ta-timer-num" id="ta-time-num">60</span>
+      </div>
+      <div class="ta-stat">
+        <span class="ta-stat-num combo-text" id="ta-combo">×1</span>
+        <span class="ta-stat-label">コンボ</span>
+      </div>
+    </div>
+
+    <div class="ta-penalty-msg" id="ta-penalty" style="display:none">-5秒 ペナルティ！</div>
+
+    <div class="ta-question-wrap">
+      <div class="ta-question" id="ta-question"></div>
+    </div>
+    <div class="ta-choices" id="ta-choices"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: TIME ATTACK RESULT
+══════════════════════════════════ -->
+<div id="screen-ta-result" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title">タイムアタック結果</span>
+    <div style="width:60px"></div>
+  </div>
+  <div class="result-body">
+    <div class="ta-rank-badge" id="ta-rank-badge">S</div>
+    <div class="result-score-row">
+      <div class="ta-result-stat">
+        <span class="ta-rs-num" id="ta-result-score">0</span>
+        <span class="ta-rs-label">スコア</span>
+      </div>
+      <div class="ta-result-stat">
+        <span class="ta-rs-num combo-text" id="ta-result-combo">×0</span>
+        <span class="ta-rs-label">最大コンボ</span>
+      </div>
+    </div>
+    <div class="result-wrong-section" id="ta-wrong-section"></div>
+    <div class="result-btns">
+      <button class="btn-primary" onclick="App.retryTimeAttack()">もう一度</button>
+      <button class="btn-secondary" onclick="App.goHome()">ホームに戻る</button>
+    </div>
+  </div>
+</div>
+
+<script src="words.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
