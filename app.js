@@ -112,6 +112,14 @@ function gradeOrder(g) {
   if (g === "中3") return 3;
   return 99;
 }
+function unitOrder(u) {
+  // Unit0..Unit10 first (numeric), then Let's Read 1..3
+  const m1 = u.match(/^Unit(\d+)$/);
+  if (m1) return [0, parseInt(m1[1], 10)];
+  const m2 = u.match(/^Let's Read\s*(\d+)$/);
+  if (m2) return [1, parseInt(m2[1], 10)];
+  return [2, u];
+}
 function getCategories() {
   const cats = [...new Set(WORDS_ACTIVE.map(w => w.category))];
   if (MODE === "jhs") {
@@ -120,7 +128,11 @@ function getCategories() {
       const [gb, ...rb] = b.split(" ");
       const go = gradeOrder(ga) - gradeOrder(gb);
       if (go !== 0) return go;
-      return ra.join(" ").localeCompare(rb.join(" "));
+      const [ka, na] = unitOrder(ra.join(" "));
+      const [kb, nb] = unitOrder(rb.join(" "));
+      if (ka !== kb) return ka - kb;
+      if (typeof na === "number" && typeof nb === "number") return na - nb;
+      return String(na).localeCompare(String(nb));
     });
   }
   return cats.sort();
