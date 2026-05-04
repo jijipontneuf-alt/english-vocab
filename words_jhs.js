@@ -7665,7 +7665,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "friedegg",
+    "english": "fried egg",
     "japanese": "目玉焼き",
     "yomi": "フライドエッグ",
     "grade": "中1",
@@ -8040,7 +8040,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "onweekends",
+    "english": "on weekends",
     "japanese": "毎週末に",
     "yomi": "ウィークエンド",
     "grade": "中1",
@@ -9420,7 +9420,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "beangry",
+    "english": "be angry",
     "japanese": "怒る",
     "yomi": "ビィ アングリィ",
     "grade": "中1",
@@ -9570,7 +9570,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "I'msorry.",
+    "english": "I'm sorry.",
     "japanese": "ごめんなさい。",
     "yomi": "アイム ソーリー",
     "grade": "中1",
@@ -9585,7 +9585,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "soundlike~",
+    "english": "sound like~",
     "japanese": "~のように聞こえる",
     "yomi": "サウンド ライク",
     "grade": "中1",
@@ -9615,7 +9615,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "talkabout~",
+    "english": "talk about~",
     "japanese": "~について話す",
     "yomi": "トーク アバウト",
     "grade": "中1",
@@ -9645,7 +9645,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "thinkabout~",
+    "english": "think about~",
     "japanese": "~について考える,思う",
     "yomi": "スィンクアバウト",
     "grade": "中1",
@@ -9705,7 +9705,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "What'sup?",
+    "english": "What's up?",
     "japanese": "どうしたのですか。",
     "yomi": "ワッツアップ",
     "grade": "中1",
@@ -9975,7 +9975,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "takeonlinetour",
+    "english": "take online tour",
     "japanese": "オンラインツアーに参加す る",
     "yomi": "トゥテイクアーオンライン",
     "grade": "中1",
@@ -10050,7 +10050,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "takepictures",
+    "english": "take pictures",
     "japanese": "写真を撮る",
     "yomi": "テイク ピクチュァズ",
     "grade": "中1",
@@ -10080,7 +10080,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "welcometo~",
+    "english": "welcome to~",
     "japanese": "~へようこそ",
     "yomi": "ウェルカムトゥ",
     "grade": "中1",
@@ -10110,7 +10110,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "HarryPotter",
+    "english": "Harry Potter",
     "japanese": "ハリー・ポッター",
     "yomi": "ハリーポッター",
     "grade": "中1",
@@ -10185,7 +10185,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "theLakeDistrict",
+    "english": "the Lake District",
     "japanese": "湖水地方",
     "yomi": "デザィ レスイクトリクト",
     "grade": "中1",
@@ -10350,7 +10350,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "lookfor~",
+    "english": "look for~",
     "japanese": "~をさがす",
     "yomi": "ルック フォー",
     "grade": "中1",
@@ -10380,7 +10380,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "Pardonme?",
+    "english": "Pardon me?",
     "japanese": "もう一度おっしゃってくださ い。",
     "yomi": "パードン ミー",
     "grade": "中1",
@@ -10485,7 +10485,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "Let'ssee.",
+    "english": "Let's see.",
     "japanese": "ええっと,そうですね",
     "yomi": "レッツスィー",
     "grade": "中1",
@@ -10500,7 +10500,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "postoffice",
+    "english": "post office",
     "japanese": "郵便局",
     "yomi": "ポストオフィス",
     "grade": "中1",
@@ -11115,7 +11115,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havetime",
+    "english": "have time",
     "japanese": "時間がある",
     "yomi": "ハブ タイム",
     "grade": "中1",
@@ -11220,7 +11220,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "ofcourse",
+    "english": "of course",
     "japanese": "もちろん",
     "yomi": "オフコース",
     "grade": "中1",
@@ -11625,7 +11625,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "wouldliketo~",
+    "english": "would like to~",
     "japanese": "~したい(のですが)",
     "yomi": "ウッド ライク トゥ",
     "grade": "中1",
@@ -11655,7 +11655,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "wouldlike~",
+    "english": "would like~",
     "japanese": "~がほしい(のですが)",
     "yomi": "ウッドライク",
     "grade": "中1",
@@ -17025,7 +17025,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "manykindsof~",
+    "english": "many kinds of~",
     "japanese": "たくさんの種類の~",
     "yomi": "カインズ オブ",
     "grade": "中2",
@@ -17385,7 +17385,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havetime",
+    "english": "have time",
     "japanese": "時間がある",
     "yomi": "ハブ タイム",
     "grade": "中2",
@@ -17475,7 +17475,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "thisSunday",
+    "english": "this Sunday",
     "japanese": "今度の日曜日",
     "yomi": "ディスサンデイ",
     "grade": "中2",
@@ -17805,7 +17805,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "eachplace",
+    "english": "each place",
     "japanese": "それぞれの場所",
     "yomi": "イーチ プレイス",
     "grade": "中2",
@@ -17820,7 +17820,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "Saycheese!",
+    "english": "Say cheese!",
     "japanese": "はい、チーズ!",
     "yomi": "セイ チーズ",
     "grade": "中2",
@@ -17895,7 +17895,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "variouskindsof~",
+    "english": "various kinds of~",
     "japanese": "いろいろな種類の~",
     "yomi": "カヴインスァリア゙ス オブ",
     "grade": "中2",
@@ -19755,7 +19755,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "getbored",
+    "english": "get bored",
     "japanese": "退屈する",
     "yomi": "ゲットボアード",
     "grade": "中2",
@@ -19905,7 +19905,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havenothingtodo",
+    "english": "have nothing to do",
     "japanese": "することがない",
     "yomi": "トゥハブナッスィング",
     "grade": "中2",
@@ -19965,7 +19965,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "WhatcanIsay?",
+    "english": "What can I say?",
     "japanese": "わたしは何と言ったらよい のでしょうか。",
     "yomi": "セイワットキャナイ",
     "grade": "中2",
@@ -20535,7 +20535,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "Bestwishes,",
+    "english": "Best wishes,",
     "japanese": "[結びの言葉] それでは。",
     "yomi": "ベストウィッシィズ",
     "grade": "中2",
@@ -20580,7 +20580,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "eachother",
+    "english": "each other",
     "japanese": "互いに",
     "yomi": "イーチ アザァ",
     "grade": "中2",
@@ -20595,7 +20595,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "seeyouagain",
+    "english": "see you again",
     "japanese": "また会いましょう",
     "yomi": "スィー ユー アゲイン",
     "grade": "中2",
@@ -20835,7 +20835,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "gethome",
+    "english": "get home",
     "japanese": "家につく",
     "yomi": "ゲットホウム",
     "grade": "中2",
@@ -20970,7 +20970,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "listento~",
+    "english": "listen to~",
     "japanese": "~を聞く",
     "yomi": "リッスン トゥ",
     "grade": "中2",
@@ -21015,7 +21015,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "talkwith~",
+    "english": "talk with~",
     "japanese": "~と話す",
     "yomi": "トーク ウィズ",
     "grade": "中2",
@@ -21105,7 +21105,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "learnabout~",
+    "english": "learn about~",
     "japanese": "~について学ぶ",
     "yomi": "ラーンアバウト",
     "grade": "中2",
@@ -21165,7 +21165,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "trytodo",
+    "english": "try to do",
     "japanese": "~しようする,努力する",
     "yomi": "トライトゥ",
     "grade": "中2",
@@ -21990,7 +21990,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "childfood",
+    "english": "child food",
     "japanese": "子供のころ",
     "yomi": "チャイルドフッド",
     "grade": "中2",
@@ -22350,7 +22350,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "accordingto~",
+    "english": "according to~",
     "japanese": "~によれば",
     "yomi": "アコーディングトゥ",
     "grade": "中2",
@@ -22890,7 +22890,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "wouldliketodo",
+    "english": "would like to do",
     "japanese": "~したい(のですが)",
     "yomi": "ウッド ライク トゥ",
     "grade": "中2",
@@ -23385,7 +23385,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "talkabout~",
+    "english": "talk about~",
     "japanese": "~について話す",
     "yomi": "トーク アバウト",
     "grade": "中2",
@@ -23430,7 +23430,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "clearvoice",
+    "english": "clear voice",
     "japanese": "はっきりした声",
     "yomi": "クリアー ボイス",
     "grade": "中2",
@@ -23535,7 +23535,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "easytounderstand",
+    "english": "easy to understand",
     "japanese": "理解しやすい",
     "yomi": "アイージンダー ストタントゥ゙",
     "grade": "中2",
@@ -23595,7 +23595,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "needswork",
+    "english": "needs work",
     "japanese": "努力が必要",
     "yomi": "ニーズワーク",
     "grade": "中2",
@@ -23700,7 +23700,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "changetrains",
+    "english": "change trains",
     "japanese": "電車を乗りかえる",
     "yomi": "チェンジ トレインズ",
     "grade": "中2",
@@ -24510,7 +24510,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "alargeamountof~",
+    "english": "a large amount of~",
     "japanese": "たくさんの量の~",
     "yomi": "オア ラブージ アマウント",
     "grade": "中2",
@@ -25230,7 +25230,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "beconcernedabout~",
+    "english": "be concerned about~",
     "japanese": "~について心配する",
     "yomi": "アビバィ コウンサトーンド",
     "grade": "中2",
@@ -28455,7 +28455,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "beattractedto~",
+    "english": "be attracted to~",
     "japanese": "~にひきつけられる",
     "yomi": "トゥビィアトラクティッド",
     "grade": "中2",
@@ -28545,7 +28545,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "forhimself",
+    "english": "for himself",
     "japanese": "自分で,独力で",
     "yomi": "フォーヒムセルフ",
     "grade": "中2",
@@ -28725,7 +28725,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "writealetterto~",
+    "english": "write a letter to~",
     "japanese": "~に手紙を書く",
     "yomi": "トゥライト ア レター",
     "grade": "中2",
@@ -29160,7 +29160,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "livingthings",
+    "english": "living things",
     "japanese": "生き物",
     "yomi": "リビング スィングス",
     "grade": "中2",
@@ -29640,7 +29640,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "staythesame",
+    "english": "stay the same",
     "japanese": "同じままである,変わらない",
     "yomi": "ステイ ザ セイム",
     "grade": "中2",
@@ -29745,7 +29745,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "liveAlife",
+    "english": "live A life",
     "japanese": "Aな人生を送る",
     "yomi": "リブ A ライフ",
     "grade": "中2",
@@ -29820,7 +29820,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "theArctic",
+    "english": "the Arctic",
     "japanese": "北極地方",
     "yomi": "ジアークティック",
     "grade": "中2",
@@ -29835,7 +29835,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "onelifetolive",
+    "english": "one life to live",
     "japanese": "[不定詞の形容詞的用法] 生きるべき1つのいのち",
     "yomi": "ワン ライフ トゥ リブ",
     "grade": "中2",
@@ -31590,7 +31590,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "takeadvantageof~",
+    "english": "take advantage of~",
     "japanese": "~を利用する",
     "yomi": "ジタイクオフ ア゙ドバンテイ",
     "grade": "中3",
@@ -32430,7 +32430,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havealready",
+    "english": "have already",
     "japanese": "[完了用法] すでに(もう)~してしまった",
     "yomi": "ハブオールレディ",
     "grade": "中3",
@@ -32445,7 +32445,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havefor~",
+    "english": "have for~",
     "japanese": "[継続用法] ~の間(ずっと)...している",
     "yomi": "",
     "grade": "中3",
@@ -32490,7 +32490,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havejust",
+    "english": "have just",
     "japanese": "[完了用法] ちょうど~したところだ",
     "yomi": "ハブ ジャスト",
     "grade": "中3",
@@ -32505,7 +32505,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "havesince~",
+    "english": "have since~",
     "japanese": "[継続用法] ~から(ずっと)...している",
     "yomi": "",
     "grade": "中3",
@@ -32595,7 +32595,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "Howlong~?",
+    "english": "How long~?",
     "japanese": "どのくらい長く[長い]",
     "yomi": "ハウロング",
     "grade": "中3",
@@ -32940,7 +32940,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "homeeconomics",
+    "english": "home economics",
     "japanese": "家庭科",
     "yomi": "ホウムエコノミクス",
     "grade": "中3",
@@ -33090,7 +33090,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "thisweekend",
+    "english": "this weekend",
     "japanese": "今週末",
     "yomi": "ディスウィークエンド",
     "grade": "中3",
@@ -33360,7 +33360,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "getmorepopular",
+    "english": "get more popular",
     "japanese": "より人気になる",
     "yomi": "ポゲヒッ゚ト ュラモアー",
     "grade": "中3",
@@ -33495,7 +33495,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "whattodo",
+    "english": "what to do",
     "japanese": "何を~したらよいか",
     "yomi": "ワット トゥ",
     "grade": "中3",
@@ -33735,7 +33735,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "forexample",
+    "english": "for example",
     "japanese": "たとえば",
     "yomi": "フォーイグザンプル",
     "grade": "中3",
@@ -33900,7 +33900,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "alittle",
+    "english": "a little",
     "japanese": "少し",
     "yomi": "アリトル",
     "grade": "中3",
@@ -33915,7 +33915,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "moreandmore",
+    "english": "more and more",
     "japanese": "ますます",
     "yomi": "モア アンd モア",
     "grade": "中3",
@@ -34200,7 +34200,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "trytodo",
+    "english": "try to do",
     "japanese": "~しようとする",
     "yomi": "トライトゥ",
     "grade": "中3",
@@ -36645,7 +36645,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "bekilledin~",
+    "english": "be killed in~",
     "japanese": "~で死ぬ",
     "yomi": "ビィ キルド イン",
     "grade": "中3",
@@ -36720,7 +36720,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "eachother",
+    "english": "each other",
     "japanese": "お互いに[を]",
     "yomi": "イーチ アザー",
     "grade": "中3",
@@ -36960,7 +36960,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "surveyresults",
+    "english": "survey results",
     "japanese": "調査結果",
     "yomi": "サーベイリザルト",
     "grade": "中3",
@@ -37005,7 +37005,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "theGreatEast",
+    "english": "the Great East",
     "japanese": "東日本大震災",
     "yomi": "シザ゙ャ クパ゙レンイト イースト",
     "grade": "中3",
@@ -37020,7 +37020,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "JapanEarthquake",
+    "english": "Japan Earthquake",
     "japanese": "東日本大震災",
     "yomi": "アジーャスクパエインク",
     "grade": "中3",
@@ -37290,7 +37290,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "thanksto~",
+    "english": "thanks to~",
     "japanese": "~のおかげで",
     "yomi": "サンクス トゥ",
     "grade": "中3",
@@ -37335,7 +37335,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "bytheway",
+    "english": "by the way",
     "japanese": "ところで",
     "yomi": "バイ ザ ウェイ",
     "grade": "中3",
@@ -37350,7 +37350,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "toworkasanALT",
+    "english": "to work as an ALT",
     "japanese": "ALTとして働くために",
     "yomi": "エートゥ ワエルークテ アィーズ",
     "grade": "中3",
@@ -37380,7 +37380,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "wanttobecome~",
+    "english": "want to become~",
     "japanese": "~になりたい",
     "yomi": "ウォントトゥビカム",
     "grade": "中3",
@@ -37665,7 +37665,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "nolonger~",
+    "english": "no longer~",
     "japanese": "もはや~ない",
     "yomi": "ノウ ロンガー",
     "grade": "中3",
@@ -37710,7 +37710,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "Thatwasbecause~",
+    "english": "That was because~",
     "japanese": "それは~だからでした。",
     "yomi": "",
     "grade": "中3",
@@ -37830,7 +37830,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "shortlyafter~",
+    "english": "shortly after~",
     "japanese": "~の後まもなく",
     "yomi": "ショートリィ",
     "grade": "中3",
@@ -44325,7 +44325,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "researchin~",
+    "english": "research in~",
     "japanese": "~の(分野における)研究",
     "yomi": "リサーチ イン",
     "grade": "中3",
@@ -44760,7 +44760,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "manythings",
+    "english": "many things",
     "japanese": "多くのもの[こと]",
     "yomi": "メニィ スィングス",
     "grade": "中3",
@@ -44955,7 +44955,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "nuclearwaste",
+    "english": "nuclear waste",
     "japanese": "核廃棄物",
     "yomi": "ウニェイュークリストア",
     "grade": "中3",
@@ -45270,7 +45270,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "andEnergy",
+    "english": "and Energy",
     "japanese": "資源エネルギー庁",
     "yomi": "",
     "grade": "中3",
@@ -45825,7 +45825,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "rainycountries",
+    "english": "rainy countries",
     "japanese": "雨の多い国々",
     "yomi": "レイニィ カントリーズ",
     "grade": "中3",
@@ -47055,7 +47055,7 @@ const WORDS_JHS = [
     "exampleJapanese": ""
   },
   {
-    "english": "WorldWarII",
+    "english": "World War II",
     "japanese": "第二次世界大戦",
     "yomi": "ワールドワー トゥー",
     "grade": "中3",
