@@ -13,9 +13,14 @@
 ══════════════════════════════════ -->
 <div id="screen-home" class="screen active">
   <div class="home-header">
-    <div class="home-logo">英</div>
+    <div class="home-logo" id="home-logo">英</div>
     <h1 class="home-title">英単語トレーニング</h1>
-    <p class="home-sub">難関私立高校入試レベル</p>
+    <p class="home-sub" id="home-sub">難関私立高校入試レベル</p>
+  </div>
+
+  <div class="mode-selector">
+    <button class="mode-btn" id="mode-btn-high" onclick="App.switchMode('high')">🎯 高校受験</button>
+    <button class="mode-btn" id="mode-btn-jhs" onclick="App.switchMode('jhs')">📚 中学定期試験</button>
   </div>
 
   <div class="stats-row" id="home-stats">
@@ -57,7 +62,7 @@
   </div>
 
   <div class="category-section">
-    <h2 class="section-title">カテゴリ別</h2>
+    <h2 class="section-title" id="category-section-title">カテゴリ別</h2>
     <div class="category-grid" id="category-grid"></div>
   </div>
 
@@ -108,6 +113,7 @@
       </div>
       <div class="card-back" id="fc-back">
         <div class="card-category" id="fc-back-cat"></div>
+        <div class="card-yomi" id="fc-yomi"></div>
         <div class="card-word" id="fc-back-word"></div>
         <div class="card-example" id="fc-example"></div>
         <div class="card-example-ja" id="fc-example-ja"></div>
@@ -244,6 +250,7 @@
 </div>
 
 <script src="words.js"></script>
+<script src="words_jhs.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

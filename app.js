@@ -4,16 +4,36 @@
    進捗保存: localStorage
 ══════════════════════════════════════════════ */
 
+// ─── Mode (高校受験 / 中学定期試験) ────────────
+const MODE_KEY = "eitango_mode";
+let MODE = localStorage.getItem(MODE_KEY) || "high"; // "high" | "jhs"
+let WORDS_ACTIVE = (MODE === "jhs" ? (typeof WORDS_JHS !== "undefined" ? WORDS_JHS : []) : WORDS);
+
+const MODE_CONFIG = {
+  high: {
+    subtitle: "難関私立高校入試レベル",
+    sectionTitle: "品詞別",
+    progressKey: "eitango_progress_v1",
+    logo: "英",
+  },
+  jhs: {
+    subtitle: "中学定期試験 (NEW HORIZON)",
+    sectionTitle: "学年・Unit別",
+    progressKey: "eitango_progress_jhs_v1",
+    logo: "中",
+  },
+};
+
 // ─── Progress store ───────────────────────────
 const Store = (() => {
-  const KEY = "eitango_progress_v1";
   let data = {};
 
+  function currentKey() { return MODE_CONFIG[MODE].progressKey; }
   function load() {
-    try { data = JSON.parse(localStorage.getItem(KEY)) || {}; } catch { data = {}; }
+    try { data = JSON.parse(localStorage.getItem(currentKey())) || {}; } catch { data = {}; }
   }
   function save() {
-    localStorage.setItem(KEY, JSON.stringify(data));
+    localStorage.setItem(currentKey(), JSON.stringify(data));
   }
   function get(english) {
     return data[english] || { correct: 0, incorrect: 0 };
@@ -33,7 +53,7 @@ const Store = (() => {
     return t > 0 ? Math.round(c / t * 100) : 0;
   }
   function weakWords() {
-    return WORDS.filter(w => {
+    return WORDS_ACTIVE.filter(w => {
       const d = get(w.english);
       const total = d.correct + d.incorrect;
       return total >= 3 && (d.correct / total) < 0.6;
@@ -44,7 +64,7 @@ const Store = (() => {
     });
   }
   load();
-  return { get, record, reset, studiedCount, overallAccuracy, weakWords };
+  return { get, record, reset, studiedCount, overallAccuracy, weakWords, reload: load };
 })();
 
 // ─── Speech ──────────────────────────────────
@@ -73,11 +93,38 @@ function showScreen(id) {
 }
 
 // ─── Categories ──────────────────────────────
-const CAT_ICONS = {
+const CAT_ICONS_HIGH = {
   "動詞": "🏃", "名詞": "📦", "形容詞": "🌈",
   "副詞": "⚡", "熟語": "🔗"
 };
-const CATEGORIES = [...new Set(WORDS.map(w => w.category))].sort();
+function catIcon(cat) {
+  if (MODE === "jhs") {
+    if (cat.startsWith("中1")) return "📕";
+    if (cat.startsWith("中2")) return "📗";
+    if (cat.startsWith("中3")) return "📘";
+    return "📖";
+  }
+  return CAT_ICONS_HIGH[cat] || "📖";
+}
+function gradeOrder(g) {
+  if (g === "中1") return 1;
+  if (g === "中2") return 2;
+  if (g === "中3") return 3;
+  return 99;
+}
+function getCategories() {
+  const cats = [...new Set(WORDS_ACTIVE.map(w => w.category))];
+  if (MODE === "jhs") {
+    return cats.sort((a, b) => {
+      const [ga, ...ra] = a.split(" ");
+      const [gb, ...rb] = b.split(" ");
+      const go = gradeOrder(ga) - gradeOrder(gb);
+      if (go !== 0) return go;
+      return ra.join(" ").localeCompare(rb.join(" "));
+    });
+  }
+  return cats.sort();
+}
 
 // ─── App State ───────────────────────────────
 let fcWords = [], fcIdx = 0, fcFlipped = false;
@@ -97,17 +144,28 @@ const App = {
   },
 
   _renderHome() {
-    $("stat-total").textContent = WORDS.length;
+    // Mode UI
+    const cfg = MODE_CONFIG[MODE];
+    $("home-sub").textContent = cfg.subtitle;
+    $("home-logo").textContent = cfg.logo;
+    $("category-section-title").textContent = cfg.sectionTitle;
+    document.querySelector(".home-header").classList.toggle("jhs", MODE === "jhs");
+    const btnHigh = $("mode-btn-high"), btnJhs = $("mode-btn-jhs");
+    btnHigh.classList.toggle("active", MODE === "high");
+    btnJhs.classList.toggle("active", MODE === "jhs");
+    btnJhs.classList.toggle("jhs", MODE === "jhs");
+
+    $("stat-total").textContent = WORDS_ACTIVE.length;
     $("stat-studied").textContent = Store.studiedCount();
     $("stat-acc").textContent = Store.overallAccuracy() + "%";
 
     const grid = $("category-grid");
     grid.innerHTML = "";
-    CATEGORIES.forEach(cat => {
-      const count = WORDS.filter(w => w.category === cat).length;
-      const icon = CAT_ICONS[cat] || "📖";
+    getCategories().forEach(cat => {
+      const count = WORDS_ACTIVE.filter(w => w.category === cat).length;
+      const icon = catIcon(cat);
       grid.innerHTML += `
-        <div class="cat-card" onclick="App._openCategoryMenu('${cat}')">
+        <div class="cat-card" onclick="App._openCategoryMenu('${cat.replace(/'/g, "\\'")}')">
           <div class="cat-icon">${icon}</div>
           <div class="cat-name">${cat}</div>
           <div class="cat-count">${count}語</div>
@@ -123,6 +181,15 @@ const App = {
     }
   },
 
+  switchMode(mode) {
+    if (mode === MODE) return;
+    MODE = mode;
+    localStorage.setItem(MODE_KEY, MODE);
+    WORDS_ACTIVE = (MODE === "jhs" ? (typeof WORDS_JHS !== "undefined" ? WORDS_JHS : []) : WORDS);
+    Store.reload();
+    this.goHome();
+  },
+
   _openCategoryMenu(cat) {
     const msg = `「${cat}」\n\n📚 単語一覧\n🃏 フラッシュカード\n❓ 4択クイズ`;
     // シンプルなアクション: flashcard or quiz
@@ -136,16 +203,16 @@ const App = {
     $("wordlist-title").textContent = "単語一覧";
     const sel = $("cat-filter");
     sel.innerHTML = '<option value="">すべて</option>';
-    CATEGORIES.forEach(c => sel.innerHTML += `<option value="${c}">${c}</option>`);
+    getCategories().forEach(c => sel.innerHTML += `<option value="${c}">${c}</option>`);
     $("search-input").value = "";
-    this._renderWordList(WORDS);
+    this._renderWordList(WORDS_ACTIVE);
     showScreen("screen-wordlist");
   },
 
   filterWords() {
     const q = $("search-input").value.toLowerCase();
     const cat = $("cat-filter").value;
-    const filtered = WORDS.filter(w =>
+    const filtered = WORDS_ACTIVE.filter(w =>
       (!cat || w.category === cat) &&
       (!q || w.english.toLowerCase().includes(q) || w.japanese.includes(q))
     );
@@ -198,7 +265,7 @@ const App = {
 
   // ── FLASH CARD ───────────────────────────
   openFlashcard(category) {
-    fcWords = shuffle(category ? WORDS.filter(w => w.category === category) : WORDS);
+    fcWords = shuffle(category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
     fcIdx = 0; fcFlipped = false;
     $("fc-title").textContent = category ? `フラッシュカード（${category}）` : "フラッシュカード";
     this._renderFC();
@@ -213,6 +280,7 @@ const App = {
     $("fc-front-word").textContent = w.english;
     $("fc-back-cat").textContent = w.category;
     $("fc-back-word").textContent = w.japanese;
+    $("fc-yomi").textContent = w.yomi || "";
     $("fc-example").textContent = w.example || "";
     $("fc-example-ja").textContent = w.exampleJapanese || "";
     $("fc-counter").textContent = `${fcIdx + 1} / ${fcWords.length}`;
@@ -251,7 +319,7 @@ const App = {
     quizCorrect = 0;
     let pool = category === "weak"
       ? Store.weakWords()
-      : (category ? WORDS.filter(w => w.category === category) : WORDS);
+      : (category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
     quizWords = shuffle(pool).slice(0, 20);
     quizIdx = 0;
     this._renderQuizQuestion();
@@ -273,14 +341,22 @@ const App = {
     $("quiz-question").textContent = quizIsEnToJa ? w.english : w.japanese;
     $("quiz-example").style.display = "none";
 
-    // 選択肢
-    let pool = WORDS.filter(x => x.english !== w.english);
-    let opts = shuffle(pool).slice(0, 3).concat(w);
-    opts = shuffle(opts);
+    // 選択肢 (dedupe by displayed label so we don't show "人気のある" three times)
+    const usedLabels = new Set([quizIsEnToJa ? w.japanese : w.english]);
+    const pool = [];
+    for (const x of shuffle(WORDS_ACTIVE)) {
+      if (x.english === w.english) continue;
+      const label = quizIsEnToJa ? x.japanese : x.english;
+      if (usedLabels.has(label)) continue;
+      usedLabels.add(label);
+      pool.push(x);
+      if (pool.length >= 3) break;
+    }
+    let opts = shuffle(pool.concat(w));
     const c = $("quiz-choices");
     c.innerHTML = opts.map(opt => {
       const label = quizIsEnToJa ? opt.japanese : opt.english;
-      return `<button class="choice-btn" onclick="App._quizAnswer('${opt.english}')">${label}</button>`;
+      return `<button class="choice-btn" onclick="App._quizAnswer('${opt.english.replace(/'/g, "\\'")}')">${label}</button>`;
     }).join("");
   },
 
@@ -302,11 +378,11 @@ const App = {
     document.querySelectorAll(".choice-btn").forEach(btn => {
       const label = btn.textContent;
       const isCorrectLabel = quizIsEnToJa ? label === correct.japanese : label === correct.english;
-      const isSelected = quizIsEnToJa ? label === WORDS.find(w => w.english === english)?.japanese
+      const isSelected = quizIsEnToJa ? label === WORDS_ACTIVE.find(w => w.english === english)?.japanese
                                        : label === english;
       if (isCorrectLabel) btn.classList.add("correct");
       else if (!isRight && btn.textContent === (quizIsEnToJa
-        ? WORDS.find(w => w.english === english)?.japanese
+        ? WORDS_ACTIVE.find(w => w.english === english)?.japanese
         : english)) btn.classList.add("wrong");
       else if (!isCorrectLabel) btn.classList.add("dim");
       btn.disabled = true;
@@ -380,7 +456,7 @@ const App = {
   },
 
   _taStart() {
-    taWords = shuffle(WORDS);
+    taWords = shuffle(WORDS_ACTIVE);
     taAnswered = false;
     $("ta-score").textContent = "0";
     $("ta-combo").textContent = "×1";
@@ -408,10 +484,19 @@ const App = {
 
   _taNextQuestion() {
     taAnswered = false;
-    const idx = Math.floor(Math.random() * WORDS.length);
-    const correct = WORDS[idx];
-    const pool = shuffle(WORDS.filter((_, i) => i !== idx)).slice(0, 3).concat(correct);
-    const opts = shuffle(pool);
+    const idx = Math.floor(Math.random() * WORDS_ACTIVE.length);
+    const correct = WORDS_ACTIVE[idx];
+    const usedLabels = new Set([taIsEnToJa ? correct.japanese : correct.english]);
+    const pool = [];
+    for (const x of shuffle(WORDS_ACTIVE)) {
+      if (x.english === correct.english) continue;
+      const label = taIsEnToJa ? x.japanese : x.english;
+      if (usedLabels.has(label)) continue;
+      usedLabels.add(label);
+      pool.push(x);
+      if (pool.length >= 3) break;
+    }
+    const opts = shuffle(pool.concat(correct));
     taWords[0] = correct;  // reuse slot
 
     $("ta-question").textContent = taIsEnToJa ? correct.english : correct.japanese;
@@ -426,7 +511,7 @@ const App = {
   _taAnswer(english) {
     if (taAnswered || !taTimer) return;
     taAnswered = true;
-    const correct = WORDS.find(w => w.english === taWords[0].english);
+    const correct = WORDS_ACTIVE.find(w => w.english === taWords[0].english);
     const isRight = english === correct.english;
     Store.record(correct.english, isRight);
 
@@ -436,7 +521,7 @@ const App = {
       const isCorrectLabel = taIsEnToJa ? label === correct.japanese : label === correct.english;
       if (isCorrectLabel) btn.classList.add("correct");
       else if (!isRight && label === (taIsEnToJa
-        ? WORDS.find(w => w.english === english)?.japanese : english)) btn.classList.add("wrong");
+        ? WORDS_ACTIVE.find(w => w.english === english)?.japanese : english)) btn.classList.add("wrong");
       else btn.classList.add("dim");
       btn.disabled = true;
     });
