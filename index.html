@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>英単語トレーニング</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -76,6 +76,47 @@
 </div>
 
 <!-- ══════════════════════════════════
+     SCREEN: UNIT MENU (per-category actions)
+══════════════════════════════════ -->
+<div id="screen-unit-menu" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title" id="unit-menu-title">―</span>
+    <div style="width:60px"></div>
+  </div>
+  <div class="unit-menu-body">
+    <div class="unit-menu-count" id="unit-menu-count">―語</div>
+    <div class="unit-menu-grid">
+      <button class="menu-card card-blue" onclick="App.openWordListForCategory()">
+        <span class="menu-icon">📚</span>
+        <span class="menu-title">単語一覧</span>
+        <span class="menu-sub">このユニットの語</span>
+      </button>
+      <button class="menu-card card-green" onclick="App.openFlashcardEnJa()">
+        <span class="menu-icon">🃏</span>
+        <span class="menu-title">フラッシュカード</span>
+        <span class="menu-sub">英 → 日</span>
+      </button>
+      <button class="menu-card card-green" onclick="App.openFlashcardJaEn()">
+        <span class="menu-icon">🃏</span>
+        <span class="menu-title">フラッシュカード</span>
+        <span class="menu-sub">日 → 英</span>
+      </button>
+      <button class="menu-card card-purple" onclick="App.openQuizForCategory()">
+        <span class="menu-icon">❓</span>
+        <span class="menu-title">4択クイズ</span>
+        <span class="menu-sub">ランダム20問</span>
+      </button>
+      <button class="menu-card card-orange" onclick="App.openTimeAttackForCategory()">
+        <span class="menu-icon">⏱</span>
+        <span class="menu-title">タイムアタック</span>
+        <span class="menu-sub">60秒で何問？</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
      SCREEN: WORD LIST
 ══════════════════════════════════ -->
 <div id="screen-wordlist" class="screen">
@@ -103,6 +144,10 @@
     <span class="nav-counter" id="fc-counter"></span>
   </div>
   <div class="fc-progress-bar"><div id="fc-progress-fill"></div></div>
+
+  <div class="quiz-mode-row" style="padding:10px 16px 0">
+    <button class="mode-toggle" id="fc-mode-btn" onclick="App.toggleFcMode()">英 → 日</button>
+  </div>
 
   <div class="fc-area">
     <div class="card-3d" id="fc-card" onclick="App.flipCard()">
@@ -192,6 +237,8 @@
     <div style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:8px">準備はいい？</div>
   </div>
 
+  <button class="ta-cancel-btn" id="ta-cancel-btn" onclick="App.cancelTimeAttack()" style="display:none">✕ 中断</button>
+
   <div id="ta-game-area" style="display:none;height:100%;display:flex;flex-direction:column">
     <div class="ta-top-bar">
       <div class="ta-stat">
@@ -249,8 +296,8 @@
   </div>
 </div>
 
-<script src="words.js?v=4"></script>
-<script src="words_jhs.js?v=4"></script>
-<script src="app.js?v=4"></script>
+<script src="words.js?v=5"></script>
+<script src="words_jhs.js?v=5"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

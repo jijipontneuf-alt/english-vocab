@@ -97,6 +97,43 @@ html, body {
 }
 .card-yomi:empty { display: none; }
 
+/* Unit menu (per-category action chooser) */
+.unit-menu-body {
+  padding: 20px 16px 24px;
+}
+.unit-menu-count {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--sub);
+  margin-bottom: 16px;
+}
+.unit-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.unit-menu-grid .menu-card { width: auto; }
+
+/* Time attack cancel button */
+.ta-cancel-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.85);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-appearance: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.ta-cancel-btn:active { transform: scale(0.96); }
+#screen-timeattack { position: relative; }
+
 .stats-row {
   display: flex;
   background: white;

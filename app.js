@@ -86,6 +86,39 @@ function shuffle(arr) {
   return a;
 }
 function $(id) { return document.getElementById(id); }
+
+/* Pick `n` plausible distractors for the correct word.
+   Strategy: prefer same category, then nearby length on the displayed side,
+   then fall back to any non-duplicate. */
+function pickDistractors(correct, n, isEnToJa, usedLabels) {
+  const pool = [];
+  const refLen = (isEnToJa ? correct.japanese : correct.english).length;
+  const same = WORDS_ACTIVE.filter(x =>
+    x.category === correct.category && x.english !== correct.english
+  );
+  const byCloseness = same
+    .map(x => ({ x, d: Math.abs((isEnToJa ? x.japanese : x.english).length - refLen) }))
+    .sort((a, b) => a.d - b.d || Math.random() - 0.5);
+
+  for (const { x } of byCloseness) {
+    const label = isEnToJa ? x.japanese : x.english;
+    if (!label || usedLabels.has(label)) continue;
+    usedLabels.add(label);
+    pool.push(x);
+    if (pool.length >= n) break;
+  }
+  if (pool.length < n) {
+    for (const x of shuffle(WORDS_ACTIVE)) {
+      if (x.english === correct.english) continue;
+      const label = isEnToJa ? x.japanese : x.english;
+      if (!label || usedLabels.has(label)) continue;
+      usedLabels.add(label);
+      pool.push(x);
+      if (pool.length >= n) break;
+    }
+  }
+  return pool;
+}
 function showScreen(id) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   $(id).classList.add("active");
@@ -139,18 +172,24 @@ function getCategories() {
 }
 
 // ─── App State ───────────────────────────────
-let fcWords = [], fcIdx = 0, fcFlipped = false;
+let fcWords = [], fcIdx = 0, fcFlipped = false, fcIsEnToJa = true, fcCategory = null;
 let quizWords = [], quizIdx = 0, quizCorrect = 0, quizWrong = [];
 let quizIsEnToJa = true, quizAnswered = false, quizCategory = null;
 let taWords = [], taTimeLeft = 60, taScore = 0, taCombo = 0, taMaxCombo = 0;
 let taTimer = null, taAnswered = false, taWrong = [], taIsEnToJa = true;
+let taCategory = null, taPendingRecords = [];
+let unitMenuCategory = null;
 
 // ══════════════════════════════════════════════
 const App = {
 
   // ── HOME ──────────────────────────────────
   goHome() {
-    if (taTimer) { clearInterval(taTimer); taTimer = null; }
+    if (taTimer) {
+      clearInterval(taTimer); taTimer = null;
+      taPendingRecords = []; // discard if user navigated away mid-game
+    }
+    $("ta-cancel-btn").style.display = "none";
     this._renderHome();
     showScreen("screen-home");
   },
@@ -203,12 +242,29 @@ const App = {
   },
 
   _openCategoryMenu(cat) {
-    const msg = `「${cat}」\n\n📚 単語一覧\n🃏 フラッシュカード\n❓ 4択クイズ`;
-    // シンプルなアクション: flashcard or quiz
-    const choice = confirm(`「${cat}」でフラッシュカードを開きますか？\n\n[OK] フラッシュカード  [キャンセル] 4択クイズ`);
-    if (choice) this.openFlashcard(cat);
-    else this.openQuiz(cat);
+    unitMenuCategory = cat;
+    $("unit-menu-title").textContent = cat;
+    const count = WORDS_ACTIVE.filter(w => w.category === cat).length;
+    $("unit-menu-count").textContent = `${count}語`;
+    showScreen("screen-unit-menu");
   },
+
+  openWordListForCategory() {
+    const cat = unitMenuCategory;
+    if (!cat) return this.openWordList();
+    $("wordlist-title").textContent = cat;
+    const sel = $("cat-filter");
+    sel.innerHTML = '<option value="">すべて</option>';
+    getCategories().forEach(c => sel.innerHTML += `<option value="${c}"${c === cat ? " selected" : ""}>${c}</option>`);
+    $("search-input").value = "";
+    this._renderWordList(WORDS_ACTIVE.filter(w => w.category === cat));
+    showScreen("screen-wordlist");
+  },
+
+  openFlashcardEnJa() { this.openFlashcard(unitMenuCategory, "en2ja"); },
+  openFlashcardJaEn() { this.openFlashcard(unitMenuCategory, "ja2en"); },
+  openQuizForCategory() { this.openQuiz(unitMenuCategory); },
+  openTimeAttackForCategory() { this.openTimeAttack(unitMenuCategory); },
 
   // ── WORD LIST ────────────────────────────
   openWordList() {
@@ -276,30 +332,46 @@ const App = {
   },
 
   // ── FLASH CARD ───────────────────────────
-  openFlashcard(category) {
+  openFlashcard(category, mode) {
+    fcCategory = category || null;
+    fcIsEnToJa = mode !== "ja2en";
     fcWords = shuffle(category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
     fcIdx = 0; fcFlipped = false;
-    $("fc-title").textContent = category ? `フラッシュカード（${category}）` : "フラッシュカード";
+    const modeLabel = fcIsEnToJa ? "英→日" : "日→英";
+    $("fc-title").textContent = category ? `${category}（${modeLabel}）` : `フラッシュカード（${modeLabel}）`;
+    $("fc-mode-btn").textContent = fcIsEnToJa ? "英 → 日" : "日 → 英";
     this._renderFC();
     showScreen("screen-flashcard");
+  },
+
+  toggleFcMode() {
+    fcIsEnToJa = !fcIsEnToJa;
+    $("fc-mode-btn").textContent = fcIsEnToJa ? "英 → 日" : "日 → 英";
+    const modeLabel = fcIsEnToJa ? "英→日" : "日→英";
+    $("fc-title").textContent = fcCategory ? `${fcCategory}（${modeLabel}）` : `フラッシュカード（${modeLabel}）`;
+    this._renderFC();
   },
 
   _renderFC() {
     const w = fcWords[fcIdx];
     if (!w) return;
-    const d = Store.get(w.english);
     $("fc-front-cat").textContent = w.category;
-    $("fc-front-word").textContent = w.english;
     $("fc-back-cat").textContent = w.category;
-    $("fc-back-word").textContent = w.japanese;
-    $("fc-yomi").textContent = w.yomi || "";
+    if (fcIsEnToJa) {
+      $("fc-front-word").textContent = w.english;
+      $("fc-back-word").textContent = w.japanese;
+      $("fc-yomi").textContent = w.yomi || "";
+    } else {
+      $("fc-front-word").textContent = w.japanese;
+      $("fc-back-word").textContent = w.english;
+      $("fc-yomi").textContent = w.yomi || "";
+    }
     $("fc-example").textContent = w.example || "";
     $("fc-example-ja").textContent = w.exampleJapanese || "";
     $("fc-counter").textContent = `${fcIdx + 1} / ${fcWords.length}`;
     const pct = (fcIdx / fcWords.length * 100).toFixed(1);
     $("fc-progress-fill").style.width = pct + "%";
-    const card = $("fc-card");
-    card.classList.remove("flipped");
+    $("fc-card").classList.remove("flipped");
     fcFlipped = false;
   },
 
@@ -353,17 +425,9 @@ const App = {
     $("quiz-question").textContent = quizIsEnToJa ? w.english : w.japanese;
     $("quiz-example").style.display = "none";
 
-    // 選択肢 (dedupe by displayed label so we don't show "人気のある" three times)
+    // 選択肢: まず同じカテゴリから「紛らわしい」候補を選び、足りなければ全体から補充
     const usedLabels = new Set([quizIsEnToJa ? w.japanese : w.english]);
-    const pool = [];
-    for (const x of shuffle(WORDS_ACTIVE)) {
-      if (x.english === w.english) continue;
-      const label = quizIsEnToJa ? x.japanese : x.english;
-      if (usedLabels.has(label)) continue;
-      usedLabels.add(label);
-      pool.push(x);
-      if (pool.length >= 3) break;
-    }
+    const pool = pickDistractors(w, 3, quizIsEnToJa, usedLabels);
     let opts = shuffle(pool.concat(w));
     const c = $("quiz-choices");
     c.innerHTML = opts.map(opt => {
@@ -439,15 +503,31 @@ const App = {
   retryQuiz() { this.openQuiz(quizCategory); },
 
   // ── TIME ATTACK ──────────────────────────
-  openTimeAttack() {
+  openTimeAttack(category) {
+    taCategory = category || null;
+    const pool = taCategory ? WORDS_ACTIVE.filter(w => w.category === taCategory) : WORDS_ACTIVE;
+    if (pool.length < 4) {
+      alert("このユニットは語数が少なすぎてタイムアタックを開けません（4語以上必要）。");
+      return;
+    }
     taIsEnToJa = Math.random() > 0.5;
     taWrong = [];
+    taPendingRecords = [];
     taScore = 0; taCombo = 0; taMaxCombo = 0;
     taTimeLeft = 60;
     showScreen("screen-timeattack");
     $("ta-countdown-overlay").style.display = "flex";
     $("ta-game-area").style.display = "none";
+    $("ta-cancel-btn").style.display = "none";
     this._taCountdown(3);
+  },
+
+  cancelTimeAttack() {
+    if (!confirm("タイムアタックを中断しますか？\nこの回の記録は残りません。")) return;
+    if (taTimer) { clearInterval(taTimer); taTimer = null; }
+    taPendingRecords = [];
+    $("ta-cancel-btn").style.display = "none";
+    this.goHome();
   },
 
   _taCountdown(n) {
@@ -462,6 +542,7 @@ const App = {
         $("ta-game-area").style.display = "flex";
         $("ta-game-area").style.flexDirection = "column";
         $("ta-game-area").style.height = "100%";
+        $("ta-cancel-btn").style.display = "block";
         this._taStart();
       }, 400);
     }
@@ -496,18 +577,11 @@ const App = {
 
   _taNextQuestion() {
     taAnswered = false;
-    const idx = Math.floor(Math.random() * WORDS_ACTIVE.length);
-    const correct = WORDS_ACTIVE[idx];
+    const sourcePool = taCategory ? WORDS_ACTIVE.filter(w => w.category === taCategory) : WORDS_ACTIVE;
+    const idx = Math.floor(Math.random() * sourcePool.length);
+    const correct = sourcePool[idx];
     const usedLabels = new Set([taIsEnToJa ? correct.japanese : correct.english]);
-    const pool = [];
-    for (const x of shuffle(WORDS_ACTIVE)) {
-      if (x.english === correct.english) continue;
-      const label = taIsEnToJa ? x.japanese : x.english;
-      if (usedLabels.has(label)) continue;
-      usedLabels.add(label);
-      pool.push(x);
-      if (pool.length >= 3) break;
-    }
+    const pool = pickDistractors(correct, 3, taIsEnToJa, usedLabels);
     const opts = shuffle(pool.concat(correct));
     taWords[0] = correct;  // reuse slot
 
@@ -525,7 +599,7 @@ const App = {
     taAnswered = true;
     const correct = WORDS_ACTIVE.find(w => w.english === taWords[0].english);
     const isRight = english === correct.english;
-    Store.record(correct.english, isRight);
+    taPendingRecords.push([correct.english, isRight]);
 
     // 色付け
     document.querySelectorAll(".ta-choice-btn").forEach(btn => {
@@ -557,6 +631,10 @@ const App = {
 
   _taShowResult() {
     clearInterval(taTimer); taTimer = null;
+    $("ta-cancel-btn").style.display = "none";
+    // Commit buffered records (skipped on cancel)
+    for (const [eng, ok] of taPendingRecords) Store.record(eng, ok);
+    taPendingRecords = [];
     const rank = taScore >= 20 ? "S" : taScore >= 15 ? "A" : taScore >= 10 ? "B" : taScore >= 5 ? "C" : "D";
     const rankColors = { S:"#F59E0B", A:"#10B981", B:"#3B82F6", C:"#A855F7", D:"#6B7280" };
     const badge = $("ta-rank-badge");
