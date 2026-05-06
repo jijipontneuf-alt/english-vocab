@@ -537,12 +537,20 @@ const App = {
 
   _updateQuizModeLabel() {
     const cfg = MODE_CONFIG[MODE];
-    $("quiz-mode-btn").textContent = quizIsEnToJa ? cfg.promptLabel : cfg.reverseLabel;
+    $("quiz-mode-en2ja").textContent = cfg.promptLabel;
+    $("quiz-mode-ja2en").textContent = cfg.reverseLabel;
+    $("quiz-mode-en2ja").classList.toggle("active", quizIsEnToJa);
+    $("quiz-mode-ja2en").classList.toggle("active", !quizIsEnToJa);
   },
 
-  toggleQuizMode() {
-    quizIsEnToJa = !quizIsEnToJa;
+  setQuizMode(toEnJa) {
+    if (quizIsEnToJa === toEnJa) return;
+    quizIsEnToJa = toEnJa;
     this._updateQuizModeLabel();
+    // Re-render current question in new direction (only if not already answered)
+    if (!quizAnswered && quizWords.length > 0 && quizIdx < quizWords.length) {
+      this._renderQuizQuestion();
+    }
   },
 
   _renderQuizQuestion() {

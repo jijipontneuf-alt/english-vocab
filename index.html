@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>英語・国語トレーニング</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -193,7 +193,10 @@
 
   <div class="quiz-body">
     <div class="quiz-mode-row">
-      <button class="mode-toggle" id="quiz-mode-btn" onclick="App.toggleQuizMode()">英→日</button>
+      <div class="quiz-mode-tabs">
+        <button class="mode-tab" id="quiz-mode-en2ja" onclick="App.setQuizMode(true)">英 → 日</button>
+        <button class="mode-tab" id="quiz-mode-ja2en" onclick="App.setQuizMode(false)">日 → 英</button>
+      </div>
       <button class="fc-btn btn-speak" onclick="App.speakQuizWord()" style="padding:6px 14px;font-size:18px">🔊</button>
     </div>
 
@@ -299,10 +302,10 @@
   </div>
 </div>
 
-<script src="words.js?v=7"></script>
-<script src="words_jhs.js?v=7"></script>
-<script src="idioms.js?v=7"></script>
-<script src="proverbs.js?v=7"></script>
-<script src="app.js?v=7"></script>
+<script src="words.js?v=8"></script>
+<script src="words_jhs.js?v=8"></script>
+<script src="idioms.js?v=8"></script>
+<script src="proverbs.js?v=8"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>
