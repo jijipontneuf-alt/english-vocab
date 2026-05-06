@@ -170,6 +170,17 @@ const CAT_ICONS_HIGH = {
   "動詞": "🏃", "名詞": "📦", "形容詞": "🌈",
   "副詞": "⚡", "熟語": "🔗"
 };
+// 慣用句の大カテゴリ（リスト先頭に表示）
+const IDIOM_SUPER_CATS = [
+  "からだに関する慣用句",
+  "動植物に関する慣用句",
+  "その他の慣用句",
+];
+function isIdiomSuper(cat) { return MODE === "idiom" && IDIOM_SUPER_CATS.includes(cat); }
+function wordsInCategory(cat) {
+  if (isIdiomSuper(cat)) return WORDS_ACTIVE.filter(w => w.superCategory === cat);
+  return WORDS_ACTIVE.filter(w => w.category === cat);
+}
 function catIcon(cat) {
   if (MODE === "jhs") {
     if (cat.startsWith("中1")) return "📕";
@@ -178,6 +189,12 @@ function catIcon(cat) {
     return "📖";
   }
   if (MODE === "idiom") {
+    const SUPER_ICON = {
+      "からだに関する慣用句": "🧍",
+      "動植物に関する慣用句": "🌿",
+      "その他の慣用句": "📚",
+    };
+    if (SUPER_ICON[cat]) return SUPER_ICON[cat];
     const BODY_ICON = {
       "目":"👁","耳":"👂","口":"👄","鼻":"👃","手":"✋","足":"🦶",
       "顔":"😀","頭":"🧠","肩":"💪","腕":"💪","腹":"🤰","身":"🧍",
@@ -227,24 +244,25 @@ function getCategories() {
     });
   }
   if (MODE === "idiom") {
-    // Body parts → ranked by usage; その他* by 五十音; misc at end
+    // 大カテゴリ (super) を先頭に、続いて細目 (body parts → misc → その他五十音)
     const BODY = ["目","耳","口","鼻","手","足","顔","頭","肩","腕","胸","腹",
                   "身","肝","歯","首","顎","頬","尻","腰","骨","まゆ","へそ",
                   "爪","脇","膝","喉","舌"];
     const MISC = ["動物","草花","言葉"];
     const SONO = ["その他あ行","その他か行","その他さ行","その他た行","その他な行",
                   "その他は行","その他ま行","その他や行","その他わ行"];
-    function rank(c) {
-      let i = BODY.indexOf(c);   if (i >= 0) return [0, i];
-      i = MISC.indexOf(c);       if (i >= 0) return [1, i];
-      i = SONO.indexOf(c);       if (i >= 0) return [2, i];
-      return [3, c];
-    }
-    return cats.sort((a, b) => {
+    const fineSorted = cats.slice().sort((a, b) => {
+      function rank(c) {
+        let i = BODY.indexOf(c);   if (i >= 0) return [0, i];
+        i = MISC.indexOf(c);       if (i >= 0) return [1, i];
+        i = SONO.indexOf(c);       if (i >= 0) return [2, i];
+        return [3, c];
+      }
       const [ka, na] = rank(a), [kb, nb] = rank(b);
       if (ka !== kb) return ka - kb;
       return typeof na === "number" ? na - nb : String(na).localeCompare(String(nb));
     });
+    return [...IDIOM_SUPER_CATS, ...fineSorted];
   }
   if (MODE === "proverb") {
     const ORDER = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"];
@@ -285,6 +303,8 @@ const App = {
     const header = document.querySelector(".home-header");
     header.classList.remove("jhs", "idiom", "proverb");
     if (cfg.headerClass) header.classList.add(cfg.headerClass);
+    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb");
+    document.body.classList.add(`mode-${MODE}`);
     const modes = ["high", "jhs", "idiom", "proverb"];
     for (const m of modes) {
       const btn = $(`mode-btn-${m}`);
@@ -300,13 +320,14 @@ const App = {
     const grid = $("category-grid");
     grid.innerHTML = "";
     getCategories().forEach(cat => {
-      const count = WORDS_ACTIVE.filter(w => w.category === cat).length;
+      const count = wordsInCategory(cat).length;
       const icon = catIcon(cat);
+      const isSuper = isIdiomSuper(cat);
       grid.innerHTML += `
-        <div class="cat-card" onclick="App._openCategoryMenu('${cat.replace(/'/g, "\\'")}')">
+        <div class="cat-card${isSuper ? " cat-card-super" : ""}" onclick="App._openCategoryMenu('${cat.replace(/'/g, "\\'")}')">
           <div class="cat-icon">${icon}</div>
           <div class="cat-name">${cat}</div>
-          <div class="cat-count">${count}語</div>
+          <div class="cat-count">${count}${cfg.unit}</div>
         </div>`;
     });
 
@@ -332,7 +353,7 @@ const App = {
     unitMenuCategory = cat;
     $("unit-menu-title").textContent = cat;
     const cfg = MODE_CONFIG[MODE];
-    const count = WORDS_ACTIVE.filter(w => w.category === cat).length;
+    const count = wordsInCategory(cat).length;
     $("unit-menu-count").textContent = `${count}${cfg.unit}`;
     $("unit-menu-fc1-sub").textContent = cfg.promptLabel;
     $("unit-menu-fc2-sub").textContent = cfg.reverseLabel;
@@ -347,7 +368,7 @@ const App = {
     sel.innerHTML = '<option value="">すべて</option>';
     getCategories().forEach(c => sel.innerHTML += `<option value="${c}"${c === cat ? " selected" : ""}>${c}</option>`);
     $("search-input").value = "";
-    this._renderWordList(WORDS_ACTIVE.filter(w => w.category === cat));
+    this._renderWordList(wordsInCategory(cat));
     showScreen("screen-wordlist");
   },
 
@@ -425,7 +446,7 @@ const App = {
   openFlashcard(category, mode) {
     fcCategory = category || null;
     fcIsEnToJa = mode !== "ja2en";
-    fcWords = shuffle(category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
+    fcWords = shuffle(category ? wordsInCategory(category) : WORDS_ACTIVE);
     fcIdx = 0; fcFlipped = false;
     this._updateFcLabels();
     this._renderFC();
@@ -434,14 +455,18 @@ const App = {
 
   _updateFcLabels() {
     const cfg = MODE_CONFIG[MODE];
+    $("fc-mode-en2ja").textContent = cfg.promptLabel;
+    $("fc-mode-ja2en").textContent = cfg.reverseLabel;
+    $("fc-mode-en2ja").classList.toggle("active", fcIsEnToJa);
+    $("fc-mode-ja2en").classList.toggle("active", !fcIsEnToJa);
     const label = fcIsEnToJa ? cfg.promptLabel : cfg.reverseLabel;
-    $("fc-mode-btn").textContent = label;
     const titleSuf = `（${label.replace(/\s*→\s*/, "→")}）`;
     $("fc-title").textContent = fcCategory ? `${fcCategory}${titleSuf}` : `フラッシュカード${titleSuf}`;
   },
 
-  toggleFcMode() {
-    fcIsEnToJa = !fcIsEnToJa;
+  setFcMode(toEnJa) {
+    if (fcIsEnToJa === toEnJa) return;
+    fcIsEnToJa = toEnJa;
     this._updateFcLabels();
     this._renderFC();
   },
@@ -497,7 +522,7 @@ const App = {
     quizCorrect = 0;
     let pool = category === "weak"
       ? Store.weakWords()
-      : (category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
+      : (category ? wordsInCategory(category) : WORDS_ACTIVE);
     if (pool.length < 4) {
       alert("4択クイズには4件以上の語彙が必要です。");
       this.goHome();
@@ -610,7 +635,7 @@ const App = {
   // ── TIME ATTACK ──────────────────────────
   openTimeAttack(category) {
     taCategory = category || null;
-    const pool = taCategory ? WORDS_ACTIVE.filter(w => w.category === taCategory) : WORDS_ACTIVE;
+    const pool = taCategory ? wordsInCategory(taCategory) : WORDS_ACTIVE;
     if (pool.length < 4) {
       alert("このユニットは語数が少なすぎてタイムアタックを開けません（4語以上必要）。");
       return;
@@ -682,7 +707,7 @@ const App = {
 
   _taNextQuestion() {
     taAnswered = false;
-    const sourcePool = taCategory ? WORDS_ACTIVE.filter(w => w.category === taCategory) : WORDS_ACTIVE;
+    const sourcePool = taCategory ? wordsInCategory(taCategory) : WORDS_ACTIVE;
     const idx = Math.floor(Math.random() * sourcePool.length);
     const correct = sourcePool[idx];
     const usedLabels = new Set([taIsEnToJa ? correct.japanese : correct.english]);

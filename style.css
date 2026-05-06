@@ -116,6 +116,54 @@ html, body {
 }
 .card-yomi:empty { display: none; }
 
+/* Flashcard mode tabs (always-visible mode toggle) */
+.fc-mode-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px 4px;
+}
+.mode-tab {
+  flex: 1;
+  padding: 9px 8px;
+  border: 1.5px solid var(--border);
+  background: white;
+  color: var(--sub);
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  -webkit-appearance: none;
+}
+.mode-tab:active { transform: scale(0.97); }
+.mode-tab.active {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+}
+body.mode-jhs .mode-tab.active {
+  background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
+  box-shadow: 0 2px 8px rgba(4, 120, 87, 0.25);
+}
+body.mode-idiom .mode-tab.active {
+  background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+}
+body.mode-proverb .mode-tab.active {
+  background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
+}
+
+/* Super category card highlight (慣用句 大カテゴリ) */
+.cat-card-super {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border: 1.5px solid #F59E0B;
+  font-weight: 800;
+}
+.cat-card-super .cat-name { color: #92400E; }
+.cat-card-super .cat-count { color: #B45309; }
+
 /* Unit menu (per-category action chooser) */
 .unit-menu-body {
   padding: 20px 16px 24px;

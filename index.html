@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>英語・国語トレーニング</title>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -147,8 +147,9 @@
   </div>
   <div class="fc-progress-bar"><div id="fc-progress-fill"></div></div>
 
-  <div class="quiz-mode-row" style="padding:10px 16px 0">
-    <button class="mode-toggle" id="fc-mode-btn" onclick="App.toggleFcMode()">英 → 日</button>
+  <div class="fc-mode-tabs">
+    <button class="mode-tab" id="fc-mode-en2ja" onclick="App.setFcMode(true)">英 → 日</button>
+    <button class="mode-tab" id="fc-mode-ja2en" onclick="App.setFcMode(false)">日 → 英</button>
   </div>
 
   <div class="fc-area">
@@ -298,10 +299,10 @@
   </div>
 </div>
 
-<script src="words.js?v=6"></script>
-<script src="words_jhs.js?v=6"></script>
-<script src="idioms.js?v=6"></script>
-<script src="proverbs.js?v=6"></script>
-<script src="app.js?v=6"></script>
+<script src="words.js?v=7"></script>
+<script src="words_jhs.js?v=7"></script>
+<script src="idioms.js?v=7"></script>
+<script src="proverbs.js?v=7"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>

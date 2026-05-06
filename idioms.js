@@ -4,6 +4,7 @@ const IDIOMS = [
     "japanese": "機嫌をそこねて意固地になる。",
     "yomi": "",
     "category": "へそ",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -13,6 +14,7 @@ const IDIOMS = [
     "japanese": "あまりしゃべらない。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -22,6 +24,7 @@ const IDIOMS = [
     "japanese": "秘密を守り、しゃべらない。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -31,6 +34,7 @@ const IDIOMS = [
     "japanese": "秘密を人に話す。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -40,6 +44,7 @@ const IDIOMS = [
     "japanese": "相手の巧みな話にだまされる。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -49,6 +54,7 @@ const IDIOMS = [
     "japanese": "ある食べ物がその人の好みに合う。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -58,6 +64,7 @@ const IDIOMS = [
     "japanese": "偉そうなことを言う。ほらを吹く。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -67,6 +74,7 @@ const IDIOMS = [
     "japanese": "あきれてものも言えない。",
     "yomi": "",
     "category": "口",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -76,6 +84,7 @@ const IDIOMS = [
     "japanese": "なかなか動こうとしない。",
     "yomi": "",
     "category": "尻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -85,6 +94,7 @@ const IDIOMS = [
     "japanese": "事態がさしせまり、余裕がなくなる。",
     "yomi": "",
     "category": "尻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -94,6 +104,7 @@ const IDIOMS = [
     "japanese": "人の失敗の後始末をする。",
     "yomi": "",
     "category": "尻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -103,6 +114,7 @@ const IDIOMS = [
     "japanese": "とるべき方法や対策がない。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -112,6 +124,7 @@ const IDIOMS = [
     "japanese": "十分に用意して機会を待つ。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -121,6 +134,7 @@ const IDIOMS = [
     "japanese": "緊迫した状況にはらはらする。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -130,6 +144,7 @@ const IDIOMS = [
     "japanese": "それまでと態度を大きく変える。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "手のひらを返すように対応がよくなった。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -139,6 +154,7 @@ const IDIOMS = [
     "japanese": "必要な対策をとる。話し合いをまとめる。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -148,6 +164,7 @@ const IDIOMS = [
     "japanese": "手伝う。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "忙しい母に手を貸す。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -157,6 +174,7 @@ const IDIOMS = [
     "japanese": "何もしないで人のするままにしておく。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "手をこまぬいて人のするままにしていてはいけない。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -166,6 +184,7 @@ const IDIOMS = [
     "japanese": "なすべきことを十分にしない。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -175,6 +194,7 @@ const IDIOMS = [
     "japanese": "関係を断つ。それまでの仕事をやめる。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -184,6 +204,7 @@ const IDIOMS = [
     "japanese": "関係する範囲を広くする。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -193,6 +214,7 @@ const IDIOMS = [
     "japanese": "処理に困ってしまう。手こずる。",
     "yomi": "",
     "category": "手",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -202,6 +224,7 @@ const IDIOMS = [
     "japanese": "野心を実現するための準備をする。",
     "yomi": "",
     "category": "爪",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -211,6 +234,7 @@ const IDIOMS = [
     "japanese": "自分のすぐ目の前で見ること。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -220,6 +244,7 @@ const IDIOMS = [
     "japanese": "魅力あるものにまどわされる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "付録に目がくらんで、雑誌を買った。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -229,6 +254,7 @@ const IDIOMS = [
     "japanese": "よいものを見分けられる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "この作品を選ぶなんて、お目が高い。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -238,6 +264,7 @@ const IDIOMS = [
     "japanese": "値段が高くてびっくりする。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -247,6 +274,7 @@ const IDIOMS = [
     "japanese": "そのことが非常に好きである。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -256,6 +284,7 @@ const IDIOMS = [
     "japanese": "とても忙しい。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "目が回るような一日。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -265,6 +294,7 @@ const IDIOMS = [
     "japanese": "先の見通しが確かだ。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -274,6 +304,7 @@ const IDIOMS = [
     "japanese": "二つの場所がとても近くにあること。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -283,6 +314,7 @@ const IDIOMS = [
     "japanese": "あまりにひどくて見過ごせない。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -292,6 +324,7 @@ const IDIOMS = [
     "japanese": "かわいくてたまらない。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -301,6 +334,7 @@ const IDIOMS = [
     "japanese": "様子が想像できる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -310,6 +344,7 @@ const IDIOMS = [
     "japanese": "ひどい目にあわせて思い知らせる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -319,6 +354,7 @@ const IDIOMS = [
     "japanese": "気持ちの変化で表情を変える。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "試験が迫り、目の色を変えて勉強する。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -328,6 +364,7 @@ const IDIOMS = [
     "japanese": "何かあるたびに憎く思う。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -337,6 +374,7 @@ const IDIOMS = [
     "japanese": "見ると欲しくなるので、見ないほうがいい物。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -346,6 +384,7 @@ const IDIOMS = [
     "japanese": "見向きもしない。無関心である。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -355,6 +394,7 @@ const IDIOMS = [
     "japanese": "ひどくて見ていられない。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -364,6 +404,7 @@ const IDIOMS = [
     "japanese": "素晴らしさに驚き、夢中になる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -373,6 +414,7 @@ const IDIOMS = [
     "japanese": "ひいきにする。親切に世話する。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -382,6 +424,7 @@ const IDIOMS = [
     "japanese": "一点をじっと見つめる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -391,6 +434,7 @@ const IDIOMS = [
     "japanese": "よく見ようとして目を大きく開く。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -400,6 +444,7 @@ const IDIOMS = [
     "japanese": "激しく怒る様子。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -409,6 +454,7 @@ const IDIOMS = [
     "japanese": "ひととおり見る。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -418,6 +464,7 @@ const IDIOMS = [
     "japanese": "気がついたものをじっと見る。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -427,6 +474,7 @@ const IDIOMS = [
     "japanese": "油断なく見張る。監視する。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -436,6 +484,7 @@ const IDIOMS = [
     "japanese": "周囲の注目を集める。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -445,6 +494,7 @@ const IDIOMS = [
     "japanese": "うれしさやかわいさでほほ笑む。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -454,6 +504,7 @@ const IDIOMS = [
     "japanese": "驚きのため、目を大きく見開く。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -463,6 +514,7 @@ const IDIOMS = [
     "japanese": "じっと見つめる。",
     "yomi": "",
     "category": "目",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -472,6 +524,7 @@ const IDIOMS = [
     "japanese": "自分の弱点を言われ、聞くのがつらい。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -481,6 +534,7 @@ const IDIOMS = [
     "japanese": "何度も聞いてうんざりする。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -490,6 +544,7 @@ const IDIOMS = [
     "japanese": "思いもよらぬことで信じられない。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -499,6 +554,7 @@ const IDIOMS = [
     "japanese": "相手の話を聞く。相談にのる。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "彼の学説に耳を貸す者は少なかった。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -508,6 +564,7 @@ const IDIOMS = [
     "japanese": "聞くことに集中する（=耳を傾ける）。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -517,6 +574,7 @@ const IDIOMS = [
     "japanese": "金額などを不足なくとりそろえる。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -526,6 +584,7 @@ const IDIOMS = [
     "japanese": "聞くともなしに聞く。偶然聞く。",
     "yomi": "",
     "category": "耳",
+    "superCategory": "からだに関する慣用句",
     "example": "友人のうわさを小耳に挟んだ。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -535,6 +594,7 @@ const IDIOMS = [
     "japanese": "何があっても落ち着いている。",
     "yomi": "",
     "category": "肝",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -544,6 +604,7 @@ const IDIOMS = [
     "japanese": "心にきざみこんで忘れない。",
     "yomi": "",
     "category": "肝",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -553,6 +614,7 @@ const IDIOMS = [
     "japanese": "あぶない目にあってひやっとする。",
     "yomi": "",
     "category": "肝",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -562,6 +624,7 @@ const IDIOMS = [
     "japanese": "非常に驚く。",
     "yomi": "",
     "category": "肝",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -571,6 +634,7 @@ const IDIOMS = [
     "japanese": "威勢がよくて得意な態度を見せる。",
     "yomi": "",
     "category": "肩",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -580,6 +644,7 @@ const IDIOMS = [
     "japanese": "負担や責任から解放される。",
     "yomi": "",
     "category": "肩",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -589,6 +654,7 @@ const IDIOMS = [
     "japanese": "力をそえる。ひいきにする。",
     "yomi": "",
     "category": "肩",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -598,6 +664,7 @@ const IDIOMS = [
     "japanese": "どうしようもない気持ちを表す。",
     "yomi": "",
     "category": "肩",
+    "superCategory": "からだに関する慣用句",
     "example": "予想外の配役に、友人は肩をすくめた。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -607,6 +674,7 @@ const IDIOMS = [
     "japanese": "対等に張り合う。",
     "yomi": "",
     "category": "肩",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -616,6 +684,7 @@ const IDIOMS = [
     "japanese": "悲しくてつらい。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "過去の悲劇に胸が痛む。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -625,6 +694,7 @@ const IDIOMS = [
     "japanese": "感動で心が満たされる。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -634,6 +704,7 @@ const IDIOMS = [
     "japanese": "喜びや期待で心がわくわくする。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -643,6 +714,7 @@ const IDIOMS = [
     "japanese": "せつなさを覚える。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -652,6 +724,7 @@ const IDIOMS = [
     "japanese": "気持ちがすっきりする。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "チームの初勝利に、胸がすく思いがした。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -661,6 +734,7 @@ const IDIOMS = [
     "japanese": "強い感情が心の中に満ちる。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -670,6 +744,7 @@ const IDIOMS = [
     "japanese": "感動を強くあたえる。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -679,6 +754,7 @@ const IDIOMS = [
     "japanese": "恋い慕って思い悩む。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -688,6 +764,7 @@ const IDIOMS = [
     "japanese": "はっとして驚く。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "彼女のするどい指摘に胸をつかれた。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -697,6 +774,7 @@ const IDIOMS = [
     "japanese": "ほっと安心する。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -706,6 +784,7 @@ const IDIOMS = [
     "japanese": "期待でわくわくする。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -715,6 +794,7 @@ const IDIOMS = [
     "japanese": "自信に満ちた態度を取る。",
     "yomi": "",
     "category": "胸",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -724,6 +804,7 @@ const IDIOMS = [
     "japanese": "すきがあり、守りが弱い。",
     "yomi": "",
     "category": "脇",
+    "superCategory": "からだに関する慣用句",
     "example": "相撲で脇に腕を差し込まれると不利になることから。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -733,6 +814,7 @@ const IDIOMS = [
     "japanese": "技術や能力がすぐれている。",
     "yomi": "",
     "category": "腕",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -742,6 +824,7 @@ const IDIOMS = [
     "japanese": "力を発揮したくて、じっとしていられない。",
     "yomi": "",
     "category": "腕",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -751,6 +834,7 @@ const IDIOMS = [
     "japanese": "気持ちをこめて、能力を発揮する。",
     "yomi": "",
     "category": "腕",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -760,6 +844,7 @@ const IDIOMS = [
     "japanese": "上手になる。",
     "yomi": "",
     "category": "腕",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -769,6 +854,7 @@ const IDIOMS = [
     "japanese": "能力を使って、見事にやってみせる。",
     "yomi": "",
     "category": "腕",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -778,6 +864,7 @@ const IDIOMS = [
     "japanese": "勉強や練習に励み、実力や技術を高める。",
     "yomi": "",
     "category": "腕",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -787,6 +874,7 @@ const IDIOMS = [
     "japanese": "じっくりかまえる。",
     "yomi": "",
     "category": "腰",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -796,6 +884,7 @@ const IDIOMS = [
     "japanese": "驚きで足腰が立たなくなる。",
     "yomi": "",
     "category": "腰",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -805,6 +894,7 @@ const IDIOMS = [
     "japanese": "なかなか動こうとしない。",
     "yomi": "",
     "category": "腰",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -814,6 +904,7 @@ const IDIOMS = [
     "japanese": "心の中がきたない。根性が悪い。",
     "yomi": "",
     "category": "腹",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -823,6 +914,7 @@ const IDIOMS = [
     "japanese": "怒りをおさえることができない。",
     "yomi": "",
     "category": "腹",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -832,6 +924,7 @@ const IDIOMS = [
     "japanese": "人の気持ちをそれとなくうかがう。",
     "yomi": "",
     "category": "腹",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -841,6 +934,7 @@ const IDIOMS = [
     "japanese": "本当の気持ちを打ち明ける。",
     "yomi": "",
     "category": "腹",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -850,6 +944,7 @@ const IDIOMS = [
     "japanese": "ちょっとしゃくにさわる。",
     "yomi": "",
     "category": "腹",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -859,6 +954,7 @@ const IDIOMS = [
     "japanese": "何か思いついたり感心したりしたときの動作。",
     "yomi": "",
     "category": "膝",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -868,6 +964,7 @@ const IDIOMS = [
     "japanese": "予算が不足する。赤字になる。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -877,6 +974,7 @@ const IDIOMS = [
     "japanese": "知らず知らずにその方へ行く。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -886,6 +984,7 @@ const IDIOMS = [
     "japanese": "悪いことをやめてまじめになる。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -895,6 +994,7 @@ const IDIOMS = [
     "japanese": "相手のすきにつけいる。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -904,6 +1004,7 @@ const IDIOMS = [
     "japanese": "歩いて行く。わざわざ訪ねて行く。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -913,6 +1014,7 @@ const IDIOMS = [
     "japanese": "他人のじゃまをする。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -922,6 +1024,7 @@ const IDIOMS = [
     "japanese": "足がひどく疲れるほど歩き回る。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "いなくなった子犬を足を棒にして捜し回る。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -931,6 +1034,7 @@ const IDIOMS = [
     "japanese": "来た道を引き返す。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "忘れ物に気づき、きびすを返して取りに戻る。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -940,6 +1044,7 @@ const IDIOMS = [
     "japanese": "思い切れずにためらう。",
     "yomi": "",
     "category": "足",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -949,6 +1054,7 @@ const IDIOMS = [
     "japanese": "広い範囲で活動する。",
     "yomi": "",
     "category": "身",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -958,6 +1064,7 @@ const IDIOMS = [
     "japanese": "人の不幸を自分のことのように感じる。",
     "yomi": "",
     "category": "身",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -967,6 +1074,7 @@ const IDIOMS = [
     "japanese": "しみじみと心に感じる。",
     "yomi": "",
     "category": "身",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -976,6 +1084,7 @@ const IDIOMS = [
     "japanese": "ぞっとする。",
     "yomi": "",
     "category": "身",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -985,6 +1094,7 @@ const IDIOMS = [
     "japanese": "一生懸命になる。",
     "yomi": "",
     "category": "身",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -994,6 +1104,7 @@ const IDIOMS = [
     "japanese": "相手に弱みがあり、対等になれない。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1003,6 +1114,7 @@ const IDIOMS = [
     "japanese": "柔軟な考え方ができない。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1012,6 +1124,7 @@ const IDIOMS = [
     "japanese": "本当に偉いと感心させられる。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1021,6 +1134,7 @@ const IDIOMS = [
     "japanese": "かっとする。つい怒る。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1030,6 +1144,7 @@ const IDIOMS = [
     "japanese": "考え込む。思案・苦慮する。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1039,6 +1154,7 @@ const IDIOMS = [
     "japanese": "恥ずかしさで顔が真っ赤になる。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1048,6 +1164,7 @@ const IDIOMS = [
     "japanese": "名が広く世に知られる。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1057,6 +1174,7 @@ const IDIOMS = [
     "japanese": "名誉が保たれる。面目が立つ。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1066,6 +1184,7 @@ const IDIOMS = [
     "japanese": "知り合いが多い。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1075,6 +1194,7 @@ const IDIOMS = [
     "japanese": "恥をかかせる。面目を失わせる。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1084,6 +1204,7 @@ const IDIOMS = [
     "japanese": "人前に出る。出席する。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1093,6 +1214,7 @@ const IDIOMS = [
     "japanese": "いばる。得意がる。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1102,6 +1224,7 @@ const IDIOMS = [
     "japanese": "自分には関係ないという態度。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "彼は涼しい顔でうそをついている。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1111,6 +1234,7 @@ const IDIOMS = [
     "japanese": "厚かましい。ずうずうしい。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1120,6 +1244,7 @@ const IDIOMS = [
     "japanese": "恥知らずでずうずうしく。",
     "yomi": "",
     "category": "顔",
+    "superCategory": "からだに関する慣用句",
     "example": "遅刻したのに、臆面もなく笑っている。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1129,6 +1254,7 @@ const IDIOMS = [
     "japanese": "苦労や努力がいる。困難である。",
     "yomi": "",
     "category": "骨",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1138,6 +1264,7 @@ const IDIOMS = [
     "japanese": "苦労をいやがってなまけること。",
     "yomi": "",
     "category": "骨",
+    "superCategory": "からだに関する慣用句",
     "example": "骨を惜しまず働きなさい。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1147,6 +1274,7 @@ const IDIOMS = [
     "japanese": "得意な様子。自慢げである。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1156,6 +1284,7 @@ const IDIOMS = [
     "japanese": "馬鹿にして笑う。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1165,6 +1294,7 @@ const IDIOMS = [
     "japanese": "自慢する。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1174,6 +1304,7 @@ const IDIOMS = [
     "japanese": "態度がきざで、我慢できない。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1183,6 +1314,7 @@ const IDIOMS = [
     "japanese": "出し抜いて、あっと言わせる。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1192,6 +1324,7 @@ const IDIOMS = [
     "japanese": "相手の自慢をくじく。恥をかかせる。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1201,6 +1334,7 @@ const IDIOMS = [
     "japanese": "冷淡にあしらう。",
     "yomi": "",
     "category": "鼻",
+    "superCategory": "からだに関する慣用句",
     "example": "木で鼻をくくったような態度で断られた。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句"
@@ -1210,6 +1344,7 @@ const IDIOMS = [
     "japanese": "いやな顔をする。",
     "yomi": "",
     "category": "まゆ",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1219,6 +1354,7 @@ const IDIOMS = [
     "japanese": "だまされないように用心する。",
     "yomi": "",
     "category": "まゆ",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1228,6 +1364,7 @@ const IDIOMS = [
     "japanese": "欲しくて我慢できない。",
     "yomi": "",
     "category": "喉",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1237,6 +1374,7 @@ const IDIOMS = [
     "japanese": "何か隠して言いにくそうな様子。",
     "yomi": "",
     "category": "歯",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1246,6 +1384,7 @@ const IDIOMS = [
     "japanese": "お世辞などで不快になる。",
     "yomi": "",
     "category": "歯",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1255,6 +1394,7 @@ const IDIOMS = [
     "japanese": "相手が強すぎて対抗できない。",
     "yomi": "",
     "category": "歯",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1264,6 +1404,7 @@ const IDIOMS = [
     "japanese": "思い通りにならず、もどかしい。",
     "yomi": "",
     "category": "歯",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1273,6 +1414,7 @@ const IDIOMS = [
     "japanese": "言葉をはっきり言う様子。",
     "yomi": "",
     "category": "歯",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1282,6 +1424,7 @@ const IDIOMS = [
     "japanese": "言いにくいことでも遠慮なく言う。",
     "yomi": "",
     "category": "歯",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1291,6 +1434,7 @@ const IDIOMS = [
     "japanese": "非常に驚き、感嘆する。",
     "yomi": "",
     "category": "舌",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1300,6 +1444,7 @@ const IDIOMS = [
     "japanese": "顔を近づけて相談する。",
     "yomi": "",
     "category": "頬",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1309,6 +1454,7 @@ const IDIOMS = [
     "japanese": "はじらいのため、頬を赤くする。",
     "yomi": "",
     "category": "頬",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1318,6 +1464,7 @@ const IDIOMS = [
     "japanese": "不満そうな顔をする。",
     "yomi": "",
     "category": "頬",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1327,6 +1474,7 @@ const IDIOMS = [
     "japanese": "認めないという意味で頭を振る。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "私の提案に彼はかぶりを振った。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1336,6 +1484,7 @@ const IDIOMS = [
     "japanese": "はげしい怒りがこみあげる。",
     "yomi": "",
     "category": "頭",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1345,6 +1494,7 @@ const IDIOMS = [
     "japanese": "料理の味が非常にいいこと。",
     "yomi": "",
     "category": "顎",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1354,6 +1504,7 @@ const IDIOMS = [
     "japanese": "いばった態度で人に指図する。",
     "yomi": "",
     "category": "顎",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1363,6 +1514,7 @@ const IDIOMS = [
     "japanese": "ひどく疲れる。ばてる。",
     "yomi": "",
     "category": "顎",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1372,6 +1524,7 @@ const IDIOMS = [
     "japanese": "不審に思う。",
     "yomi": "",
     "category": "首",
+    "superCategory": "からだに関する慣用句",
     "example": "政治家の説明に首をかしげる。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1381,6 +1534,7 @@ const IDIOMS = [
     "japanese": "驚きや恐れて、思わず首を縮める。",
     "yomi": "",
     "category": "首",
+    "superCategory": "からだに関する慣用句",
     "example": "いきなりの轟音に、皆が首をすくめた。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1390,6 +1544,7 @@ const IDIOMS = [
     "japanese": "今か今かと待ちわびる。",
     "yomi": "",
     "category": "首",
+    "superCategory": "からだに関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1399,6 +1554,7 @@ const IDIOMS = [
     "japanese": "考え込む。納得できずにいる。",
     "yomi": "",
     "category": "首",
+    "superCategory": "からだに関する慣用句",
     "example": "弟の不可解な話に私は首をひねった。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分"
@@ -1408,6 +1564,7 @@ const IDIOMS = [
     "japanese": "警備・警戒が厳しい様子。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1417,6 +1574,7 @@ const IDIOMS = [
     "japanese": "進み具合の遅いこと。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1426,6 +1584,7 @@ const IDIOMS = [
     "japanese": "物事を考えないで受け入れる。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1435,6 +1594,7 @@ const IDIOMS = [
     "japanese": "見逃すまいと熱心に探す様子。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1444,6 +1604,7 @@ const IDIOMS = [
     "japanese": "自分と考えが合う。意気投合する。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1453,6 +1614,7 @@ const IDIOMS = [
     "japanese": "元気のないとても小さな声。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1462,6 +1624,7 @@ const IDIOMS = [
     "japanese": "敵意をあらわにする。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1471,6 +1634,7 @@ const IDIOMS = [
     "japanese": "店などにほとんどお客がいない様子。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1480,6 +1644,7 @@ const IDIOMS = [
     "japanese": "わけがわからずぽかんとする。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1489,6 +1654,7 @@ const IDIOMS = [
     "japanese": "散らばって逃げる。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1498,6 +1664,7 @@ const IDIOMS = [
     "japanese": "仲が悪いこと。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1507,6 +1674,7 @@ const IDIOMS = [
     "japanese": "自分の都合のいいように数量をごまかす。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1516,6 +1684,7 @@ const IDIOMS = [
     "japanese": "ごまかしや隠しごとがばれる。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1525,6 +1694,7 @@ const IDIOMS = [
     "japanese": "よく考えないで、人に従って行動する。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1534,6 +1704,7 @@ const IDIOMS = [
     "japanese": "量がきわめて少ないこと。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1543,6 +1714,7 @@ const IDIOMS = [
     "japanese": "眠ったふりをすること。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1552,6 +1724,7 @@ const IDIOMS = [
     "japanese": "有力者の一言で議論がまとまること。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "結局、会長の鶴の一声で決まった。",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1561,6 +1734,7 @@ const IDIOMS = [
     "japanese": "とても短い時間で入浴を済ますこと。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1570,6 +1744,7 @@ const IDIOMS = [
     "japanese": "たいへん勢いが盛んな様子。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1579,6 +1754,7 @@ const IDIOMS = [
     "japanese": "大事なものを不意に奪われる。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1588,6 +1764,7 @@ const IDIOMS = [
     "japanese": "大切にして手放さないもの。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1597,6 +1774,7 @@ const IDIOMS = [
     "japanese": "やさしくこびる声。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1606,6 +1784,7 @@ const IDIOMS = [
     "japanese": "とても忙しい。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1615,6 +1794,7 @@ const IDIOMS = [
     "japanese": "非常に狭いこと。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1624,6 +1804,7 @@ const IDIOMS = [
     "japanese": "だれもかれもみんな。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1633,6 +1814,7 @@ const IDIOMS = [
     "japanese": "本性を隠し、おとなしいふりをする。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1642,6 +1824,7 @@ const IDIOMS = [
     "japanese": "のびのびと自由にふるまう。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1651,6 +1834,7 @@ const IDIOMS = [
     "japanese": "追いつめられて逃げ場のない状態。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1660,6 +1844,7 @@ const IDIOMS = [
     "japanese": "自分勝手で人の都合を考えない。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1669,6 +1854,7 @@ const IDIOMS = [
     "japanese": "（悪い）予感がする。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1678,6 +1864,7 @@ const IDIOMS = [
     "japanese": "何となく好きになれない。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1687,6 +1874,7 @@ const IDIOMS = [
     "japanese": "余計なことをして、災難にあうこと。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1696,6 +1884,7 @@ const IDIOMS = [
     "japanese": "乱暴につかみとること。",
     "yomi": "",
     "category": "動物",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "動物に関する慣用句"
@@ -1705,6 +1894,7 @@ const IDIOMS = [
     "japanese": "そっくりなこと。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1714,6 +1904,7 @@ const IDIOMS = [
     "japanese": "競走などで一気に何人も追い抜くこと。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1723,6 +1914,7 @@ const IDIOMS = [
     "japanese": "力がおよばず、手に入れられないもの。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1732,6 +1924,7 @@ const IDIOMS = [
     "japanese": "さっぱりしていてこだわらない様子。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1741,6 +1934,7 @@ const IDIOMS = [
     "japanese": "なんの返事も連絡もないこと。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1750,6 +1944,7 @@ const IDIOMS = [
     "japanese": "うらむ気持ちをいつまでも忘れない。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1759,6 +1954,7 @@ const IDIOMS = [
     "japanese": "細かいことをしつこくたずねる様子。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "母に根掘り葉掘り質問された。",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1768,6 +1964,7 @@ const IDIOMS = [
     "japanese": "まったく根拠がない。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1777,6 +1974,7 @@ const IDIOMS = [
     "japanese": "新しい思想やものごとなどが定着する。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1786,6 +1984,7 @@ const IDIOMS = [
     "japanese": "深く広がり、動かしがたくなっている。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1795,6 +1994,7 @@ const IDIOMS = [
     "japanese": "①にぎやかにする。②栄える。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "①なつかしい思い出話に花を咲かせる。②この芝居で、彼も花を咲かせることができた。",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1804,6 +2004,7 @@ const IDIOMS = [
     "japanese": "名誉を相手にゆずる。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "年長者に花を持たせる。",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1813,6 +2014,7 @@ const IDIOMS = [
     "japanese": "はなやかさを加える。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1822,6 +2024,7 @@ const IDIOMS = [
     "japanese": "目的地への途中で別のことをする。",
     "yomi": "",
     "category": "草花",
+    "superCategory": "動植物に関する慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "植物に関する慣用句"
@@ -1831,6 +2034,7 @@ const IDIOMS = [
     "japanese": "言葉では言い尽くすことができない。",
     "yomi": "",
     "category": "言葉",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "言葉に関する慣用句"
@@ -1840,6 +2044,7 @@ const IDIOMS = [
     "japanese": "返事ができずに困る。",
     "yomi": "",
     "category": "言葉",
+    "superCategory": "その他の慣用句",
     "example": "彼に気持ちを聞かれ、言葉に詰まった。",
     "exampleJapanese": "",
     "bigCategory": "言葉に関する慣用句"
@@ -1849,6 +2054,7 @@ const IDIOMS = [
     "japanese": "多くの言葉を使って話す。",
     "yomi": "",
     "category": "言葉",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "言葉に関する慣用句"
@@ -1858,6 +2064,7 @@ const IDIOMS = [
     "japanese": "はっきりと言わず、あいまいにする。",
     "yomi": "",
     "category": "言葉",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "言葉に関する慣用句"
@@ -1867,6 +2074,7 @@ const IDIOMS = [
     "japanese": "人の話に口出しする。",
     "yomi": "",
     "category": "言葉",
+    "superCategory": "その他の慣用句",
     "example": "横から言葉を挟む。",
     "exampleJapanese": "",
     "bigCategory": "言葉に関する慣用句"
@@ -1876,6 +2084,7 @@ const IDIOMS = [
     "japanese": "相手の話に合わせて受け答えをする。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1885,6 +2094,7 @@ const IDIOMS = [
     "japanese": "ものごとの最後。結局。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1894,6 +2104,7 @@ const IDIOMS = [
     "japanese": "時機をのがし、手遅れになること。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1903,6 +2114,7 @@ const IDIOMS = [
     "japanese": "むだな話などで時間をつぶしてなまける。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1912,6 +2124,7 @@ const IDIOMS = [
     "japanese": "過ちを強く責める。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "帰りが遅くなって父に油をしぼられた。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1921,6 +2134,7 @@ const IDIOMS = [
     "japanese": "さわぎが起こる前の不気味な静けさ。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1930,6 +2144,7 @@ const IDIOMS = [
     "japanese": "ひどく驚きあわてる。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1939,6 +2154,7 @@ const IDIOMS = [
     "japanese": "会議や交渉などのついてに行き詰まる。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1948,6 +2164,7 @@ const IDIOMS = [
     "japanese": "あることのついでに他のことをすること。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1957,6 +2174,7 @@ const IDIOMS = [
     "japanese": "せわしく呼吸をする。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1966,6 +2184,7 @@ const IDIOMS = [
     "japanese": "緊張などから息苦しくなる。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1975,6 +2194,7 @@ const IDIOMS = [
     "japanese": "せわしく呼吸をする。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1984,6 +2204,7 @@ const IDIOMS = [
     "japanese": "息をおさえて、じっと静かにしている。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -1993,6 +2214,7 @@ const IDIOMS = [
     "japanese": "驚きのあまり息ができない。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "初めて海で出会うイルカの姿に、息をのんだ。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2002,6 +2224,7 @@ const IDIOMS = [
     "japanese": "ひっそりと静かにしている。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2011,6 +2234,7 @@ const IDIOMS = [
     "japanese": "悪い状態を脱し、よい状態に向かう。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2020,6 +2244,7 @@ const IDIOMS = [
     "japanese": "職業や地位などになじむ。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2029,6 +2254,7 @@ const IDIOMS = [
     "japanese": "相手の力を認め、敬意をもつ。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "囲碁で弱いほうが先に碁石を置くことから。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2038,6 +2264,7 @@ const IDIOMS = [
     "japanese": "うまくだまされてしまう。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2047,6 +2274,7 @@ const IDIOMS = [
     "japanese": "驚いて顔が青くなる。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2056,6 +2284,7 @@ const IDIOMS = [
     "japanese": "どこでも同じ態度で接する様子。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "あの人は裏表がない、信用できる人だ。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2065,6 +2294,7 @@ const IDIOMS = [
     "japanese": "相手が予想しない行動に出る。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2074,6 +2304,7 @@ const IDIOMS = [
     "japanese": "他のことが気になり、注意が向かない様子。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2083,6 +2314,7 @@ const IDIOMS = [
     "japanese": "次の働きに向けて十分に休養を取る。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2092,6 +2324,7 @@ const IDIOMS = [
     "japanese": "今までの態度を改めて気を引き締める。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2101,6 +2334,7 @@ const IDIOMS = [
     "japanese": "いい加減にして、その場を繕う。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2110,6 +2344,7 @@ const IDIOMS = [
     "japanese": "同じ分野。近い立場。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "同じ土俵で戦う。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2119,6 +2354,7 @@ const IDIOMS = [
     "japanese": "後まで影響が残る。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2128,6 +2364,7 @@ const IDIOMS = [
     "japanese": "予期した状態。",
     "yomi": "",
     "category": "その他あ行",
+    "superCategory": "その他の慣用句",
     "example": "ここであきらめたら、敵の思うつぼだ。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2137,6 +2374,7 @@ const IDIOMS = [
     "japanese": "存在が目立たない。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2146,6 +2384,7 @@ const IDIOMS = [
     "japanese": "おもてに出なくなる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2155,6 +2394,7 @@ const IDIOMS = [
     "japanese": "力のある人に頼っていばる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2164,6 +2404,7 @@ const IDIOMS = [
     "japanese": "どこからともなく伝わってくるうわさ。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2173,6 +2414,7 @@ const IDIOMS = [
     "japanese": "緊張してことの成り行きを見守る。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "固唾をのんで合否の結果発表を見守る。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2182,6 +2424,7 @@ const IDIOMS = [
     "japanese": "ひいきにする。味方をする。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2191,6 +2434,7 @@ const IDIOMS = [
     "japanese": "周囲からの評価が高くなる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "文化祭の発表で、吹奏楽部の株が上がった。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2200,6 +2444,7 @@ const IDIOMS = [
     "japanese": "（悪い）計画に加わり力をかす。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2209,6 +2454,7 @@ const IDIOMS = [
     "japanese": "人間関係がぎこちないものになる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2218,6 +2464,7 @@ const IDIOMS = [
     "japanese": "降参する。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2227,6 +2474,7 @@ const IDIOMS = [
     "japanese": "聞きたいことを自ら言うようにしむける。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2236,6 +2484,7 @@ const IDIOMS = [
     "japanese": "自分の世界にこもり心を開かない。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2245,6 +2494,7 @@ const IDIOMS = [
     "japanese": "がまんができなくなる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2254,6 +2504,7 @@ const IDIOMS = [
     "japanese": "すぐに。間を置かずに。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "質問に間髪をいれず答える。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2263,6 +2514,7 @@ const IDIOMS = [
     "japanese": "気遣いがいらない。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "「油断ができない」という意味ではない。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2272,6 +2524,7 @@ const IDIOMS = [
     "japanese": "はずかしい。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2281,6 +2534,7 @@ const IDIOMS = [
     "japanese": "心配のために心が落ち着かない。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "明日の試合のことを思うと、気が気でない。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2290,6 +2544,7 @@ const IDIOMS = [
     "japanese": "せっかちだ。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2299,6 +2554,7 @@ const IDIOMS = [
     "japanese": "憂鬱な気分になる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "雨の日が続くと気がめいってしまう。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2308,6 +2564,7 @@ const IDIOMS = [
     "japanese": "心配で、心が落ち着かない。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2317,6 +2574,7 @@ const IDIOMS = [
     "japanese": "不満だ。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2326,6 +2584,7 @@ const IDIOMS = [
     "japanese": "周囲にこまかく注意を払う。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2335,6 +2594,7 @@ const IDIOMS = [
     "japanese": "人の心の奥に触れ、感動をあたえる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2344,6 +2604,7 @@ const IDIOMS = [
     "japanese": "後で問題が生じないように念を押す。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2353,6 +2614,7 @@ const IDIOMS = [
     "japanese": "どちらか一方の勝ちが決定する。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2362,6 +2624,7 @@ const IDIOMS = [
     "japanese": "危険な状態であることを知らせる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2371,6 +2634,7 @@ const IDIOMS = [
     "japanese": "程度や数量にたいへん違いがある。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2380,6 +2644,7 @@ const IDIOMS = [
     "japanese": "生計を立てる。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2389,6 +2654,7 @@ const IDIOMS = [
     "japanese": "決着がつく。",
     "yomi": "",
     "category": "その他か行",
+    "superCategory": "その他の慣用句",
     "example": "和歌・俳句の最後に「けり」を使うことから。紛争にけりがつく。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2398,6 +2664,7 @@ const IDIOMS = [
     "japanese": "実現させるのが不可能な物事をあきらめる。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2407,6 +2674,7 @@ const IDIOMS = [
     "japanese": "くやしくて足ぶみをする。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "先を越され、じだんだを踏んで悔しがる。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2416,6 +2684,7 @@ const IDIOMS = [
     "japanese": "お互いに激しく競い合う。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "「しのぎ」とは、刀の刃と峰の中間の少し盛り上がった部分のこと。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2425,6 +2694,7 @@ const IDIOMS = [
     "japanese": "待ちきれなくなる。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2434,6 +2704,7 @@ const IDIOMS = [
     "japanese": "細かいことまで突き止めたり、指摘したりする。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2443,6 +2714,7 @@ const IDIOMS = [
     "japanese": "どちらが強いかを決める。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2452,6 +2724,7 @@ const IDIOMS = [
     "japanese": "連続して連なっていること。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "入場者が数珠つなぎに並んでいる。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2461,6 +2734,7 @@ const IDIOMS = [
     "japanese": "知っていても知らないふりをする。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2470,6 +2744,7 @@ const IDIOMS = [
     "japanese": "全力をあげて何かに取り組む。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2479,6 +2754,7 @@ const IDIOMS = [
     "japanese": "何のおもしろみもない。味気ない。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2488,6 +2764,7 @@ const IDIOMS = [
     "japanese": "いい気になる。つけあがる。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2497,6 +2774,7 @@ const IDIOMS = [
     "japanese": "あなどれない。抜け目がない。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2506,6 +2784,7 @@ const IDIOMS = [
     "japanese": "熱心に働く。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "部活の練習に精を出す。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2515,6 +2794,7 @@ const IDIOMS = [
     "japanese": "力を出しきって、気力がなくなる。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "三日間の大会の運営で、精も根も尽きた。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2524,6 +2804,7 @@ const IDIOMS = [
     "japanese": "おさえられていたものが、勢いよく動きだす様子。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2533,6 +2814,7 @@ const IDIOMS = [
     "japanese": "貯えがなくなる。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2542,6 +2824,7 @@ const IDIOMS = [
     "japanese": "仲がよくない。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2551,6 +2834,7 @@ const IDIOMS = [
     "japanese": "実社会で苦労して、ずるくなること。",
     "yomi": "",
     "category": "その他さ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2560,6 +2844,7 @@ const IDIOMS = [
     "japanese": "まちがいのないことを保証する。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2569,6 +2854,7 @@ const IDIOMS = [
     "japanese": "安全な場所で何もせずに見ていること。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2578,6 +2864,7 @@ const IDIOMS = [
     "japanese": "大したことはないだろうと見くびる。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2587,6 +2874,7 @@ const IDIOMS = [
     "japanese": "すらすらとよどみなく話す様子。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2596,6 +2884,7 @@ const IDIOMS = [
     "japanese": "わざと触れずにすます。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2605,6 +2894,7 @@ const IDIOMS = [
     "japanese": "がっかりして意欲が減退する。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2614,6 +2904,7 @@ const IDIOMS = [
     "japanese": "手助けする。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2623,6 +2914,7 @@ const IDIOMS = [
     "japanese": "筋道が通っている。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2632,6 +2924,7 @@ const IDIOMS = [
     "japanese": "どうすればいいかわからなくて困る。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2641,6 +2934,7 @@ const IDIOMS = [
     "japanese": "冷淡で相手にしてくれない。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2650,6 +2944,7 @@ const IDIOMS = [
     "japanese": "取り上げるだけの価値がない。",
     "yomi": "",
     "category": "その他た行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2659,6 +2954,7 @@ const IDIOMS = [
     "japanese": "全体の勢いに乗り、さらに進める。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "「流れに逆らう」の意味で使うのは誤り。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2668,6 +2964,7 @@ const IDIOMS = [
     "japanese": "はっきりしない。どっちつかずである。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2677,6 +2974,7 @@ const IDIOMS = [
     "japanese": "平穏な生活や状態が破られる。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2686,6 +2984,7 @@ const IDIOMS = [
     "japanese": "大事なところだけ注意して、さっと読む。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2695,6 +2994,7 @@ const IDIOMS = [
     "japanese": "悔しさをこらえる。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2704,6 +3004,7 @@ const IDIOMS = [
     "japanese": "あきれて次に言う言葉が出ない。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2713,6 +3014,7 @@ const IDIOMS = [
     "japanese": "前の人と同じ失敗をすること。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2722,6 +3024,7 @@ const IDIOMS = [
     "japanese": "のぼせあがって夢中になる。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2731,6 +3034,7 @@ const IDIOMS = [
     "japanese": "我慢しきれず降参する。",
     "yomi": "",
     "category": "その他な行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2740,6 +3044,7 @@ const IDIOMS = [
     "japanese": "どちらが得か、はかりに掛けて比べる。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2749,6 +3054,7 @@ const IDIOMS = [
     "japanese": "びくびくしながら危険を冒す。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2758,6 +3064,7 @@ const IDIOMS = [
     "japanese": "いきいきと会話が進む。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2767,6 +3074,7 @@ const IDIOMS = [
     "japanese": "相談や交渉ごとがまとまる。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2776,6 +3084,7 @@ const IDIOMS = [
     "japanese": "思いのままに勢力をふるう。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2785,6 +3094,7 @@ const IDIOMS = [
     "japanese": "気をつかって接する様子。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2794,6 +3104,7 @@ const IDIOMS = [
     "japanese": "ふつうのやり方では思うようにならない。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2803,6 +3114,7 @@ const IDIOMS = [
     "japanese": "さらに勢いづける。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2812,6 +3124,7 @@ const IDIOMS = [
     "japanese": "戦いなどを激しく争う。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2821,6 +3134,7 @@ const IDIOMS = [
     "japanese": "戦いなどを開始する。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2830,6 +3144,7 @@ const IDIOMS = [
     "japanese": "予想外の事態に張り合いがなくなること。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "案外簡単にできたので、拍子抜けした。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2839,6 +3154,7 @@ const IDIOMS = [
     "japanese": "うちとけて話し合う。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2848,6 +3164,7 @@ const IDIOMS = [
     "japanese": "一生懸命に働く。",
     "yomi": "",
     "category": "その他は行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2857,6 +3174,7 @@ const IDIOMS = [
     "japanese": "例を挙げきれないほど多い。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2866,6 +3184,7 @@ const IDIOMS = [
     "japanese": "物事を終わりにする。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2875,6 +3194,7 @@ const IDIOMS = [
     "japanese": "いくら待ち続けても。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "待てど暮らせど、返事が返ってこない。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2884,6 +3204,7 @@ const IDIOMS = [
     "japanese": "なかったことにする。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2893,6 +3214,7 @@ const IDIOMS = [
     "japanese": "努力がむだになること。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2902,6 +3224,7 @@ const IDIOMS = [
     "japanese": "じゃまをする。仲のよい間柄を不和にする。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2911,6 +3234,7 @@ const IDIOMS = [
     "japanese": "相手の気持ちをある方向へと誘いかける。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2920,6 +3244,7 @@ const IDIOMS = [
     "japanese": "露骨すぎて味もそっけもない。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2929,6 +3254,7 @@ const IDIOMS = [
     "japanese": "言葉で表すことができない。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2938,6 +3264,7 @@ const IDIOMS = [
     "japanese": "①手に入れる。②技術などを身につける。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "②練習して、手話をものにした。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2947,6 +3274,7 @@ const IDIOMS = [
     "japanese": "非難・攻撃の対象となる。",
     "yomi": "",
     "category": "その他ま行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2956,6 +3284,7 @@ const IDIOMS = [
     "japanese": "次々に行うこと。",
     "yomi": "",
     "category": "その他や行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2965,6 +3294,7 @@ const IDIOMS = [
     "japanese": "万一の的中を考えにして何かをする。",
     "yomi": "",
     "category": "その他や行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2974,6 +3304,7 @@ const IDIOMS = [
     "japanese": "ある人を攻撃の対象とする。",
     "yomi": "",
     "category": "その他や行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2983,6 +3314,7 @@ const IDIOMS = [
     "japanese": "権力者に反抗する。",
     "yomi": "",
     "category": "その他や行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -2992,6 +3324,7 @@ const IDIOMS = [
     "japanese": "はかどらない。物事のきまりがつかない。",
     "yomi": "",
     "category": "その他や行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -3001,6 +3334,7 @@ const IDIOMS = [
     "japanese": "一つのことだけに熱中する。",
     "yomi": "",
     "category": "その他わ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -3010,6 +3344,7 @@ const IDIOMS = [
     "japanese": "制限や制約を加える。",
     "yomi": "",
     "category": "その他わ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -3019,6 +3354,7 @@ const IDIOMS = [
     "japanese": "ちょうど都合のよいことに出会う。",
     "yomi": "",
     "category": "その他わ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -3028,6 +3364,7 @@ const IDIOMS = [
     "japanese": "損になる。",
     "yomi": "",
     "category": "その他わ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
@@ -3037,6 +3374,7 @@ const IDIOMS = [
     "japanese": "さらに程度を大きくする。",
     "yomi": "",
     "category": "その他わ行",
+    "superCategory": "その他の慣用句",
     "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
