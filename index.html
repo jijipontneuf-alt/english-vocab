@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>英単語トレーニング</title>
-  <link rel="stylesheet" href="style.css?v=5">
+  <title>英語・国語トレーニング</title>
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -14,13 +14,15 @@
 <div id="screen-home" class="screen active">
   <div class="home-header">
     <div class="home-logo" id="home-logo">英</div>
-    <h1 class="home-title">英単語トレーニング</h1>
+    <h1 class="home-title">英語・国語トレーニング</h1>
     <p class="home-sub" id="home-sub">難関私立高校入試レベル</p>
   </div>
 
-  <div class="mode-selector">
+  <div class="mode-selector mode-selector-grid">
     <button class="mode-btn" id="mode-btn-high" onclick="App.switchMode('high')">🎯 高校受験</button>
     <button class="mode-btn" id="mode-btn-jhs" onclick="App.switchMode('jhs')">📚 中学定期試験</button>
+    <button class="mode-btn" id="mode-btn-idiom" onclick="App.switchMode('idiom')">🎭 慣用句</button>
+    <button class="mode-btn" id="mode-btn-proverb" onclick="App.switchMode('proverb')">🦊 ことわざ</button>
   </div>
 
   <div class="stats-row" id="home-stats">
@@ -95,12 +97,12 @@
       <button class="menu-card card-green" onclick="App.openFlashcardEnJa()">
         <span class="menu-icon">🃏</span>
         <span class="menu-title">フラッシュカード</span>
-        <span class="menu-sub">英 → 日</span>
+        <span class="menu-sub" id="unit-menu-fc1-sub">英 → 日</span>
       </button>
       <button class="menu-card card-green" onclick="App.openFlashcardJaEn()">
         <span class="menu-icon">🃏</span>
         <span class="menu-title">フラッシュカード</span>
-        <span class="menu-sub">日 → 英</span>
+        <span class="menu-sub" id="unit-menu-fc2-sub">日 → 英</span>
       </button>
       <button class="menu-card card-purple" onclick="App.openQuizForCategory()">
         <span class="menu-icon">❓</span>
@@ -296,8 +298,10 @@
   </div>
 </div>
 
-<script src="words.js?v=5"></script>
-<script src="words_jhs.js?v=5"></script>
-<script src="app.js?v=5"></script>
+<script src="words.js?v=6"></script>
+<script src="words_jhs.js?v=6"></script>
+<script src="idioms.js?v=6"></script>
+<script src="proverbs.js?v=6"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

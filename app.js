@@ -4,10 +4,17 @@
    進捗保存: localStorage
 ══════════════════════════════════════════════ */
 
-// ─── Mode (高校受験 / 中学定期試験) ────────────
+// ─── Mode (4 modes: 高校受験 / 中学定期試験 / 慣用句 / ことわざ) ────
 const MODE_KEY = "eitango_mode";
-let MODE = localStorage.getItem(MODE_KEY) || "high"; // "high" | "jhs"
-let WORDS_ACTIVE = (MODE === "jhs" ? (typeof WORDS_JHS !== "undefined" ? WORDS_JHS : []) : WORDS);
+let MODE = localStorage.getItem(MODE_KEY) || "high"; // "high" | "jhs" | "idiom" | "proverb"
+
+function dataForMode(m) {
+  if (m === "jhs")     return typeof WORDS_JHS  !== "undefined" ? WORDS_JHS  : [];
+  if (m === "idiom")   return typeof IDIOMS    !== "undefined" ? IDIOMS    : [];
+  if (m === "proverb") return typeof PROVERBS  !== "undefined" ? PROVERBS  : [];
+  return WORDS;
+}
+let WORDS_ACTIVE = dataForMode(MODE);
 
 const MODE_CONFIG = {
   high: {
@@ -15,12 +22,44 @@ const MODE_CONFIG = {
     sectionTitle: "品詞別",
     progressKey: "eitango_progress_v1",
     logo: "英",
+    promptLabel: "英 → 日",
+    reverseLabel: "日 → 英",
+    speakLang: "en-US",
+    headerClass: "",
+    unit: "語",
   },
   jhs: {
     subtitle: "中学定期試験 (NEW HORIZON)",
     sectionTitle: "学年・Unit別",
     progressKey: "eitango_progress_jhs_v1",
     logo: "中",
+    promptLabel: "英 → 日",
+    reverseLabel: "日 → 英",
+    speakLang: "en-US",
+    headerClass: "jhs",
+    unit: "語",
+  },
+  idiom: {
+    subtitle: "慣用句",
+    sectionTitle: "部位・分類別",
+    progressKey: "eitango_progress_idiom_v1",
+    logo: "慣",
+    promptLabel: "慣用句 → 意味",
+    reverseLabel: "意味 → 慣用句",
+    speakLang: "ja-JP",
+    headerClass: "idiom",
+    unit: "句",
+  },
+  proverb: {
+    subtitle: "ことわざ",
+    sectionTitle: "五十音別",
+    progressKey: "eitango_progress_proverb_v1",
+    logo: "諺",
+    promptLabel: "ことわざ → 意味",
+    reverseLabel: "意味 → ことわざ",
+    speakLang: "ja-JP",
+    headerClass: "proverb",
+    unit: "句",
   },
 };
 
@@ -72,7 +111,8 @@ function speak(text) {
   if (!window.speechSynthesis) return;
   window.speechSynthesis.cancel();
   const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = "en-US"; utt.rate = 0.85;
+  utt.lang = MODE_CONFIG[MODE].speakLang || "en-US";
+  utt.rate = 0.9;
   window.speechSynthesis.speak(utt);
 }
 
@@ -137,6 +177,24 @@ function catIcon(cat) {
     if (cat.startsWith("中3")) return "📘";
     return "📖";
   }
+  if (MODE === "idiom") {
+    const BODY_ICON = {
+      "目":"👁","耳":"👂","口":"👄","鼻":"👃","手":"✋","足":"🦶",
+      "顔":"😀","頭":"🧠","肩":"💪","腕":"💪","腹":"🤰","身":"🧍",
+      "胸":"💞","肝":"🫀","歯":"🦷","首":"💆","顎":"😬","頬":"😊",
+      "尻":"🍑","腰":"🕺","骨":"🦴","まゆ":"🤨","へそ":"🪀","爪":"💅",
+      "脇":"🤷","膝":"🦵","喉":"🗣","舌":"👅",
+      "動物":"🐾","草花":"🌸","言葉":"💬",
+    };
+    if (BODY_ICON[cat]) return BODY_ICON[cat];
+    if (cat.startsWith("その他")) return "🗂";
+    return "🎭";
+  }
+  if (MODE === "proverb") {
+    const ICONS = {"あ行":"🅰️","か行":"🅱️","さ行":"🆎","た行":"🆑","な行":"🆒",
+                   "は行":"🆓","ま行":"🆔","や行":"🆕","ら行":"🆖","わ行":"🆗"};
+    return ICONS[cat] || "🦊";
+  }
   return CAT_ICONS_HIGH[cat] || "📖";
 }
 function gradeOrder(g) {
@@ -167,6 +225,30 @@ function getCategories() {
       if (typeof na === "number" && typeof nb === "number") return na - nb;
       return String(na).localeCompare(String(nb));
     });
+  }
+  if (MODE === "idiom") {
+    // Body parts → ranked by usage; その他* by 五十音; misc at end
+    const BODY = ["目","耳","口","鼻","手","足","顔","頭","肩","腕","胸","腹",
+                  "身","肝","歯","首","顎","頬","尻","腰","骨","まゆ","へそ",
+                  "爪","脇","膝","喉","舌"];
+    const MISC = ["動物","草花","言葉"];
+    const SONO = ["その他あ行","その他か行","その他さ行","その他た行","その他な行",
+                  "その他は行","その他ま行","その他や行","その他わ行"];
+    function rank(c) {
+      let i = BODY.indexOf(c);   if (i >= 0) return [0, i];
+      i = MISC.indexOf(c);       if (i >= 0) return [1, i];
+      i = SONO.indexOf(c);       if (i >= 0) return [2, i];
+      return [3, c];
+    }
+    return cats.sort((a, b) => {
+      const [ka, na] = rank(a), [kb, nb] = rank(b);
+      if (ka !== kb) return ka - kb;
+      return typeof na === "number" ? na - nb : String(na).localeCompare(String(nb));
+    });
+  }
+  if (MODE === "proverb") {
+    const ORDER = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"];
+    return cats.sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
   }
   return cats.sort();
 }
@@ -200,11 +282,16 @@ const App = {
     $("home-sub").textContent = cfg.subtitle;
     $("home-logo").textContent = cfg.logo;
     $("category-section-title").textContent = cfg.sectionTitle;
-    document.querySelector(".home-header").classList.toggle("jhs", MODE === "jhs");
-    const btnHigh = $("mode-btn-high"), btnJhs = $("mode-btn-jhs");
-    btnHigh.classList.toggle("active", MODE === "high");
-    btnJhs.classList.toggle("active", MODE === "jhs");
-    btnJhs.classList.toggle("jhs", MODE === "jhs");
+    const header = document.querySelector(".home-header");
+    header.classList.remove("jhs", "idiom", "proverb");
+    if (cfg.headerClass) header.classList.add(cfg.headerClass);
+    const modes = ["high", "jhs", "idiom", "proverb"];
+    for (const m of modes) {
+      const btn = $(`mode-btn-${m}`);
+      btn.classList.toggle("active", MODE === m);
+      btn.classList.remove("jhs", "idiom", "proverb");
+      if (MODE === m && MODE_CONFIG[m].headerClass) btn.classList.add(MODE_CONFIG[m].headerClass);
+    }
 
     $("stat-total").textContent = WORDS_ACTIVE.length;
     $("stat-studied").textContent = Store.studiedCount();
@@ -226,7 +313,7 @@ const App = {
     const weak = Store.weakWords();
     if (weak.length > 0) {
       $("weak-section").style.display = "block";
-      $("weak-count-label").textContent = `苦手 ${weak.length}語`;
+      $("weak-count-label").textContent = `苦手 ${weak.length}${cfg.unit}`;
     } else {
       $("weak-section").style.display = "none";
     }
@@ -236,7 +323,7 @@ const App = {
     if (mode === MODE) return;
     MODE = mode;
     localStorage.setItem(MODE_KEY, MODE);
-    WORDS_ACTIVE = (MODE === "jhs" ? (typeof WORDS_JHS !== "undefined" ? WORDS_JHS : []) : WORDS);
+    WORDS_ACTIVE = dataForMode(MODE);
     Store.reload();
     this.goHome();
   },
@@ -244,8 +331,11 @@ const App = {
   _openCategoryMenu(cat) {
     unitMenuCategory = cat;
     $("unit-menu-title").textContent = cat;
+    const cfg = MODE_CONFIG[MODE];
     const count = WORDS_ACTIVE.filter(w => w.category === cat).length;
-    $("unit-menu-count").textContent = `${count}語`;
+    $("unit-menu-count").textContent = `${count}${cfg.unit}`;
+    $("unit-menu-fc1-sub").textContent = cfg.promptLabel;
+    $("unit-menu-fc2-sub").textContent = cfg.reverseLabel;
     showScreen("screen-unit-menu");
   },
 
@@ -337,18 +427,22 @@ const App = {
     fcIsEnToJa = mode !== "ja2en";
     fcWords = shuffle(category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
     fcIdx = 0; fcFlipped = false;
-    const modeLabel = fcIsEnToJa ? "英→日" : "日→英";
-    $("fc-title").textContent = category ? `${category}（${modeLabel}）` : `フラッシュカード（${modeLabel}）`;
-    $("fc-mode-btn").textContent = fcIsEnToJa ? "英 → 日" : "日 → 英";
+    this._updateFcLabels();
     this._renderFC();
     showScreen("screen-flashcard");
   },
 
+  _updateFcLabels() {
+    const cfg = MODE_CONFIG[MODE];
+    const label = fcIsEnToJa ? cfg.promptLabel : cfg.reverseLabel;
+    $("fc-mode-btn").textContent = label;
+    const titleSuf = `（${label.replace(/\s*→\s*/, "→")}）`;
+    $("fc-title").textContent = fcCategory ? `${fcCategory}${titleSuf}` : `フラッシュカード${titleSuf}`;
+  },
+
   toggleFcMode() {
     fcIsEnToJa = !fcIsEnToJa;
-    $("fc-mode-btn").textContent = fcIsEnToJa ? "英 → 日" : "日 → 英";
-    const modeLabel = fcIsEnToJa ? "英→日" : "日→英";
-    $("fc-title").textContent = fcCategory ? `${fcCategory}（${modeLabel}）` : `フラッシュカード（${modeLabel}）`;
+    this._updateFcLabels();
     this._renderFC();
   },
 
@@ -404,15 +498,26 @@ const App = {
     let pool = category === "weak"
       ? Store.weakWords()
       : (category ? WORDS_ACTIVE.filter(w => w.category === category) : WORDS_ACTIVE);
+    if (pool.length < 4) {
+      alert("4択クイズには4件以上の語彙が必要です。");
+      this.goHome();
+      return;
+    }
     quizWords = shuffle(pool).slice(0, 20);
     quizIdx = 0;
+    this._updateQuizModeLabel();
     this._renderQuizQuestion();
     showScreen("screen-quiz");
   },
 
+  _updateQuizModeLabel() {
+    const cfg = MODE_CONFIG[MODE];
+    $("quiz-mode-btn").textContent = quizIsEnToJa ? cfg.promptLabel : cfg.reverseLabel;
+  },
+
   toggleQuizMode() {
     quizIsEnToJa = !quizIsEnToJa;
-    $("quiz-mode-btn").textContent = quizIsEnToJa ? "英→日" : "日→英";
+    this._updateQuizModeLabel();
   },
 
   _renderQuizQuestion() {

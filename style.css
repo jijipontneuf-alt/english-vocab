@@ -51,7 +51,7 @@ html, body {
 .home-title { font-size: 1.4rem; font-weight: 800; }
 .home-sub { margin-top: 4px; font-size: 0.85rem; opacity: 0.8; }
 
-/* Mode toggle for 高校受験 / 中学定期試験 */
+/* Mode toggle */
 .mode-selector {
   display: flex;
   gap: 8px;
@@ -59,8 +59,12 @@ html, body {
   background: white;
   border-bottom: 1px solid var(--border);
 }
+.mode-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
 .mode-btn {
-  flex: 1;
   padding: 10px 8px;
   border: 1.5px solid var(--border);
   background: white;
@@ -72,6 +76,7 @@ html, body {
   transition: all 0.15s;
   -webkit-appearance: none;
 }
+.mode-selector:not(.mode-selector-grid) .mode-btn { flex: 1; }
 .mode-btn:active { transform: scale(0.97); }
 .mode-btn.active {
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 100%);
@@ -83,8 +88,22 @@ html, body {
   background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
   box-shadow: 0 2px 8px rgba(4, 120, 87, 0.25);
 }
+.mode-btn.active.idiom {
+  background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+}
+.mode-btn.active.proverb {
+  background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
+}
 .home-header.jhs {
   background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
+}
+.home-header.idiom {
+  background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
+}
+.home-header.proverb {
+  background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
 }
 
 /* yomi (katakana pronunciation) on flashcard back */
