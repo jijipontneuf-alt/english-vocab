@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>英語・国語トレーニング</title>
-  <link rel="stylesheet" href="style.css?v=8">
+  <title>英語・国語・歴史トレーニング</title>
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -14,25 +14,26 @@
 <div id="screen-home" class="screen active">
   <div class="home-header">
     <div class="home-logo" id="home-logo">英</div>
-    <h1 class="home-title">英語・国語トレーニング</h1>
+    <h1 class="home-title">英語・国語・歴史トレーニング</h1>
     <p class="home-sub" id="home-sub">難関私立高校入試レベル</p>
   </div>
 
   <div class="mode-selector mode-selector-grid">
-    <button class="mode-btn" id="mode-btn-high" onclick="App.switchMode('high')">🎯 高校受験</button>
-    <button class="mode-btn" id="mode-btn-jhs" onclick="App.switchMode('jhs')">📚 中学定期試験</button>
+    <button class="mode-btn" id="mode-btn-high" onclick="App.switchMode('high')">🎯 英語・高校受験</button>
+    <button class="mode-btn" id="mode-btn-jhs" onclick="App.switchMode('jhs')">📚 英語・中学定期試験</button>
     <button class="mode-btn" id="mode-btn-idiom" onclick="App.switchMode('idiom')">🎭 慣用句</button>
     <button class="mode-btn" id="mode-btn-proverb" onclick="App.switchMode('proverb')">🦊 ことわざ</button>
+    <button class="mode-btn mode-btn-wide" id="mode-btn-history" onclick="App.switchMode('history')">🗓 歴史年表</button>
   </div>
 
   <div class="stats-row" id="home-stats">
     <div class="stat-box">
       <span class="stat-num" id="stat-total">0</span>
-      <span class="stat-label">総単語数</span>
+      <span class="stat-label" id="stat-total-label">総単語数</span>
     </div>
     <div class="stat-box">
       <span class="stat-num" id="stat-studied">0</span>
-      <span class="stat-label">学習済み</span>
+      <span class="stat-label" id="stat-studied-label">学習済み</span>
     </div>
     <div class="stat-box">
       <span class="stat-num" id="stat-acc">0%</span>
@@ -43,13 +44,13 @@
   <div class="menu-grid">
     <button class="menu-card card-blue" onclick="App.openWordList()">
       <span class="menu-icon">📚</span>
-      <span class="menu-title">単語一覧</span>
-      <span class="menu-sub">全カテゴリ</span>
+      <span class="menu-title" id="home-list-title">単語一覧</span>
+      <span class="menu-sub" id="home-list-sub">全カテゴリ</span>
     </button>
     <button class="menu-card card-green" onclick="App.openFlashcard(null)">
       <span class="menu-icon">🃏</span>
       <span class="menu-title">フラッシュカード</span>
-      <span class="menu-sub">全単語</span>
+      <span class="menu-sub" id="home-flash-sub">全単語</span>
     </button>
     <button class="menu-card card-purple" onclick="App.openQuiz(null)">
       <span class="menu-icon">❓</span>
@@ -63,15 +64,27 @@
     </button>
   </div>
 
-  <div class="category-section">
+  <div class="category-section" id="category-section">
     <h2 class="section-title" id="category-section-title">カテゴリ別</h2>
     <div class="category-grid" id="category-grid"></div>
+  </div>
+
+  <div class="history-range-section" id="history-range-section" style="display:none">
+    <div class="history-range-head">
+      <h2 class="section-title">出題範囲</h2>
+      <div class="history-range-actions">
+        <button type="button" onclick="App.selectAllHistorySections()">全選択</button>
+        <button type="button" onclick="App.clearHistorySections()">全解除</button>
+      </div>
+    </div>
+    <div class="history-selected-count" id="history-selected-count"></div>
+    <div class="history-range-tree" id="history-range-tree"></div>
   </div>
 
   <div class="weak-section" id="weak-section" style="display:none">
     <button class="menu-card card-red" onclick="App.openQuiz('weak')" style="width:100%">
       <span class="menu-icon">⚠️</span>
-      <span class="menu-title">苦手単語クイズ</span>
+      <span class="menu-title" id="weak-menu-title">苦手単語クイズ</span>
       <span class="menu-sub" id="weak-count-label">―</span>
     </button>
   </div>
@@ -171,7 +184,7 @@
 
   <div class="fc-actions">
     <button class="fc-btn btn-wrong" onclick="App.fcRecord(false)">✗ わからない</button>
-    <button class="fc-btn btn-speak" onclick="App.speakCurrent()">🔊</button>
+    <button class="fc-btn btn-speak" id="fc-speak-btn" onclick="App.speakCurrent()">🔊</button>
     <button class="fc-btn btn-correct" onclick="App.fcRecord(true)">✓ わかった</button>
   </div>
   <div class="fc-nav-row">
@@ -197,7 +210,7 @@
         <button class="mode-tab" id="quiz-mode-en2ja" onclick="App.setQuizMode(true)">英 → 日</button>
         <button class="mode-tab" id="quiz-mode-ja2en" onclick="App.setQuizMode(false)">日 → 英</button>
       </div>
-      <button class="fc-btn btn-speak" onclick="App.speakQuizWord()" style="padding:6px 14px;font-size:18px">🔊</button>
+      <button class="fc-btn btn-speak" id="quiz-speak-btn" onclick="App.speakQuizWord()" style="padding:6px 14px;font-size:18px">🔊</button>
     </div>
 
     <div class="quiz-question" id="quiz-question"></div>
@@ -230,6 +243,32 @@
     <div class="result-btns">
       <button class="btn-primary" onclick="App.retryQuiz()">もう一度</button>
       <button class="btn-secondary" onclick="App.goHome()">ホームに戻る</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     SCREEN: TIME ATTACK SETUP
+══════════════════════════════════ -->
+<div id="screen-timeattack-setup" class="screen">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="App.goHome()">← ホーム</button>
+    <span class="nav-title">タイムアタック</span>
+    <div style="width:60px"></div>
+  </div>
+  <div class="ta-setup-body">
+    <div class="ta-setup-title">出題方向を選ぶ</div>
+    <div class="ta-setup-actions">
+      <button class="menu-card card-orange" onclick="App.startTimeAttack(true)">
+        <span class="menu-icon">⏱</span>
+        <span class="menu-title" id="ta-setup-forward-title">英 → 日</span>
+        <span class="menu-sub">60秒で挑戦</span>
+      </button>
+      <button class="menu-card card-orange" onclick="App.startTimeAttack(false)">
+        <span class="menu-icon">⏱</span>
+        <span class="menu-title" id="ta-setup-reverse-title">日 → 英</span>
+        <span class="menu-sub">60秒で挑戦</span>
+      </button>
     </div>
   </div>
 </div>
@@ -302,10 +341,11 @@
   </div>
 </div>
 
-<script src="words.js?v=8"></script>
-<script src="words_jhs.js?v=8"></script>
-<script src="idioms.js?v=8"></script>
-<script src="proverbs.js?v=8"></script>
-<script src="app.js?v=8"></script>
+<script src="words.js?v=10"></script>
+<script src="words_jhs.js?v=10"></script>
+<script src="idioms.js?v=10"></script>
+<script src="proverbs.js?v=10"></script>
+<script src="history.js?v=10"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>

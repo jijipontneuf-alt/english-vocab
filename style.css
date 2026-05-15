@@ -64,6 +64,7 @@ html, body {
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
+.mode-btn-wide { grid-column: 1 / -1; }
 .mode-btn {
   padding: 10px 8px;
   border: 1.5px solid var(--border);
@@ -96,6 +97,10 @@ html, body {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
   box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
 }
+.mode-btn.active.history {
+  background: linear-gradient(135deg, #0F766E 0%, #0EA5A8 100%);
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
+}
 .home-header.jhs {
   background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
 }
@@ -104,6 +109,9 @@ html, body {
 }
 .home-header.proverb {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
+}
+.home-header.history {
+  background: linear-gradient(135deg, #0F766E 0%, #0EA5A8 100%);
 }
 
 /* yomi (katakana pronunciation) on flashcard back */
@@ -154,6 +162,10 @@ body.mode-proverb .mode-tab.active {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
   box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
 }
+body.mode-history .mode-tab.active {
+  background: linear-gradient(135deg, #0F766E 0%, #0EA5A8 100%);
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
+}
 
 /* Super category card highlight (慣用句 大カテゴリ) */
 .cat-card-super {
@@ -200,6 +212,22 @@ body.mode-proverb .mode-tab.active {
 }
 .ta-cancel-btn:active { transform: scale(0.96); }
 #screen-timeattack { position: relative; }
+.ta-setup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px;
+}
+.ta-setup-title {
+  color: var(--sub);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+.ta-setup-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
 
 .stats-row {
   display: flex;
@@ -238,6 +266,96 @@ body.mode-proverb .mode-tab.active {
 .card-red    { background: linear-gradient(135deg,#7F1D1D,#EF4444); }
 
 .category-section { padding: 0 16px 16px; }
+.history-range-section { padding: 0 16px 16px; }
+.history-range-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.history-range-actions {
+  display: flex;
+  gap: 6px;
+}
+.history-range-actions button {
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--sub);
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.history-selected-count {
+  color: var(--sub);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.history-range-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.history-chapter {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.history-chapter-disabled {
+  background: #F8FAFC;
+}
+.history-disabled-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  color: var(--sub);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+.history-chapter summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+.history-chapter summary::-webkit-details-marker { display: none; }
+.history-chapter summary::after {
+  content: "▾";
+  margin-left: auto;
+  color: var(--sub);
+  transition: transform 0.15s;
+}
+.history-chapter:not([open]) summary::after { transform: rotate(-90deg); }
+.history-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0 12px 12px 34px;
+}
+.history-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.history-check-row input {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+.history-section-count {
+  color: var(--sub);
+  white-space: nowrap;
+}
 .section-title {
   font-size: 0.85rem; font-weight: 700;
   color: var(--sub); text-transform: uppercase;
@@ -349,6 +467,10 @@ body.mode-proverb .mode-tab.active {
   backface-visibility: hidden;
   transition: transform .5s cubic-bezier(.4,0,.2,1);
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.card-3d.no-transition .card-front,
+.card-3d.no-transition .card-back {
+  transition: none;
 }
 .card-front {
   background: linear-gradient(135deg, var(--blue), var(--blue2));

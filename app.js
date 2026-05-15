@@ -4,14 +4,15 @@
    進捗保存: localStorage
 ══════════════════════════════════════════════ */
 
-// ─── Mode (4 modes: 高校受験 / 中学定期試験 / 慣用句 / ことわざ) ────
+// ─── Mode (高校受験 / 中学定期試験 / 慣用句 / ことわざ / 歴史年表) ────
 const MODE_KEY = "eitango_mode";
-let MODE = localStorage.getItem(MODE_KEY) || "high"; // "high" | "jhs" | "idiom" | "proverb"
+let MODE = localStorage.getItem(MODE_KEY) || "high";
 
 function dataForMode(m) {
   if (m === "jhs")     return typeof WORDS_JHS  !== "undefined" ? WORDS_JHS  : [];
   if (m === "idiom")   return typeof IDIOMS    !== "undefined" ? IDIOMS    : [];
   if (m === "proverb") return typeof PROVERBS  !== "undefined" ? PROVERBS  : [];
+  if (m === "history") return typeof HISTORY_ITEMS !== "undefined" ? HISTORY_ITEMS : [];
   return WORDS;
 }
 let WORDS_ACTIVE = dataForMode(MODE);
@@ -27,6 +28,11 @@ const MODE_CONFIG = {
     speakLang: "en-US",
     headerClass: "",
     unit: "語",
+    itemName: "単語",
+    totalLabel: "総単語数",
+    listTitle: "単語一覧",
+    listSub: "全カテゴリ",
+    flashSub: "全単語",
   },
   jhs: {
     subtitle: "中学定期試験 (NEW HORIZON)",
@@ -38,6 +44,11 @@ const MODE_CONFIG = {
     speakLang: "en-US",
     headerClass: "jhs",
     unit: "語",
+    itemName: "単語",
+    totalLabel: "総単語数",
+    listTitle: "単語一覧",
+    listSub: "全カテゴリ",
+    flashSub: "全単語",
   },
   idiom: {
     subtitle: "慣用句",
@@ -49,6 +60,11 @@ const MODE_CONFIG = {
     speakLang: "ja-JP",
     headerClass: "idiom",
     unit: "句",
+    itemName: "慣用句",
+    totalLabel: "総句数",
+    listTitle: "慣用句一覧",
+    listSub: "全カテゴリ",
+    flashSub: "全慣用句",
   },
   proverb: {
     subtitle: "ことわざ",
@@ -60,8 +76,57 @@ const MODE_CONFIG = {
     speakLang: "ja-JP",
     headerClass: "proverb",
     unit: "句",
+    itemName: "ことわざ",
+    totalLabel: "総句数",
+    listTitle: "ことわざ一覧",
+    listSub: "全カテゴリ",
+    flashSub: "全ことわざ",
+  },
+  history: {
+    subtitle: "中学歴史 年表問題",
+    sectionTitle: "出題範囲",
+    progressKey: "history_timeline_progress_v1",
+    logo: "歴",
+    promptLabel: "年 → 出来事",
+    reverseLabel: "出来事 → 年",
+    speakLang: "ja-JP",
+    headerClass: "history",
+    unit: "件",
+    itemName: "年表項目",
+    totalLabel: "対象項目数",
+    listTitle: "年表一覧",
+    listSub: "選択範囲",
+    flashSub: "選択範囲",
   },
 };
+
+function itemKey(item) {
+  return typeof item === "string" ? item : (item.id || item.english);
+}
+
+const HISTORY_SCOPE_KEY = "history_selected_sections_v1";
+function allHistorySectionIds() {
+  return typeof HISTORY_SECTIONS === "undefined"
+    ? []
+    : HISTORY_SECTIONS.flatMap(chapter => chapter.sections.map(section => section.id));
+}
+function loadHistorySelection() {
+  const all = allHistorySectionIds();
+  try {
+    const saved = JSON.parse(localStorage.getItem(HISTORY_SCOPE_KEY));
+    return Array.isArray(saved) ? saved.filter(id => all.includes(id)) : all;
+  } catch {
+    return all;
+  }
+}
+let historySelectedSections = new Set(loadHistorySelection());
+function saveHistorySelection() {
+  localStorage.setItem(HISTORY_SCOPE_KEY, JSON.stringify([...historySelectedSections]));
+}
+function learningPool() {
+  if (MODE !== "history") return WORDS_ACTIVE;
+  return WORDS_ACTIVE.filter(item => historySelectedSections.has(item.sectionId));
+}
 
 // ─── Progress store ───────────────────────────
 const Store = (() => {
@@ -74,30 +139,38 @@ const Store = (() => {
   function save() {
     localStorage.setItem(currentKey(), JSON.stringify(data));
   }
-  function get(english) {
-    return data[english] || { correct: 0, incorrect: 0 };
+  function get(item) {
+    return data[itemKey(item)] || { correct: 0, incorrect: 0 };
   }
-  function record(english, correct) {
-    if (!data[english]) data[english] = { correct: 0, incorrect: 0 };
-    correct ? data[english].correct++ : data[english].incorrect++;
+  function record(item, correct) {
+    const key = itemKey(item);
+    if (!data[key]) data[key] = { correct: 0, incorrect: 0 };
+    correct ? data[key].correct++ : data[key].incorrect++;
     save();
   }
   function reset() { data = {}; save(); }
   function studiedCount() {
-    return Object.values(data).filter(d => (d.correct + d.incorrect) > 0).length;
+    return learningPool().filter(item => {
+      const d = get(item);
+      return (d.correct + d.incorrect) > 0;
+    }).length;
   }
   function overallAccuracy() {
     let c = 0, t = 0;
-    Object.values(data).forEach(d => { c += d.correct; t += d.correct + d.incorrect; });
+    learningPool().forEach(item => {
+      const d = get(item);
+      c += d.correct;
+      t += d.correct + d.incorrect;
+    });
     return t > 0 ? Math.round(c / t * 100) : 0;
   }
   function weakWords() {
-    return WORDS_ACTIVE.filter(w => {
-      const d = get(w.english);
+    return learningPool().filter(w => {
+      const d = get(w);
       const total = d.correct + d.incorrect;
       return total >= 3 && (d.correct / total) < 0.6;
     }).sort((a, b) => {
-      const da = get(a.english), db = get(b.english);
+      const da = get(a), db = get(b);
       const ta = da.correct + da.incorrect, tb = db.correct + db.incorrect;
       return (da.correct / ta) - (db.correct / tb);
     });
@@ -127,14 +200,83 @@ function shuffle(arr) {
 }
 function $(id) { return document.getElementById(id); }
 
-/* Pick `n` plausible distractors for the correct word.
-   Strategy: prefer same category, then nearby length on the displayed side,
-   then fall back to any non-duplicate. */
+function historyYearValue(label) {
+  let m = label.match(/^紀元前(\d+)年/);
+  if (m) return -parseInt(m[1], 10);
+  m = label.match(/^紀元前(\d+)世紀/);
+  if (m) return -((parseInt(m[1], 10) - 1) * 100 + 50);
+  m = label.match(/^(\d+)世紀/);
+  if (m) return (parseInt(m[1], 10) - 1) * 100 + 50;
+  m = label.match(/^(\d+)年/);
+  if (m) return parseInt(m[1], 10);
+  return Number.POSITIVE_INFINITY;
+}
+
+function historyEventKind(text) {
+  const endings = [
+    "が始まる",
+    "が起こる",
+    "が成立する",
+    "が結ばれる",
+    "が行われる",
+    "が定められる",
+    "が出される",
+    "が公布される",
+    "が発布される",
+    "が伝わる",
+    "を移す",
+    "が開かれる",
+    "になる",
+    "を始める",
+  ];
+  return endings.find(ending => text.endsWith(ending)) || "";
+}
+
+function historyDistractorScore(correct, candidate, isEnToJa) {
+  let score = 0;
+  if (candidate.sectionId === correct.sectionId) score += 120;
+  else if (candidate.chapterId === correct.chapterId) score += 60;
+
+  const correctYear = historyYearValue(correct.english);
+  const candidateYear = historyYearValue(candidate.english);
+  if (Number.isFinite(correctYear) && Number.isFinite(candidateYear)) {
+    const distance = Math.abs(correctYear - candidateYear);
+    score += Math.max(0, 50 - Math.min(distance, 50));
+  }
+
+  if (isEnToJa) {
+    const correctKind = historyEventKind(correct.japanese);
+    const candidateKind = historyEventKind(candidate.japanese);
+    if (correctKind && correctKind === candidateKind) score += 18;
+  }
+  return score;
+}
+
+/* Pick `n` plausible distractors for the correct item.
+   History prefers same section/chapter and nearby years.
+   Other modes keep the older category + displayed-length heuristic. */
 function pickDistractors(correct, n, isEnToJa, usedLabels) {
   const pool = [];
+  const source = learningPool();
+  if (MODE === "history") {
+    const ranked = source
+      .filter(x => itemKey(x) !== itemKey(correct))
+      .map(x => ({ x, score: historyDistractorScore(correct, x, isEnToJa) }))
+      .sort((a, b) => b.score - a.score || Math.random() - 0.5);
+
+    for (const { x } of ranked) {
+      const label = isEnToJa ? x.japanese : x.english;
+      if (!label || usedLabels.has(label)) continue;
+      usedLabels.add(label);
+      pool.push(x);
+      if (pool.length >= n) break;
+    }
+    return pool;
+  }
+
   const refLen = (isEnToJa ? correct.japanese : correct.english).length;
-  const same = WORDS_ACTIVE.filter(x =>
-    x.category === correct.category && x.english !== correct.english
+  const same = source.filter(x =>
+    x.category === correct.category && itemKey(x) !== itemKey(correct)
   );
   const byCloseness = same
     .map(x => ({ x, d: Math.abs((isEnToJa ? x.japanese : x.english).length - refLen) }))
@@ -148,8 +290,8 @@ function pickDistractors(correct, n, isEnToJa, usedLabels) {
     if (pool.length >= n) break;
   }
   if (pool.length < n) {
-    for (const x of shuffle(WORDS_ACTIVE)) {
-      if (x.english === correct.english) continue;
+    for (const x of shuffle(source)) {
+      if (itemKey(x) === itemKey(correct)) continue;
       const label = isEnToJa ? x.japanese : x.english;
       if (!label || usedLabels.has(label)) continue;
       usedLabels.add(label);
@@ -182,6 +324,7 @@ function wordsInCategory(cat) {
   return WORDS_ACTIVE.filter(w => w.category === cat);
 }
 function catIcon(cat) {
+  if (MODE === "history") return "🗓";
   if (MODE === "jhs") {
     if (cat.startsWith("中1")) return "📕";
     if (cat.startsWith("中2")) return "📗";
@@ -228,8 +371,8 @@ function unitOrder(u) {
   if (m2) return [1, parseInt(m2[1], 10)];
   return [2, u];
 }
-function getCategories() {
-  const cats = [...new Set(WORDS_ACTIVE.map(w => w.category))];
+function getCategories(source = WORDS_ACTIVE) {
+  const cats = [...new Set(source.map(w => w.category))];
   if (MODE === "jhs") {
     return cats.sort((a, b) => {
       const [ga, ...ra] = a.split(" ");
@@ -268,6 +411,11 @@ function getCategories() {
     const ORDER = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"];
     return cats.sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
   }
+  if (MODE === "history") {
+    return (typeof HISTORY_SECTIONS === "undefined" ? [] : HISTORY_SECTIONS)
+      .flatMap(chapter => chapter.sections.map(section => `${chapter.title} / ${section.title}`))
+      .filter(cat => cats.includes(cat));
+  }
   return cats.sort();
 }
 
@@ -301,22 +449,34 @@ const App = {
     $("home-logo").textContent = cfg.logo;
     $("category-section-title").textContent = cfg.sectionTitle;
     const header = document.querySelector(".home-header");
-    header.classList.remove("jhs", "idiom", "proverb");
+    header.classList.remove("jhs", "idiom", "proverb", "history");
     if (cfg.headerClass) header.classList.add(cfg.headerClass);
-    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb");
+    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb", "mode-history");
     document.body.classList.add(`mode-${MODE}`);
-    const modes = ["high", "jhs", "idiom", "proverb"];
+    const modes = ["high", "jhs", "idiom", "proverb", "history"];
     for (const m of modes) {
       const btn = $(`mode-btn-${m}`);
       btn.classList.toggle("active", MODE === m);
-      btn.classList.remove("jhs", "idiom", "proverb");
+      btn.classList.remove("jhs", "idiom", "proverb", "history");
       if (MODE === m && MODE_CONFIG[m].headerClass) btn.classList.add(MODE_CONFIG[m].headerClass);
     }
 
-    $("stat-total").textContent = WORDS_ACTIVE.length;
+    const pool = learningPool();
+    $("stat-total").textContent = pool.length;
+    $("stat-total-label").textContent = cfg.totalLabel;
+    $("stat-studied-label").textContent = "学習済み";
     $("stat-studied").textContent = Store.studiedCount();
     $("stat-acc").textContent = Store.overallAccuracy() + "%";
+    $("home-list-title").textContent = cfg.listTitle;
+    $("home-list-sub").textContent = cfg.listSub;
+    $("home-flash-sub").textContent = cfg.flashSub;
+    $("weak-menu-title").textContent = `苦手${cfg.itemName}クイズ`;
+    $("fc-speak-btn").style.display = MODE === "history" ? "none" : "";
+    $("quiz-speak-btn").style.display = MODE === "history" ? "none" : "";
 
+    $("category-section").style.display = MODE === "history" ? "none" : "block";
+    $("history-range-section").style.display = MODE === "history" ? "block" : "none";
+    if (MODE === "history") this._renderHistoryRange();
     const grid = $("category-grid");
     grid.innerHTML = "";
     getCategories().forEach(cat => {
@@ -349,6 +509,72 @@ const App = {
     this.goHome();
   },
 
+  _renderHistoryRange() {
+    if (typeof HISTORY_SECTIONS === "undefined") return;
+    const tree = $("history-range-tree");
+    const nonTimelineRows = (typeof HISTORY_NON_TIMELINE_CHAPTERS === "undefined" ? [] : HISTORY_NON_TIMELINE_CHAPTERS)
+      .map(chapter => `
+        <div class="history-chapter history-chapter-disabled">
+          <div class="history-disabled-row">
+            <span>${chapter.title}</span>
+            <span class="history-section-count">${chapter.note}</span>
+          </div>
+        </div>`)
+      .join("");
+    const selectableRows = HISTORY_SECTIONS.map((chapter) => {
+      const selectedCount = chapter.sections.filter(section => historySelectedSections.has(section.id)).length;
+      const allChecked = selectedCount === chapter.sections.length;
+      const sectionRows = chapter.sections.map((section) => {
+        const count = HISTORY_ITEMS.filter(item => item.sectionId === section.id).length;
+        const checked = historySelectedSections.has(section.id) ? " checked" : "";
+        return `
+          <label class="history-check-row">
+            <input type="checkbox"${checked} onchange="App.toggleHistorySection('${section.id}', this.checked)">
+            <span>${section.title}</span>
+            <span class="history-section-count">${count}件</span>
+          </label>`;
+      }).join("");
+      return `
+        <details class="history-chapter" open>
+          <summary>
+            <input type="checkbox"${allChecked ? " checked" : ""} onchange="App.toggleHistoryChapter('${chapter.id}', this.checked); event.stopPropagation();">
+            <span>${chapter.title}</span>
+          </summary>
+          <div class="history-sections">${sectionRows}</div>
+        </details>`;
+    }).join("");
+    tree.innerHTML = nonTimelineRows + selectableRows;
+    $("history-selected-count").textContent = `選択中: ${historySelectedSections.size}節 / ${learningPool().length}件`;
+  },
+
+  toggleHistorySection(sectionId, checked) {
+    checked ? historySelectedSections.add(sectionId) : historySelectedSections.delete(sectionId);
+    saveHistorySelection();
+    this._renderHome();
+  },
+
+  toggleHistoryChapter(chapterId, checked) {
+    const chapter = HISTORY_SECTIONS.find(item => item.id === chapterId);
+    if (!chapter) return;
+    chapter.sections.forEach(section => checked
+      ? historySelectedSections.add(section.id)
+      : historySelectedSections.delete(section.id));
+    saveHistorySelection();
+    this._renderHome();
+  },
+
+  selectAllHistorySections() {
+    historySelectedSections = new Set(allHistorySectionIds());
+    saveHistorySelection();
+    this._renderHome();
+  },
+
+  clearHistorySections() {
+    historySelectedSections = new Set();
+    saveHistorySelection();
+    this._renderHome();
+  },
+
   _openCategoryMenu(cat) {
     unitMenuCategory = cat;
     $("unit-menu-title").textContent = cat;
@@ -379,19 +605,21 @@ const App = {
 
   // ── WORD LIST ────────────────────────────
   openWordList() {
-    $("wordlist-title").textContent = "単語一覧";
+    const cfg = MODE_CONFIG[MODE];
+    const source = learningPool();
+    $("wordlist-title").textContent = cfg.listTitle;
     const sel = $("cat-filter");
     sel.innerHTML = '<option value="">すべて</option>';
-    getCategories().forEach(c => sel.innerHTML += `<option value="${c}">${c}</option>`);
+    getCategories(source).forEach(c => sel.innerHTML += `<option value="${c}">${c}</option>`);
     $("search-input").value = "";
-    this._renderWordList(WORDS_ACTIVE);
+    this._renderWordList(source);
     showScreen("screen-wordlist");
   },
 
   filterWords() {
     const q = $("search-input").value.toLowerCase();
     const cat = $("cat-filter").value;
-    const filtered = WORDS_ACTIVE.filter(w =>
+    const filtered = learningPool().filter(w =>
       (!cat || w.category === cat) &&
       (!q || w.english.toLowerCase().includes(q) || w.japanese.includes(q))
     );
@@ -400,9 +628,9 @@ const App = {
 
   _renderWordList(words) {
     const c = $("word-list-container");
-    if (words.length === 0) { c.innerHTML = "<p style='padding:20px;text-align:center;color:#94A3B8'>該当する単語がありません</p>"; return; }
+    if (words.length === 0) { c.innerHTML = `<p style='padding:20px;text-align:center;color:#94A3B8'>該当する${MODE_CONFIG[MODE].itemName}がありません</p>`; return; }
     c.innerHTML = words.map((w, i) => {
-      const d = Store.get(w.english);
+      const d = Store.get(w);
       const total = d.correct + d.incorrect;
       const accHtml = total > 0
         ? `<span class="wr-acc ${d.correct/total >= 0.7 ? 'acc-good' : 'acc-bad'}">${Math.round(d.correct/total*100)}%</span>`
@@ -446,7 +674,12 @@ const App = {
   openFlashcard(category, mode) {
     fcCategory = category || null;
     fcIsEnToJa = mode !== "ja2en";
-    fcWords = shuffle(category ? wordsInCategory(category) : WORDS_ACTIVE);
+    fcWords = shuffle(category ? wordsInCategory(category) : learningPool());
+    if (!fcWords.length) {
+      alert("学習する範囲を1つ以上選んでください。");
+      this.goHome();
+      return;
+    }
     fcIdx = 0; fcFlipped = false;
     this._updateFcLabels();
     this._renderFC();
@@ -474,6 +707,10 @@ const App = {
   _renderFC() {
     const w = fcWords[fcIdx];
     if (!w) return;
+    const card = $("fc-card");
+    card.classList.add("no-transition");
+    card.classList.remove("flipped");
+    void card.offsetWidth;
     $("fc-front-cat").textContent = w.category;
     $("fc-back-cat").textContent = w.category;
     if (fcIsEnToJa) {
@@ -490,8 +727,8 @@ const App = {
     $("fc-counter").textContent = `${fcIdx + 1} / ${fcWords.length}`;
     const pct = (fcIdx / fcWords.length * 100).toFixed(1);
     $("fc-progress-fill").style.width = pct + "%";
-    $("fc-card").classList.remove("flipped");
     fcFlipped = false;
+    requestAnimationFrame(() => card.classList.remove("no-transition"));
   },
 
   flipCard() {
@@ -507,7 +744,7 @@ const App = {
     if (fcIdx > 0) { fcIdx--; this._renderFC(); }
   },
   fcRecord(correct) {
-    if (fcWords[fcIdx]) Store.record(fcWords[fcIdx].english, correct);
+    if (fcWords[fcIdx]) Store.record(fcWords[fcIdx], correct);
     this.fcNext();
   },
   speakCurrent() {
@@ -522,9 +759,9 @@ const App = {
     quizCorrect = 0;
     let pool = category === "weak"
       ? Store.weakWords()
-      : (category ? wordsInCategory(category) : WORDS_ACTIVE);
+      : (category ? wordsInCategory(category) : learningPool());
     if (pool.length < 4) {
-      alert("4択クイズには4件以上の語彙が必要です。");
+      alert(`4択クイズには4${MODE_CONFIG[MODE].unit}以上の${MODE_CONFIG[MODE].itemName}が必要です。`);
       this.goHome();
       return;
     }
@@ -570,7 +807,7 @@ const App = {
     const c = $("quiz-choices");
     c.innerHTML = opts.map(opt => {
       const label = quizIsEnToJa ? opt.japanese : opt.english;
-      return `<button class="choice-btn" onclick="App._quizAnswer('${opt.english.replace(/'/g, "\\'")}')">${label}</button>`;
+      return `<button class="choice-btn" onclick="App._quizAnswer('${itemKey(opt).replace(/'/g, "\\'")}')">${label}</button>`;
     }).join("");
   },
 
@@ -579,12 +816,12 @@ const App = {
     if (w) speak(w.english);
   },
 
-  _quizAnswer(english) {
+  _quizAnswer(key) {
     if (quizAnswered) return;
     quizAnswered = true;
     const correct = quizWords[quizIdx];
-    const isRight = english === correct.english;
-    Store.record(correct.english, isRight);
+    const isRight = key === itemKey(correct);
+    Store.record(correct, isRight);
     if (isRight) quizCorrect++;
     else quizWrong.push(correct);
 
@@ -592,12 +829,10 @@ const App = {
     document.querySelectorAll(".choice-btn").forEach(btn => {
       const label = btn.textContent;
       const isCorrectLabel = quizIsEnToJa ? label === correct.japanese : label === correct.english;
-      const isSelected = quizIsEnToJa ? label === WORDS_ACTIVE.find(w => w.english === english)?.japanese
-                                       : label === english;
+      const selected = learningPool().find(w => itemKey(w) === key);
+      const isSelected = quizIsEnToJa ? label === selected?.japanese : label === selected?.english;
       if (isCorrectLabel) btn.classList.add("correct");
-      else if (!isRight && btn.textContent === (quizIsEnToJa
-        ? WORDS_ACTIVE.find(w => w.english === english)?.japanese
-        : english)) btn.classList.add("wrong");
+      else if (!isRight && isSelected) btn.classList.add("wrong");
       else if (!isCorrectLabel) btn.classList.add("dim");
       btn.disabled = true;
     });
@@ -625,7 +860,8 @@ const App = {
     $("result-msg").textContent = pct >= 90 ? "🎉 素晴らしい！" : pct >= 70 ? "👍 よくできました" : pct >= 50 ? "📖 もう少し頑張ろう" : "💪 復習しましょう";
     const ws = $("result-wrong-section");
     if (quizWrong.length > 0) {
-      ws.innerHTML = `<div class="wrong-title">✗ ミスした単語（${quizWrong.length}語）</div>` +
+      const cfg = MODE_CONFIG[MODE];
+      ws.innerHTML = `<div class="wrong-title">✗ ミスした${cfg.itemName}（${quizWrong.length}${cfg.unit}）</div>` +
         quizWrong.map(w => `
           <div class="wrong-row">
             <div class="wrong-en">${w.english}</div>
@@ -643,12 +879,19 @@ const App = {
   // ── TIME ATTACK ──────────────────────────
   openTimeAttack(category) {
     taCategory = category || null;
-    const pool = taCategory ? wordsInCategory(taCategory) : WORDS_ACTIVE;
+    const pool = taCategory ? wordsInCategory(taCategory) : learningPool();
     if (pool.length < 4) {
-      alert("このユニットは語数が少なすぎてタイムアタックを開けません（4語以上必要）。");
+      alert(`タイムアタックには4${MODE_CONFIG[MODE].unit}以上の${MODE_CONFIG[MODE].itemName}が必要です。`);
       return;
     }
-    taIsEnToJa = Math.random() > 0.5;
+    const cfg = MODE_CONFIG[MODE];
+    $("ta-setup-forward-title").textContent = cfg.promptLabel;
+    $("ta-setup-reverse-title").textContent = cfg.reverseLabel;
+    showScreen("screen-timeattack-setup");
+  },
+
+  startTimeAttack(toEnJa) {
+    taIsEnToJa = toEnJa;
     taWrong = [];
     taPendingRecords = [];
     taScore = 0; taCombo = 0; taMaxCombo = 0;
@@ -687,7 +930,7 @@ const App = {
   },
 
   _taStart() {
-    taWords = shuffle(WORDS_ACTIVE);
+    taWords = shuffle(learningPool());
     taAnswered = false;
     $("ta-score").textContent = "0";
     $("ta-combo").textContent = "×1";
@@ -715,7 +958,7 @@ const App = {
 
   _taNextQuestion() {
     taAnswered = false;
-    const sourcePool = taCategory ? wordsInCategory(taCategory) : WORDS_ACTIVE;
+    const sourcePool = taCategory ? wordsInCategory(taCategory) : learningPool();
     const idx = Math.floor(Math.random() * sourcePool.length);
     const correct = sourcePool[idx];
     const usedLabels = new Set([taIsEnToJa ? correct.japanese : correct.english]);
@@ -728,24 +971,25 @@ const App = {
     const c = $("ta-choices");
     c.innerHTML = opts.map(opt => {
       const label = taIsEnToJa ? opt.japanese : opt.english;
-      return `<button class="ta-choice-btn" onclick="App._taAnswer('${opt.english.replace(/'/g, "\\'")}')">${label}</button>`;
+      return `<button class="ta-choice-btn" onclick="App._taAnswer('${itemKey(opt).replace(/'/g, "\\'")}')">${label}</button>`;
     }).join("");
   },
 
-  _taAnswer(english) {
+  _taAnswer(key) {
     if (taAnswered || !taTimer) return;
     taAnswered = true;
-    const correct = WORDS_ACTIVE.find(w => w.english === taWords[0].english);
-    const isRight = english === correct.english;
-    taPendingRecords.push([correct.english, isRight]);
+    const correct = taWords[0];
+    const isRight = key === itemKey(correct);
+    taPendingRecords.push([correct, isRight]);
 
     // 色付け
     document.querySelectorAll(".ta-choice-btn").forEach(btn => {
       const label = btn.textContent;
       const isCorrectLabel = taIsEnToJa ? label === correct.japanese : label === correct.english;
+      const selected = learningPool().find(w => itemKey(w) === key);
+      const isSelected = taIsEnToJa ? label === selected?.japanese : label === selected?.english;
       if (isCorrectLabel) btn.classList.add("correct");
-      else if (!isRight && label === (taIsEnToJa
-        ? WORDS_ACTIVE.find(w => w.english === english)?.japanese : english)) btn.classList.add("wrong");
+      else if (!isRight && isSelected) btn.classList.add("wrong");
       else btn.classList.add("dim");
       btn.disabled = true;
     });
@@ -771,7 +1015,7 @@ const App = {
     clearInterval(taTimer); taTimer = null;
     $("ta-cancel-btn").style.display = "none";
     // Commit buffered records (skipped on cancel)
-    for (const [eng, ok] of taPendingRecords) Store.record(eng, ok);
+    for (const [item, ok] of taPendingRecords) Store.record(item, ok);
     taPendingRecords = [];
     const rank = taScore >= 20 ? "S" : taScore >= 15 ? "A" : taScore >= 10 ? "B" : taScore >= 5 ? "C" : "D";
     const rankColors = { S:"#F59E0B", A:"#10B981", B:"#3B82F6", C:"#A855F7", D:"#6B7280" };
@@ -782,8 +1026,9 @@ const App = {
     $("ta-result-combo").textContent = "×" + taMaxCombo;
     const ws = $("ta-wrong-section");
     if (taWrong.length > 0) {
-      ws.innerHTML = `<div class="wrong-title">✗ ミスした単語（${taWrong.length}語）</div>` +
-        [...new Map(taWrong.map(w => [w.english, w])).values()].map(w => `
+      const cfg = MODE_CONFIG[MODE];
+      ws.innerHTML = `<div class="wrong-title">✗ ミスした${cfg.itemName}（${taWrong.length}${cfg.unit}）</div>` +
+        [...new Map(taWrong.map(w => [itemKey(w), w])).values()].map(w => `
           <div class="wrong-row">
             <div class="wrong-en">${w.english}</div>
             <div class="wrong-ja">${w.japanese}</div>
@@ -795,7 +1040,7 @@ const App = {
     showScreen("screen-ta-result");
   },
 
-  retryTimeAttack() { this.openTimeAttack(); },
+  retryTimeAttack() { this.startTimeAttack(taIsEnToJa); },
 
 };  // end App
 
