@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>英語・国語・歴史トレーニング</title>
-  <link rel="stylesheet" href="style.css?v=10">
+  <title>英語・国語・社会トレーニング</title>
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 <div id="screen-home" class="screen active">
   <div class="home-header">
     <div class="home-logo" id="home-logo">英</div>
-    <h1 class="home-title">英語・国語・歴史トレーニング</h1>
+    <h1 class="home-title">英語・国語・社会トレーニング</h1>
     <p class="home-sub" id="home-sub">難関私立高校入試レベル</p>
   </div>
 
@@ -23,7 +23,11 @@
     <button class="mode-btn" id="mode-btn-jhs" onclick="App.switchMode('jhs')">📚 英語・中学定期試験</button>
     <button class="mode-btn" id="mode-btn-idiom" onclick="App.switchMode('idiom')">🎭 慣用句</button>
     <button class="mode-btn" id="mode-btn-proverb" onclick="App.switchMode('proverb')">🦊 ことわざ</button>
-    <button class="mode-btn mode-btn-wide" id="mode-btn-history" onclick="App.switchMode('history')">🗓 歴史年表</button>
+    <button class="mode-btn" id="mode-btn-history" onclick="App.switchMode('history')">🗓 歴史年表</button>
+    <button class="mode-btn" id="mode-btn-geo-periodic" onclick="App.switchMode('geo-periodic')">🧭 地理・定期テスト</button>
+    <button class="mode-btn" id="mode-btn-geo-national" onclick="App.switchMode('geo-national')">🌏 地理・全国上位校</button>
+    <button class="mode-btn" id="mode-btn-geo-aichi-public" onclick="App.switchMode('geo-aichi-public')">🏫 地理・愛知公立上位</button>
+    <button class="mode-btn mode-btn-wide" id="mode-btn-geo-aichi-private" onclick="App.switchMode('geo-aichi-private')">🎓 地理・愛知私立上位</button>
   </div>
 
   <div class="stats-row" id="home-stats">
@@ -73,12 +77,18 @@
     <div class="history-range-head">
       <h2 class="section-title">出題範囲</h2>
       <div class="history-range-actions">
-        <button type="button" onclick="App.selectAllHistorySections()">全選択</button>
-        <button type="button" onclick="App.clearHistorySections()">全解除</button>
+        <button type="button" onclick="App.selectAllScopeSections()">全選択</button>
+        <button type="button" onclick="App.clearScopeSections()">全解除</button>
       </div>
     </div>
     <div class="history-selected-count" id="history-selected-count"></div>
     <div class="history-range-tree" id="history-range-tree"></div>
+  </div>
+
+  <div class="geo-link-section" id="geo-link-section" style="display:none">
+    <a class="geo-link-btn" href="https://tsubaki-social-geo.jijipontneuf.workers.dev/" target="_blank" rel="noreferrer">
+      図表つき地理サイトへ
+    </a>
   </div>
 
   <div class="weak-section" id="weak-section" style="display:none">
@@ -341,11 +351,15 @@
   </div>
 </div>
 
-<script src="words.js?v=10"></script>
-<script src="words_jhs.js?v=10"></script>
-<script src="idioms.js?v=10"></script>
-<script src="proverbs.js?v=10"></script>
-<script src="history.js?v=10"></script>
-<script src="app.js?v=10"></script>
+<script src="words.js?v=16"></script>
+<script src="words_jhs.js?v=16"></script>
+<script src="idioms.js?v=16"></script>
+<script src="proverbs.js?v=16"></script>
+<script src="history.js?v=16"></script>
+<script src="geography_periodic.js?v=16"></script>
+<script src="geography_national.js?v=16"></script>
+<script src="geography_aichi_public.js?v=16"></script>
+<script src="geography_aichi_private.js?v=16"></script>
+<script src="app.js?v=16"></script>
 </body>
 </html>

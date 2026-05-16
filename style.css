@@ -101,6 +101,22 @@ html, body {
   background: linear-gradient(135deg, #0F766E 0%, #0EA5A8 100%);
   box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
 }
+.mode-btn.active.geo-periodic {
+  background: linear-gradient(135deg, #166534 0%, #65A30D 100%);
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.25);
+}
+.mode-btn.active.geo-national {
+  background: linear-gradient(135deg, #9A3412 0%, #EA580C 100%);
+  box-shadow: 0 2px 8px rgba(154, 52, 18, 0.25);
+}
+.mode-btn.active.geo-aichi-public {
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%);
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+}
+.mode-btn.active.geo-aichi-private {
+  background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
+}
 .home-header.jhs {
   background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
 }
@@ -112,6 +128,18 @@ html, body {
 }
 .home-header.history {
   background: linear-gradient(135deg, #0F766E 0%, #0EA5A8 100%);
+}
+.home-header.geo-periodic {
+  background: linear-gradient(135deg, #166534 0%, #65A30D 100%);
+}
+.home-header.geo-national {
+  background: linear-gradient(135deg, #9A3412 0%, #EA580C 100%);
+}
+.home-header.geo-aichi-public {
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%);
+}
+.home-header.geo-aichi-private {
+  background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
 }
 
 /* yomi (katakana pronunciation) on flashcard back */
@@ -165,6 +193,22 @@ body.mode-proverb .mode-tab.active {
 body.mode-history .mode-tab.active {
   background: linear-gradient(135deg, #0F766E 0%, #0EA5A8 100%);
   box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
+}
+body.mode-geo-periodic .mode-tab.active {
+  background: linear-gradient(135deg, #166534 0%, #65A30D 100%);
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.25);
+}
+body.mode-geo-national .mode-tab.active {
+  background: linear-gradient(135deg, #9A3412 0%, #EA580C 100%);
+  box-shadow: 0 2px 8px rgba(154, 52, 18, 0.25);
+}
+body.mode-geo-aichi-public .mode-tab.active {
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%);
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+}
+body.mode-geo-aichi-private .mode-tab.active {
+  background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
 }
 
 /* Super category card highlight (慣用句 大カテゴリ) */
@@ -355,6 +399,25 @@ body.mode-history .mode-tab.active {
 .history-section-count {
   color: var(--sub);
   white-space: nowrap;
+}
+.geo-link-section {
+  padding: 0 16px 16px;
+}
+.geo-link-btn {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+.geo-link-btn:active {
+  transform: scale(0.98);
 }
 .section-title {
   font-size: 0.85rem; font-weight: 700;

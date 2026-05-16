@@ -4,7 +4,7 @@
    進捗保存: localStorage
 ══════════════════════════════════════════════ */
 
-// ─── Mode (高校受験 / 中学定期試験 / 慣用句 / ことわざ / 歴史年表) ────
+// ─── Mode (英語 / 国語 / 歴史 / 地理) ─────────────────
 const MODE_KEY = "eitango_mode";
 let MODE = localStorage.getItem(MODE_KEY) || "high";
 
@@ -13,6 +13,10 @@ function dataForMode(m) {
   if (m === "idiom")   return typeof IDIOMS    !== "undefined" ? IDIOMS    : [];
   if (m === "proverb") return typeof PROVERBS  !== "undefined" ? PROVERBS  : [];
   if (m === "history") return typeof HISTORY_ITEMS !== "undefined" ? HISTORY_ITEMS : [];
+  if (m === "geo-periodic") return typeof GEOGRAPHY_PERIODIC_ITEMS !== "undefined" ? GEOGRAPHY_PERIODIC_ITEMS : [];
+  if (m === "geo-national") return typeof GEOGRAPHY_NATIONAL_ITEMS !== "undefined" ? GEOGRAPHY_NATIONAL_ITEMS : [];
+  if (m === "geo-aichi-public") return typeof GEOGRAPHY_AICHI_PUBLIC_ITEMS !== "undefined" ? GEOGRAPHY_AICHI_PUBLIC_ITEMS : [];
+  if (m === "geo-aichi-private") return typeof GEOGRAPHY_AICHI_PRIVATE_ITEMS !== "undefined" ? GEOGRAPHY_AICHI_PRIVATE_ITEMS : [];
   return WORDS;
 }
 let WORDS_ACTIVE = dataForMode(MODE);
@@ -98,34 +102,151 @@ const MODE_CONFIG = {
     listSub: "選択範囲",
     flashSub: "選択範囲",
   },
+  "geo-periodic": {
+    subtitle: "社会 地理・定期テスト",
+    sectionTitle: "出題範囲",
+    progressKey: "geography_periodic_progress_v1",
+    logo: "地",
+    promptLabel: "問題 → 用語",
+    reverseLabel: "用語 → 問題",
+    speakLang: "ja-JP",
+    headerClass: "geo-periodic",
+    unit: "問",
+    itemName: "問題",
+    totalLabel: "対象問題数",
+    listTitle: "地理問題一覧",
+    listSub: "選択範囲",
+    flashSub: "選択範囲",
+  },
+  "geo-national": {
+    subtitle: "社会 地理・高校受験 全国上位校",
+    sectionTitle: "出題範囲",
+    progressKey: "geography_national_progress_v1",
+    logo: "地",
+    promptLabel: "問題 → 用語",
+    reverseLabel: "用語 → 問題",
+    speakLang: "ja-JP",
+    headerClass: "geo-national",
+    unit: "問",
+    itemName: "問題",
+    totalLabel: "対象問題数",
+    listTitle: "地理問題一覧",
+    listSub: "選択範囲",
+    flashSub: "選択範囲",
+  },
+  "geo-aichi-public": {
+    subtitle: "社会 地理・愛知県公立上位",
+    sectionTitle: "出題範囲",
+    progressKey: "geography_aichi_public_progress_v1",
+    logo: "地",
+    promptLabel: "問題 → 用語",
+    reverseLabel: "用語 → 問題",
+    speakLang: "ja-JP",
+    headerClass: "geo-aichi-public",
+    unit: "問",
+    itemName: "問題",
+    totalLabel: "対象問題数",
+    listTitle: "地理問題一覧",
+    listSub: "選択範囲",
+    flashSub: "選択範囲",
+  },
+  "geo-aichi-private": {
+    subtitle: "社会 地理・愛知県私立上位",
+    sectionTitle: "出題範囲",
+    progressKey: "geography_aichi_private_progress_v1",
+    logo: "地",
+    promptLabel: "問題 → 用語",
+    reverseLabel: "用語 → 問題",
+    speakLang: "ja-JP",
+    headerClass: "geo-aichi-private",
+    unit: "問",
+    itemName: "問題",
+    totalLabel: "対象問題数",
+    listTitle: "地理問題一覧",
+    listSub: "選択範囲",
+    flashSub: "選択範囲",
+  },
 };
 
 function itemKey(item) {
   return typeof item === "string" ? item : (item.id || item.english);
 }
 
-const HISTORY_SCOPE_KEY = "history_selected_sections_v1";
-function allHistorySectionIds() {
-  return typeof HISTORY_SECTIONS === "undefined"
-    ? []
-    : HISTORY_SECTIONS.flatMap(chapter => chapter.sections.map(section => section.id));
+const SCOPED_MODE_CONFIG = {
+  history: {
+    storageKey: "history_selected_sections_v1",
+    groups: () => typeof HISTORY_SECTIONS === "undefined" ? [] : HISTORY_SECTIONS,
+    disabledGroups: () => typeof HISTORY_NON_TIMELINE_CHAPTERS === "undefined" ? [] : HISTORY_NON_TIMELINE_CHAPTERS,
+  },
+  "geo-periodic": {
+    storageKey: "geography_periodic_selected_sections_v1",
+    groups: () => typeof GEOGRAPHY_PERIODIC_GROUPS === "undefined" ? [] : GEOGRAPHY_PERIODIC_GROUPS,
+    disabledGroups: () => [],
+  },
+  "geo-national": {
+    storageKey: "geography_national_selected_sections_v1",
+    groups: () => typeof GEOGRAPHY_NATIONAL_GROUPS === "undefined" ? [] : GEOGRAPHY_NATIONAL_GROUPS,
+    disabledGroups: () => [],
+  },
+  "geo-aichi-public": {
+    storageKey: "geography_aichi_public_selected_sections_v1",
+    groups: () => typeof GEOGRAPHY_AICHI_PUBLIC_GROUPS === "undefined" ? [] : GEOGRAPHY_AICHI_PUBLIC_GROUPS,
+    disabledGroups: () => [],
+  },
+  "geo-aichi-private": {
+    storageKey: "geography_aichi_private_selected_sections_v1",
+    groups: () => typeof GEOGRAPHY_AICHI_PRIVATE_GROUPS === "undefined" ? [] : GEOGRAPHY_AICHI_PRIVATE_GROUPS,
+    disabledGroups: () => [],
+  },
+};
+function isScopedMode(mode = MODE) {
+  return Boolean(SCOPED_MODE_CONFIG[mode]);
 }
-function loadHistorySelection() {
-  const all = allHistorySectionIds();
+function scopeGroups(mode = MODE) {
+  return isScopedMode(mode) ? SCOPED_MODE_CONFIG[mode].groups() : [];
+}
+function disabledScopeGroups(mode = MODE) {
+  return isScopedMode(mode) ? SCOPED_MODE_CONFIG[mode].disabledGroups() : [];
+}
+function allScopeSectionIds(mode = MODE) {
+  return scopeGroups(mode).flatMap(chapter => chapter.sections.map(section => section.id));
+}
+function loadScopeSelection(mode) {
+  const all = allScopeSectionIds(mode);
   try {
-    const saved = JSON.parse(localStorage.getItem(HISTORY_SCOPE_KEY));
+    const saved = JSON.parse(localStorage.getItem(SCOPED_MODE_CONFIG[mode].storageKey));
     return Array.isArray(saved) ? saved.filter(id => all.includes(id)) : all;
   } catch {
     return all;
   }
 }
-let historySelectedSections = new Set(loadHistorySelection());
-function saveHistorySelection() {
-  localStorage.setItem(HISTORY_SCOPE_KEY, JSON.stringify([...historySelectedSections]));
+const scopedSelections = Object.fromEntries(
+  Object.keys(SCOPED_MODE_CONFIG).map(mode => [mode, new Set(loadScopeSelection(mode))])
+);
+function currentScopeSelection() {
+  return scopedSelections[MODE] || new Set();
+}
+function saveScopeSelection(mode = MODE) {
+  localStorage.setItem(SCOPED_MODE_CONFIG[mode].storageKey, JSON.stringify([...scopedSelections[mode]]));
 }
 function learningPool() {
-  if (MODE !== "history") return WORDS_ACTIVE;
-  return WORDS_ACTIVE.filter(item => historySelectedSections.has(item.sectionId));
+  if (!isScopedMode()) return WORDS_ACTIVE;
+  return WORDS_ACTIVE.filter(item => currentScopeSelection().has(item.sectionId));
+}
+
+function pickQuizItems(pool, count) {
+  if (!["geo-national", "geo-aichi-public", "geo-aichi-private"].includes(MODE)) return shuffle(pool).slice(0, count);
+  const advanced = pool.filter(item => item.tier === "advanced");
+  const foundation = pool.filter(item => item.tier !== "advanced");
+  if (!advanced.length || !foundation.length) return shuffle(pool).slice(0, count);
+  const advancedCount = Math.min(Math.ceil(count * 0.45), advanced.length);
+  const foundationCount = Math.min(count - advancedCount, foundation.length);
+  const fillCount = count - advancedCount - foundationCount;
+  return shuffle([
+    ...shuffle(advanced).slice(0, advancedCount),
+    ...shuffle(foundation).slice(0, foundationCount),
+    ...shuffle(pool).slice(0, fillCount),
+  ]);
 }
 
 // ─── Progress store ───────────────────────────
@@ -252,6 +373,97 @@ function historyDistractorScore(correct, candidate, isEnToJa) {
   return score;
 }
 
+function scopedDistractorScore(correct, candidate, isEnToJa) {
+  let score = 0;
+  if (candidate.sectionId === correct.sectionId) score += 120;
+  else if (candidate.chapterId === correct.chapterId) score += 60;
+
+  if (MODE.startsWith("geo-")) {
+    const correctKind = geographyDistractorKind(correct);
+    const candidateKind = geographyDistractorKind(candidate);
+    if (correctKind && correctKind === candidateKind) score += 280;
+    else if (
+      correctKind &&
+      candidateKind &&
+      geographyKindFamily(correctKind) === geographyKindFamily(candidateKind)
+    ) score += 95;
+  }
+
+  const correctLabel = isEnToJa ? correct.japanese : correct.english;
+  const candidateLabel = isEnToJa ? candidate.japanese : candidate.english;
+  score += Math.max(0, 30 - Math.abs(correctLabel.length - candidateLabel.length));
+  return score;
+}
+
+function geographyDistractorKind(item) {
+  const answer = item.japanese;
+  if (/^(赤道|本初子午線|標準時子午線)$/.test(answer)) return "geo-reference";
+  if (/^(国境|領土|領海|領空|排他的経済水域)$/.test(answer)) return "territory";
+  if (/^(季節風|偏西風|やませ)$/.test(answer)) return "wind";
+  if (/^(フェーン現象|梅雨前線|台風|ハリケーン)$/.test(answer)) return "weather";
+  if (/(気候|気候帯)$/.test(answer) || /^(熱帯|乾燥帯|温帯|冷帯|寒帯)$/.test(answer)) return "climate";
+  if (/(農業|栽培|作物|稲作|酪農|畜産|牧畜|果樹栽培|林業)$/.test(answer)) return "agriculture";
+  if (/(工業地帯|工業地域|太平洋ベルト)$/.test(answer)) return "industrial-area";
+  if (/^(第一次産業|第二次産業|第三次産業)$/.test(answer)) return "industry-sector";
+  if (/(工業|組立型工業)$/.test(answer)) return "industry";
+  if (/平野$/.test(answer)) return "plain";
+  if (/台地$/.test(answer)) return "plateau";
+  if (/海岸$/.test(answer)) return "coast";
+  if (/造山帯$/.test(answer)) return "mountain";
+  if (/山脈$/.test(answer)) return "mountain";
+  if (/川$/.test(answer)) return "river";
+  if (/湖$/.test(answer)) return "lake";
+  if (/(大洋|海)$/.test(answer)) return "sea";
+  if (/(大陸|列島|諸島)$/.test(answer)) return "landform";
+  if (/^(自然災害|少子高齢化|ヒートアイランド現象)$/.test(answer)) return "issue";
+  if (/(EU|ASEAN|ユーロ|協定|通貨|経済特区|開拓使)$/.test(answer)) return "organization";
+  if (/^(北方領土問題|環境問題|都市問題|砂漠化|干ばつ|冷害|過密|過疎)$/.test(answer)) return "issue";
+  if (/(人口集中|都市化|スラム|ヒスパニック|多文化社会)$/.test(answer)) return "population";
+  if (/(石油|鉄鉱石|金|資源)$/.test(answer)) return "resource";
+  if (/地方$/.test(answer)) return "region";
+  if (/^(プレーリー|パンパ)$/.test(answer)) return "grassland";
+  if (/^(セルバ|サバナ|ツンドラ)$/.test(answer)) return "vegetation";
+  if (/^(北大西洋海流|親潮)$/.test(answer)) return "current";
+  if (/^(平地|港|降水量|水蒸気|価格|人工物|消費地)$/.test(answer)) return "concept";
+  if (/^(乾燥して高温になる|通しやすい|穏やか)$/.test(answer)) return "description";
+  if (/(どこか|国はどこ|都市はどこ)/.test(item.english)) return "place";
+  return "";
+}
+
+function geographyKindFamily(kind) {
+  const families = {
+    wind: "atmosphere",
+    weather: "atmosphere",
+    climate: "atmosphere",
+    agriculture: "agriculture",
+    "industrial-area": "industry",
+    "industry-sector": "industry",
+    industry: "industry",
+    plain: "landform",
+    plateau: "landform",
+    coast: "landform",
+    mountain: "landform",
+    river: "landform",
+    lake: "landform",
+    sea: "landform",
+    landform: "landform",
+    issue: "issue",
+    population: "population",
+    resource: "resource",
+    organization: "organization",
+    region: "region",
+    place: "place",
+    "geo-reference": "geo-reference",
+    territory: "territory",
+    grassland: "vegetation",
+    vegetation: "vegetation",
+    current: "current",
+    concept: "concept",
+    description: "description",
+  };
+  return families[kind] || "";
+}
+
 /* Pick `n` plausible distractors for the correct item.
    History prefers same section/chapter and nearby years.
    Other modes keep the older category + displayed-length heuristic. */
@@ -262,6 +474,21 @@ function pickDistractors(correct, n, isEnToJa, usedLabels) {
     const ranked = source
       .filter(x => itemKey(x) !== itemKey(correct))
       .map(x => ({ x, score: historyDistractorScore(correct, x, isEnToJa) }))
+      .sort((a, b) => b.score - a.score || Math.random() - 0.5);
+
+    for (const { x } of ranked) {
+      const label = isEnToJa ? x.japanese : x.english;
+      if (!label || usedLabels.has(label)) continue;
+      usedLabels.add(label);
+      pool.push(x);
+      if (pool.length >= n) break;
+    }
+    return pool;
+  }
+  if (isScopedMode()) {
+    const ranked = source
+      .filter(x => itemKey(x) !== itemKey(correct))
+      .map(x => ({ x, score: scopedDistractorScore(correct, x, isEnToJa) }))
       .sort((a, b) => b.score - a.score || Math.random() - 0.5);
 
     for (const { x } of ranked) {
@@ -325,6 +552,7 @@ function wordsInCategory(cat) {
 }
 function catIcon(cat) {
   if (MODE === "history") return "🗓";
+  if (MODE.startsWith("geo-")) return "🧭";
   if (MODE === "jhs") {
     if (cat.startsWith("中1")) return "📕";
     if (cat.startsWith("中2")) return "📗";
@@ -411,9 +639,11 @@ function getCategories(source = WORDS_ACTIVE) {
     const ORDER = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"];
     return cats.sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
   }
-  if (MODE === "history") {
-    return (typeof HISTORY_SECTIONS === "undefined" ? [] : HISTORY_SECTIONS)
-      .flatMap(chapter => chapter.sections.map(section => `${chapter.title} / ${section.title}`))
+  if (isScopedMode()) {
+    return scopeGroups()
+      .flatMap(chapter => chapter.sections.map(section =>
+        MODE === "history" ? `${chapter.title} / ${section.title}` : section.title
+      ))
       .filter(cat => cats.includes(cat));
   }
   return cats.sort();
@@ -449,15 +679,15 @@ const App = {
     $("home-logo").textContent = cfg.logo;
     $("category-section-title").textContent = cfg.sectionTitle;
     const header = document.querySelector(".home-header");
-    header.classList.remove("jhs", "idiom", "proverb", "history");
+    header.classList.remove("jhs", "idiom", "proverb", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private");
     if (cfg.headerClass) header.classList.add(cfg.headerClass);
-    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb", "mode-history");
+    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb", "mode-history", "mode-geo-periodic", "mode-geo-national", "mode-geo-aichi-public", "mode-geo-aichi-private");
     document.body.classList.add(`mode-${MODE}`);
-    const modes = ["high", "jhs", "idiom", "proverb", "history"];
+    const modes = ["high", "jhs", "idiom", "proverb", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private"];
     for (const m of modes) {
       const btn = $(`mode-btn-${m}`);
       btn.classList.toggle("active", MODE === m);
-      btn.classList.remove("jhs", "idiom", "proverb", "history");
+      btn.classList.remove("jhs", "idiom", "proverb", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private");
       if (MODE === m && MODE_CONFIG[m].headerClass) btn.classList.add(MODE_CONFIG[m].headerClass);
     }
 
@@ -471,12 +701,14 @@ const App = {
     $("home-list-sub").textContent = cfg.listSub;
     $("home-flash-sub").textContent = cfg.flashSub;
     $("weak-menu-title").textContent = `苦手${cfg.itemName}クイズ`;
-    $("fc-speak-btn").style.display = MODE === "history" ? "none" : "";
-    $("quiz-speak-btn").style.display = MODE === "history" ? "none" : "";
+    const hideSpeech = MODE === "history" || MODE.startsWith("geo-");
+    $("fc-speak-btn").style.display = hideSpeech ? "none" : "";
+    $("quiz-speak-btn").style.display = hideSpeech ? "none" : "";
 
-    $("category-section").style.display = MODE === "history" ? "none" : "block";
-    $("history-range-section").style.display = MODE === "history" ? "block" : "none";
-    if (MODE === "history") this._renderHistoryRange();
+    $("category-section").style.display = isScopedMode() ? "none" : "block";
+    $("history-range-section").style.display = isScopedMode() ? "block" : "none";
+    $("geo-link-section").style.display = MODE.startsWith("geo-") ? "block" : "none";
+    if (isScopedMode()) this._renderScopeRange();
     const grid = $("category-grid");
     grid.innerHTML = "";
     getCategories().forEach(cat => {
@@ -509,10 +741,11 @@ const App = {
     this.goHome();
   },
 
-  _renderHistoryRange() {
-    if (typeof HISTORY_SECTIONS === "undefined") return;
+  _renderScopeRange() {
+    if (!isScopedMode()) return;
     const tree = $("history-range-tree");
-    const nonTimelineRows = (typeof HISTORY_NON_TIMELINE_CHAPTERS === "undefined" ? [] : HISTORY_NON_TIMELINE_CHAPTERS)
+    const selectedSections = currentScopeSelection();
+    const disabledRows = disabledScopeGroups()
       .map(chapter => `
         <div class="history-chapter history-chapter-disabled">
           <div class="history-disabled-row">
@@ -521,57 +754,59 @@ const App = {
           </div>
         </div>`)
       .join("");
-    const selectableRows = HISTORY_SECTIONS.map((chapter) => {
-      const selectedCount = chapter.sections.filter(section => historySelectedSections.has(section.id)).length;
+    const selectableRows = scopeGroups().map((chapter) => {
+      const selectedCount = chapter.sections.filter(section => selectedSections.has(section.id)).length;
       const allChecked = selectedCount === chapter.sections.length;
       const sectionRows = chapter.sections.map((section) => {
-        const count = HISTORY_ITEMS.filter(item => item.sectionId === section.id).length;
-        const checked = historySelectedSections.has(section.id) ? " checked" : "";
+        const count = WORDS_ACTIVE.filter(item => item.sectionId === section.id).length;
+        const checked = selectedSections.has(section.id) ? " checked" : "";
         return `
           <label class="history-check-row">
-            <input type="checkbox"${checked} onchange="App.toggleHistorySection('${section.id}', this.checked)">
+            <input type="checkbox"${checked} onchange="App.toggleScopeSection('${section.id}', this.checked)">
             <span>${section.title}</span>
-            <span class="history-section-count">${count}件</span>
+            <span class="history-section-count">${count}${MODE_CONFIG[MODE].unit}</span>
           </label>`;
       }).join("");
       return `
         <details class="history-chapter" open>
           <summary>
-            <input type="checkbox"${allChecked ? " checked" : ""} onchange="App.toggleHistoryChapter('${chapter.id}', this.checked); event.stopPropagation();">
+            <input type="checkbox"${allChecked ? " checked" : ""} onchange="App.toggleScopeChapter('${chapter.id}', this.checked); event.stopPropagation();">
             <span>${chapter.title}</span>
           </summary>
           <div class="history-sections">${sectionRows}</div>
         </details>`;
     }).join("");
-    tree.innerHTML = nonTimelineRows + selectableRows;
-    $("history-selected-count").textContent = `選択中: ${historySelectedSections.size}節 / ${learningPool().length}件`;
+    tree.innerHTML = disabledRows + selectableRows;
+    $("history-selected-count").textContent = `選択中: ${selectedSections.size}節 / ${learningPool().length}${MODE_CONFIG[MODE].unit}`;
   },
 
-  toggleHistorySection(sectionId, checked) {
-    checked ? historySelectedSections.add(sectionId) : historySelectedSections.delete(sectionId);
-    saveHistorySelection();
+  toggleScopeSection(sectionId, checked) {
+    const selectedSections = currentScopeSelection();
+    checked ? selectedSections.add(sectionId) : selectedSections.delete(sectionId);
+    saveScopeSelection();
     this._renderHome();
   },
 
-  toggleHistoryChapter(chapterId, checked) {
-    const chapter = HISTORY_SECTIONS.find(item => item.id === chapterId);
+  toggleScopeChapter(chapterId, checked) {
+    const chapter = scopeGroups().find(item => item.id === chapterId);
     if (!chapter) return;
+    const selectedSections = currentScopeSelection();
     chapter.sections.forEach(section => checked
-      ? historySelectedSections.add(section.id)
-      : historySelectedSections.delete(section.id));
-    saveHistorySelection();
+      ? selectedSections.add(section.id)
+      : selectedSections.delete(section.id));
+    saveScopeSelection();
     this._renderHome();
   },
 
-  selectAllHistorySections() {
-    historySelectedSections = new Set(allHistorySectionIds());
-    saveHistorySelection();
+  selectAllScopeSections() {
+    scopedSelections[MODE] = new Set(allScopeSectionIds());
+    saveScopeSelection();
     this._renderHome();
   },
 
-  clearHistorySections() {
-    historySelectedSections = new Set();
-    saveHistorySelection();
+  clearScopeSections() {
+    scopedSelections[MODE] = new Set();
+    saveScopeSelection();
     this._renderHome();
   },
 
@@ -765,7 +1000,7 @@ const App = {
       this.goHome();
       return;
     }
-    quizWords = shuffle(pool).slice(0, 20);
+    quizWords = pickQuizItems(pool, 20);
     quizIdx = 0;
     this._updateQuizModeLabel();
     this._renderQuizQuestion();
