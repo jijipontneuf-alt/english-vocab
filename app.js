@@ -707,7 +707,6 @@ const App = {
 
     $("category-section").style.display = isScopedMode() ? "none" : "block";
     $("history-range-section").style.display = isScopedMode() ? "block" : "none";
-    $("geo-link-section").style.display = MODE.startsWith("geo-") ? "block" : "none";
     if (isScopedMode()) this._renderScopeRange();
     const grid = $("category-grid");
     grid.innerHTML = "";

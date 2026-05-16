@@ -117,6 +117,10 @@ html, body {
   background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
   box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
 }
+.geo-external-btn {
+  text-align: center;
+  text-decoration: none;
+}
 .home-header.jhs {
   background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
 }
@@ -399,25 +403,6 @@ body.mode-geo-aichi-private .mode-tab.active {
 .history-section-count {
   color: var(--sub);
   white-space: nowrap;
-}
-.geo-link-section {
-  padding: 0 16px 16px;
-}
-.geo-link-btn {
-  display: block;
-  width: 100%;
-  padding: 13px 14px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: white;
-  color: var(--text);
-  font-size: 0.88rem;
-  font-weight: 800;
-  text-align: center;
-  text-decoration: none;
-}
-.geo-link-btn:active {
-  transform: scale(0.98);
 }
 .section-title {
   font-size: 0.85rem; font-weight: 700;
