@@ -657,6 +657,9 @@ let taWords = [], taTimeLeft = 60, taScore = 0, taCombo = 0, taMaxCombo = 0;
 let taTimer = null, taAnswered = false, taWrong = [], taIsEnToJa = true;
 let taCategory = null, taPendingRecords = [];
 let unitMenuCategory = null;
+// Sequential (順番) mode
+let taSeqMode = false, taSeqPool = [], taSeqIdx = 0;
+let bpCategory = null, bpSize = 5, bpMode = "fc", bpDir = "en2ja";
 
 // ══════════════════════════════════════════════
 const App = {
@@ -905,10 +908,12 @@ const App = {
   },
 
   // ── FLASH CARD ───────────────────────────
-  openFlashcard(category, mode) {
-    fcCategory = category || null;
+  openFlashcard(category, mode, opts) {
+    opts = opts || {};
+    fcCategory = opts.titleOverride || category || null;
     fcIsEnToJa = mode !== "ja2en";
-    fcWords = shuffle(category ? wordsInCategory(category) : learningPool());
+    const base = opts.words || (category ? wordsInCategory(category) : learningPool());
+    fcWords = opts.noShuffle ? base.slice() : shuffle(base);
     if (!fcWords.length) {
       alert("学習する範囲を1つ以上選んでください。");
       this.goHome();
@@ -1111,11 +1116,28 @@ const App = {
   retryQuiz() { this.openQuiz(quizCategory); },
 
   // ── TIME ATTACK ──────────────────────────
-  openTimeAttack(category) {
+  openTimeAttack(category, opts) {
+    opts = opts || {};
     taCategory = category || null;
-    const pool = taCategory ? wordsInCategory(taCategory) : learningPool();
-    if (pool.length < 4) {
+    taSeqMode = !!opts.sequential;
+    taSeqPool = opts.words ? opts.words.slice() : [];
+    taSeqIdx = 0;
+    const questionPool = taSeqMode ? taSeqPool : (taCategory ? wordsInCategory(taCategory) : learningPool());
+    if (questionPool.length < 1) {
+      alert("出題できる語彙がありません。");
+      return;
+    }
+    if (learningPool().length < 4 && WORDS_ACTIVE.length < 4) {
       alert(`タイムアタックには4${MODE_CONFIG[MODE].unit}以上の${MODE_CONFIG[MODE].itemName}が必要です。`);
+      return;
+    }
+    if (!taSeqMode && questionPool.length < 4) {
+      alert(`このユニットは${MODE_CONFIG[MODE].itemName}が少なすぎてタイムアタックを開けません（4${MODE_CONFIG[MODE].unit}以上必要）。`);
+      return;
+    }
+    if (taSeqMode || opts.isEnToJa !== undefined) {
+      // Sequential or pre-specified direction: skip setup, start immediately
+      this.startTimeAttack(opts.isEnToJa !== undefined ? opts.isEnToJa : (Math.random() > 0.5));
       return;
     }
     const cfg = MODE_CONFIG[MODE];
@@ -1192,9 +1214,14 @@ const App = {
 
   _taNextQuestion() {
     taAnswered = false;
-    const sourcePool = taCategory ? wordsInCategory(taCategory) : learningPool();
-    const idx = Math.floor(Math.random() * sourcePool.length);
-    const correct = sourcePool[idx];
+    let correct;
+    if (taSeqMode) {
+      correct = taSeqPool[taSeqIdx % taSeqPool.length];
+      taSeqIdx++;
+    } else {
+      const sourcePool = taCategory ? wordsInCategory(taCategory) : learningPool();
+      correct = sourcePool[Math.floor(Math.random() * sourcePool.length)];
+    }
     const usedLabels = new Set([taIsEnToJa ? correct.japanese : correct.english]);
     const pool = pickDistractors(correct, 3, taIsEnToJa, usedLabels);
     const opts = shuffle(pool.concat(correct));
@@ -1274,7 +1301,87 @@ const App = {
     showScreen("screen-ta-result");
   },
 
-  retryTimeAttack() { this.startTimeAttack(taIsEnToJa); },
+  retryTimeAttack() {
+    if (taSeqMode && taSeqPool.length > 0) {
+      taSeqIdx = 0;
+      this.startTimeAttack(taIsEnToJa);
+    } else {
+      this.startTimeAttack(taIsEnToJa);
+    }
+  },
+
+  // ── BATCH PICKER (順番に学習) ─────────────
+  openBatchPicker(category) {
+    bpCategory = category || null;
+    // Default direction = "慣用句→意味" (en→ja) which is promptLabel mapping
+    bpDir = "en2ja";
+    this._bpRender();
+    showScreen("screen-batch-picker");
+  },
+  openBatchPickerForCategory() {
+    this.openBatchPicker(unitMenuCategory);
+  },
+
+  _bpSetSize(n) { bpSize = n; this._bpRender(); },
+  _bpSetMode(m) { bpMode = m; this._bpRender(); },
+  _bpSetDir(d)  { bpDir  = d; this._bpRender(); },
+
+  _bpRender() {
+    const cfg = MODE_CONFIG[MODE];
+    $("bp-target").textContent = bpCategory ? bpCategory : `全${cfg.unit}`;
+    $("bp-dir-en2ja").textContent = cfg.promptLabel;
+    $("bp-dir-ja2en").textContent = cfg.reverseLabel;
+    // Active states
+    [5, 10, 20].forEach(s => $(`bp-size-${s}`).classList.toggle("active", bpSize === s));
+    $("bp-mode-fc").classList.toggle("active", bpMode === "fc");
+    $("bp-mode-ta").classList.toggle("active", bpMode === "ta");
+    $("bp-dir-en2ja").classList.toggle("active", bpDir === "en2ja");
+    $("bp-dir-ja2en").classList.toggle("active", bpDir === "ja2en");
+    // Build batch grid
+    const pool = bpCategory ? wordsInCategory(bpCategory) : WORDS_ACTIVE;
+    const total = pool.length;
+    const numBatches = Math.max(1, Math.ceil(total / bpSize));
+    const grid = $("bp-batch-grid");
+    if (total < (bpMode === "ta" ? 4 : 1)) {
+      grid.innerHTML = `<p style="grid-column:span 2;text-align:center;color:var(--sub);padding:20px">該当する語彙がありません</p>`;
+      return;
+    }
+    let html = "";
+    for (let i = 0; i < numBatches; i++) {
+      const start = i * bpSize + 1;
+      const end   = Math.min((i + 1) * bpSize, total);
+      const count = end - start + 1;
+      // TA needs >= 4 words total for distractor pool; this batch can have fewer
+      // but the global pool always has enough since we checked above
+      html += `
+        <button class="bp-batch-card" onclick="App._bpStart(${i})">
+          <div class="bp-batch-range">${start} 〜 ${end} 問</div>
+          <div class="bp-batch-count">${count}${cfg.unit}</div>
+        </button>`;
+    }
+    $("bp-batches-label").textContent = `バッチを選択（全${numBatches}バッチ）`;
+    grid.innerHTML = html;
+  },
+
+  _bpStart(batchIdx) {
+    const cfg = MODE_CONFIG[MODE];
+    const pool = bpCategory ? wordsInCategory(bpCategory) : WORDS_ACTIVE;
+    const start = batchIdx * bpSize;
+    const end = Math.min(start + bpSize, pool.length);
+    const batch = pool.slice(start, end);
+    const target = bpCategory || `全${cfg.unit}`;
+    const title = `${target} (${start + 1}〜${end}問)`;
+    const isEnToJa = bpDir === "en2ja";
+    if (bpMode === "fc") {
+      this.openFlashcard(null, isEnToJa ? "en2ja" : "ja2en", {
+        words: batch, noShuffle: true, titleOverride: title
+      });
+    } else {
+      this.openTimeAttack(bpCategory, {
+        sequential: true, words: batch, isEnToJa: isEnToJa,
+      });
+    }
+  },
 
 };  // end App
 

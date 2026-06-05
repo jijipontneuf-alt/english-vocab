@@ -312,6 +312,95 @@ body.mode-geo-aichi-private .mode-tab.active {
 .card-purple { background: linear-gradient(135deg,#4C1D95,#7C3AED); }
 .card-orange { background: linear-gradient(135deg,#92400E,#F59E0B); }
 .card-red    { background: linear-gradient(135deg,#7F1D1D,#EF4444); }
+.card-teal   { background: linear-gradient(135deg,#0F766E,#14B8A6); }
+
+/* Batch picker (順番に学習) */
+.bp-body {
+  padding: 14px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.bp-target {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  background: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  text-align: center;
+}
+.bp-section { display: flex; flex-direction: column; gap: 8px; }
+.bp-section-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--sub);
+}
+.bp-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.bp-pill {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 6px;
+  border: 1.5px solid var(--border);
+  background: white;
+  color: var(--sub);
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  -webkit-appearance: none;
+  white-space: nowrap;
+}
+.bp-pill:active { transform: scale(0.97); }
+.bp-pill.active {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+}
+body.mode-jhs .bp-pill.active {
+  background: linear-gradient(135deg, #047857 0%, var(--green) 100%);
+  box-shadow: 0 2px 8px rgba(4, 120, 87, 0.25);
+}
+body.mode-idiom .bp-pill.active {
+  background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+}
+body.mode-proverb .bp-pill.active {
+  background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
+}
+.bp-batch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.bp-batch-card {
+  padding: 14px 8px;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  -webkit-appearance: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bp-batch-card:active { transform: scale(0.96); }
+.bp-batch-card:hover { border-color: var(--blue2); }
+.bp-batch-range {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.bp-batch-count {
+  font-size: 0.78rem;
+  color: var(--sub);
+}
 
 .category-section { padding: 0 16px 16px; }
 .history-range-section { padding: 0 16px 16px; }
