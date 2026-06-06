@@ -663,6 +663,7 @@ function getCategories(source = WORDS_ACTIVE) {
 let fcWords = [], fcIdx = 0, fcFlipped = false, fcIsEnToJa = true, fcCategory = null;
 let quizWords = [], quizIdx = 0, quizCorrect = 0, quizWrong = [];
 let quizIsEnToJa = true, quizAnswered = false, quizCategory = null;
+let quizMultiMode = false, quizMultiKeys = new Set(), quizMultiFound = 0;
 let taWords = [], taTimeLeft = 60, taScore = 0, taCombo = 0, taMaxCombo = 0;
 let taTimer = null, taAnswered = false, taWrong = [], taIsEnToJa = true;
 let taCategory = null, taPendingRecords = [];
@@ -1050,18 +1051,39 @@ const App = {
 
   _renderQuizQuestion() {
     quizAnswered = false;
+    quizMultiMode = false;
+    quizMultiKeys = new Set();
+    quizMultiFound = 0;
     const w = quizWords[quizIdx];
     if (!w) return;
     $("quiz-counter").textContent = `${quizIdx + 1} / ${quizWords.length}`;
     const pct = (quizIdx / quizWords.length * 100).toFixed(1);
     $("quiz-progress-fill").style.width = pct + "%";
-    $("quiz-question").textContent = quizIsEnToJa ? w.english : w.japanese;
     $("quiz-example").style.display = "none";
 
-    // 選択肢: まず同じカテゴリから「紛らわしい」候補を選び、足りなければ全体から補充
-    const usedLabels = new Set([quizIsEnToJa ? w.japanese : w.english]);
-    const pool = pickDistractors(w, 3, quizIsEnToJa, usedLabels);
-    let opts = shuffle(pool.concat(w));
+    // 歴史モード 年→出来事: 同年に複数イベントがある場合は複数選択
+    let correctItems = [w];
+    let distractorCount = 3;
+    if (MODE === "history" && quizIsEnToJa) {
+      const sameYear = learningPool().filter(x => x.english === w.english);
+      if (sameYear.length > 1) {
+        correctItems = sameYear;
+        distractorCount = Math.max(1, 4 - sameYear.length);
+        quizMultiMode = true;
+        quizMultiKeys = new Set(sameYear.map(x => itemKey(x)));
+      }
+    }
+
+    // 問題文
+    const questionText = quizIsEnToJa ? w.english : w.japanese;
+    $("quiz-question").textContent = quizMultiMode
+      ? `${questionText}（${correctItems.length}つ選べ）`
+      : questionText;
+
+    // 選択肢
+    const usedLabels = new Set(correctItems.map(x => quizIsEnToJa ? x.japanese : x.english));
+    const pool = pickDistractors(w, distractorCount, quizIsEnToJa, usedLabels);
+    let opts = shuffle(pool.concat(correctItems));
     const c = $("quiz-choices");
     c.innerHTML = opts.map(opt => {
       const label = quizIsEnToJa ? opt.japanese : opt.english;
@@ -1076,25 +1098,71 @@ const App = {
 
   _quizAnswer(key) {
     if (quizAnswered) return;
-    quizAnswered = true;
     const correct = quizWords[quizIdx];
-    let isRight = key === itemKey(correct);
-    if (!isRight && MODE === "history" && quizIsEnToJa) {
-      const sameKeys = historySameYearKeys(correct);
-      if (sameKeys.has(key)) isRight = true;
+
+    // === 複数選択モード（歴史 年→出来事、同年複数イベント） ===
+    if (quizMultiMode) {
+      const isCorrectKey = quizMultiKeys.has(key);
+      const clickedItem = learningPool().find(w => itemKey(w) === key);
+      const clickedLabel = quizIsEnToJa ? clickedItem?.japanese : clickedItem?.english;
+
+      if (isCorrectKey) {
+        // 正解ボタンをクリック → 緑にして無効化
+        document.querySelectorAll(".choice-btn").forEach(btn => {
+          if (btn.textContent === clickedLabel && !btn.disabled) {
+            btn.classList.add("correct");
+            btn.disabled = true;
+          }
+        });
+        quizMultiFound++;
+        if (quizMultiFound >= quizMultiKeys.size) {
+          // 全正解を選択完了
+          quizAnswered = true;
+          Store.record(correct, true);
+          quizCorrect++;
+          document.querySelectorAll(".choice-btn").forEach(btn => {
+            if (!btn.disabled) { btn.classList.add("dim"); btn.disabled = true; }
+          });
+          setTimeout(() => {
+            quizIdx++;
+            if (quizIdx >= quizWords.length) this._showQuizResult();
+            else this._renderQuizQuestion();
+          }, 800);
+        }
+        return;
+      } else {
+        // 不正解 → 全ボタン色付けして終了
+        quizAnswered = true;
+        Store.record(correct, false);
+        quizWrong.push(correct);
+        const correctLabels = learningPool()
+          .filter(x => quizMultiKeys.has(itemKey(x)))
+          .map(x => quizIsEnToJa ? x.japanese : x.english);
+        document.querySelectorAll(".choice-btn").forEach(btn => {
+          if (btn.textContent === clickedLabel) btn.classList.add("wrong");
+          else if (correctLabels.includes(btn.textContent)) btn.classList.add("correct");
+          else if (!btn.classList.contains("correct")) btn.classList.add("dim");
+          btn.disabled = true;
+        });
+        setTimeout(() => {
+          quizIdx++;
+          if (quizIdx >= quizWords.length) this._showQuizResult();
+          else this._renderQuizQuestion();
+        }, 1400);
+        return;
+      }
     }
+
+    // === 通常モード（単一選択） ===
+    quizAnswered = true;
+    const isRight = key === itemKey(correct);
     Store.record(correct, isRight);
     if (isRight) quizCorrect++;
     else quizWrong.push(correct);
 
-    // ボタンに色付け
     document.querySelectorAll(".choice-btn").forEach(btn => {
       const label = btn.textContent;
-      let isCorrectLabel = quizIsEnToJa ? label === correct.japanese : label === correct.english;
-      if (!isCorrectLabel && MODE === "history" && quizIsEnToJa) {
-        const sameYearEvents = learningPool().filter(x => x.english === correct.english).map(x => x.japanese);
-        if (sameYearEvents.includes(label)) isCorrectLabel = true;
-      }
+      const isCorrectLabel = quizIsEnToJa ? label === correct.japanese : label === correct.english;
       const selected = learningPool().find(w => itemKey(w) === key);
       const isSelected = quizIsEnToJa ? label === selected?.japanese : label === selected?.english;
       if (isCorrectLabel) btn.classList.add("correct");
@@ -1103,14 +1171,12 @@ const App = {
       btn.disabled = true;
     });
 
-    // 例文表示
     if (correct.example) {
       $("qex-en").textContent = "💬 " + correct.example;
       $("qex-ja").textContent = "→ " + correct.exampleJapanese;
       $("quiz-example").style.display = "block";
     }
 
-    // 次の問題
     setTimeout(() => {
       quizIdx++;
       if (quizIdx >= quizWords.length) this._showQuizResult();
