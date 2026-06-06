@@ -353,6 +353,15 @@ function historyEventKind(text) {
   return endings.find(ending => text.endsWith(ending)) || "";
 }
 
+function historySameYearKeys(item) {
+  if (MODE !== "history") return new Set();
+  return new Set(
+    learningPool()
+      .filter(x => x.english === item.english)
+      .map(x => itemKey(x))
+  );
+}
+
 function historyDistractorScore(correct, candidate, isEnToJa) {
   let score = 0;
   if (candidate.sectionId === correct.sectionId) score += 120;
@@ -471,8 +480,9 @@ function pickDistractors(correct, n, isEnToJa, usedLabels) {
   const pool = [];
   const source = learningPool();
   if (MODE === "history") {
+    const sameYearKeys = historySameYearKeys(correct);
     const ranked = source
-      .filter(x => itemKey(x) !== itemKey(correct))
+      .filter(x => !sameYearKeys.has(itemKey(x)))
       .map(x => ({ x, score: historyDistractorScore(correct, x, isEnToJa) }))
       .sort((a, b) => b.score - a.score || Math.random() - 0.5);
 
@@ -954,7 +964,16 @@ const App = {
     $("fc-back-cat").textContent = w.category;
     if (fcIsEnToJa) {
       $("fc-front-word").textContent = w.english;
-      $("fc-back-word").textContent = w.japanese;
+      if (MODE === "history") {
+        const sameYear = learningPool().filter(x => x.english === w.english);
+        if (sameYear.length > 1) {
+          $("fc-back-word").innerHTML = sameYear.map(x => x.japanese).join("<br>");
+        } else {
+          $("fc-back-word").textContent = w.japanese;
+        }
+      } else {
+        $("fc-back-word").textContent = w.japanese;
+      }
       $("fc-yomi").textContent = w.yomi || "";
     } else {
       $("fc-front-word").textContent = w.japanese;
@@ -1059,7 +1078,11 @@ const App = {
     if (quizAnswered) return;
     quizAnswered = true;
     const correct = quizWords[quizIdx];
-    const isRight = key === itemKey(correct);
+    let isRight = key === itemKey(correct);
+    if (!isRight && MODE === "history" && quizIsEnToJa) {
+      const sameKeys = historySameYearKeys(correct);
+      if (sameKeys.has(key)) isRight = true;
+    }
     Store.record(correct, isRight);
     if (isRight) quizCorrect++;
     else quizWrong.push(correct);
@@ -1067,7 +1090,11 @@ const App = {
     // ボタンに色付け
     document.querySelectorAll(".choice-btn").forEach(btn => {
       const label = btn.textContent;
-      const isCorrectLabel = quizIsEnToJa ? label === correct.japanese : label === correct.english;
+      let isCorrectLabel = quizIsEnToJa ? label === correct.japanese : label === correct.english;
+      if (!isCorrectLabel && MODE === "history" && quizIsEnToJa) {
+        const sameYearEvents = learningPool().filter(x => x.english === correct.english).map(x => x.japanese);
+        if (sameYearEvents.includes(label)) isCorrectLabel = true;
+      }
       const selected = learningPool().find(w => itemKey(w) === key);
       const isSelected = quizIsEnToJa ? label === selected?.japanese : label === selected?.english;
       if (isCorrectLabel) btn.classList.add("correct");
@@ -1240,13 +1267,21 @@ const App = {
     if (taAnswered || !taTimer) return;
     taAnswered = true;
     const correct = taWords[0];
-    const isRight = key === itemKey(correct);
+    let isRight = key === itemKey(correct);
+    if (!isRight && MODE === "history" && taIsEnToJa) {
+      const sameKeys = historySameYearKeys(correct);
+      if (sameKeys.has(key)) isRight = true;
+    }
     taPendingRecords.push([correct, isRight]);
 
     // 色付け
     document.querySelectorAll(".ta-choice-btn").forEach(btn => {
       const label = btn.textContent;
-      const isCorrectLabel = taIsEnToJa ? label === correct.japanese : label === correct.english;
+      let isCorrectLabel = taIsEnToJa ? label === correct.japanese : label === correct.english;
+      if (!isCorrectLabel && MODE === "history" && taIsEnToJa) {
+        const sameYearEvents = learningPool().filter(x => x.english === correct.english).map(x => x.japanese);
+        if (sameYearEvents.includes(label)) isCorrectLabel = true;
+      }
       const selected = learningPool().find(w => itemKey(w) === key);
       const isSelected = taIsEnToJa ? label === selected?.japanese : label === selected?.english;
       if (isCorrectLabel) btn.classList.add("correct");
