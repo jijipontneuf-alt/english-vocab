@@ -1590,6 +1590,26 @@ const IDIOMS = [
     "bigCategory": "動物に関する慣用句"
   },
   {
+    "english": "鵜のみにする",
+    "japanese": "物事を考えないで受け入れる。",
+    "yomi": "",
+    "category": "動物",
+    "superCategory": "動植物に関する慣用句",
+    "example": "友達の話を鵜のみにして、だまされてしまった。",
+    "exampleJapanese": "",
+    "bigCategory": "動物に関する慣用句"
+  },
+  {
+    "english": "馬が合う",
+    "japanese": "自分と考えが合う。意気投合する。",
+    "yomi": "",
+    "category": "動物",
+    "superCategory": "動植物に関する慣用句",
+    "example": "初めて会ったのに、すぐに馬が合った。",
+    "exampleJapanese": "",
+    "bigCategory": "動物に関する慣用句"
+  },
+  {
     "english": "蚊の鳴くような声",
     "japanese": "元気のないとても小さな声。",
     "yomi": "",
