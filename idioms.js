@@ -1610,6 +1610,16 @@ const IDIOMS = [
     "bigCategory": "動物に関する慣用句"
   },
   {
+    "english": "尻尾を出す",
+    "japanese": "ごまかしや隠し事がばれる。",
+    "yomi": "",
+    "category": "動物",
+    "superCategory": "動植物に関する慣用句",
+    "example": "うそをついていたが、ついに尻尾を出してしまった。",
+    "exampleJapanese": "",
+    "bigCategory": "動物に関する慣用句"
+  },
+  {
     "english": "蚊の鳴くような声",
     "japanese": "元気のないとても小さな声。",
     "yomi": "",
