@@ -661,6 +661,7 @@ function getCategories(source = WORDS_ACTIVE) {
 
 // ─── App State ───────────────────────────────
 let fcWords = [], fcIdx = 0, fcFlipped = false, fcIsEnToJa = true, fcCategory = null;
+let fcExampleMode = false;
 let quizWords = [], quizIdx = 0, quizCorrect = 0, quizWrong = [];
 let quizIsEnToJa = true, quizAnswered = false, quizCategory = null;
 let quizMultiMode = false, quizMultiKeys = new Set(), quizMultiFound = 0;
@@ -831,6 +832,29 @@ const App = {
     $("unit-menu-count").textContent = `${count}${cfg.unit}`;
     $("unit-menu-fc1-sub").textContent = cfg.promptLabel;
     $("unit-menu-fc2-sub").textContent = cfg.reverseLabel;
+
+    // 例文フラッシュカードボタン
+    let fcExBtn = $("unit-menu-fc-example");
+    if (MODE === "idiom") {
+      if (!fcExBtn) {
+        const tpl = $("unit-menu-fc2-sub").closest(".menu-card") || $("unit-menu-fc2-sub").parentElement;
+        if (tpl) {
+          fcExBtn = tpl.cloneNode(true);
+          fcExBtn.id = "unit-menu-fc-example";
+          const sub = fcExBtn.querySelector(".menu-sub") || fcExBtn.querySelector("[id]");
+          if (sub) { sub.removeAttribute("id"); sub.textContent = "\u6163\u7528\u53e5 \u2192 \u4f8b\u6587"; }
+          const title = fcExBtn.querySelector(".menu-title");
+          if (title) title.textContent = "\u30d5\u30e9\u30c3\u30b7\u30e5\u30ab\u30fc\u30c9";
+          const icon = fcExBtn.querySelector(".menu-icon");
+          if (icon) icon.textContent = "\ud83d\udcd6";
+          fcExBtn.onclick = () => App.openFlashcardExample();
+          tpl.parentNode.insertBefore(fcExBtn, tpl.nextSibling);
+        }
+      }
+      if (fcExBtn) fcExBtn.style.display = "";
+    } else if (fcExBtn) {
+      fcExBtn.style.display = "none";
+    }
     showScreen("screen-unit-menu");
   },
 
@@ -847,7 +871,8 @@ const App = {
   },
 
   openFlashcardEnJa() { this.openFlashcard(unitMenuCategory, "en2ja"); },
-  openFlashcardJaEn() { this.openFlashcard(unitMenuCategory, "ja2en"); },
+  openFlashcardJaEn() { this.openFlashcard(unitMenuCategory, "ja2en"); }
+  openFlashcardExample() { this.openFlashcard(unitMenuCategory, "en2ja", { exampleMode: true }); },,
   openQuizForCategory() { this.openQuiz(unitMenuCategory); },
   openTimeAttackForCategory() { this.openTimeAttack(unitMenuCategory); },
 
@@ -923,6 +948,7 @@ const App = {
     opts = opts || {};
     fcCategory = opts.titleOverride || category || null;
     fcIsEnToJa = mode !== "ja2en";
+    fcExampleMode = !!opts.exampleMode;
     const base = opts.words || (category ? wordsInCategory(category) : learningPool());
     fcWords = opts.noShuffle ? base.slice() : shuffle(base);
     if (!fcWords.length) {
@@ -940,16 +966,42 @@ const App = {
     const cfg = MODE_CONFIG[MODE];
     $("fc-mode-en2ja").textContent = cfg.promptLabel;
     $("fc-mode-ja2en").textContent = cfg.reverseLabel;
-    $("fc-mode-en2ja").classList.toggle("active", fcIsEnToJa);
-    $("fc-mode-ja2en").classList.toggle("active", !fcIsEnToJa);
-    const label = fcIsEnToJa ? cfg.promptLabel : cfg.reverseLabel;
-    const titleSuf = `（${label.replace(/\s*→\s*/, "→")}）`;
-    $("fc-title").textContent = fcCategory ? `${fcCategory}${titleSuf}` : `フラッシュカード${titleSuf}`;
+    $("fc-mode-en2ja").classList.toggle("active", fcIsEnToJa && !fcExampleMode);
+    $("fc-mode-ja2en").classList.toggle("active", !fcIsEnToJa && !fcExampleMode);
+    // Example mode button — idiom mode only
+    let exBtn = $("fc-mode-example");
+    if (MODE === "idiom") {
+      if (!exBtn) {
+        exBtn = document.createElement("button");
+        exBtn.id = "fc-mode-example";
+        exBtn.className = "mode-btn";
+        exBtn.onclick = () => App.setFcExample();
+        $("fc-mode-ja2en").parentNode.insertBefore(exBtn, $("fc-mode-ja2en").nextSibling);
+      }
+      exBtn.textContent = "\u6163\u7528\u53E5 \u2192 \u4F8B\u6587";
+      exBtn.style.display = "";
+      exBtn.classList.toggle("active", fcExampleMode);
+    } else if (exBtn) {
+      exBtn.style.display = "none";
+    }
+    let label;
+    if (fcExampleMode) label = "\u6163\u7528\u53E5\u2192\u4F8B\u6587";
+    else label = fcIsEnToJa ? cfg.promptLabel : cfg.reverseLabel;
+    const titleSuf = `\uFF08${label.replace(/\s*\u2192\s*/, "\u2192")}\uFF09`;
+    $("fc-title").textContent = fcCategory ? `${fcCategory}${titleSuf}` : `\u30D5\u30E9\u30C3\u30B7\u30E5\u30AB\u30FC\u30C9${titleSuf}`;
   },
 
   setFcMode(toEnJa) {
-    if (fcIsEnToJa === toEnJa) return;
+    if (fcIsEnToJa === toEnJa && !fcExampleMode) return;
     fcIsEnToJa = toEnJa;
+    fcExampleMode = false;
+    this._updateFcLabels();
+    this._renderFC();
+  },
+  setFcExample() {
+    if (fcExampleMode) return;
+    fcExampleMode = true;
+    fcIsEnToJa = true;
     this._updateFcLabels();
     this._renderFC();
   },
@@ -963,7 +1015,13 @@ const App = {
     void card.offsetWidth;
     $("fc-front-cat").textContent = w.category;
     $("fc-back-cat").textContent = w.category;
-    if (fcIsEnToJa) {
+    if (fcExampleMode) {
+      $("fc-front-word").textContent = w.english;
+      $("fc-back-word").textContent = w.example || "\uFF08\u4F8B\u6587\u306A\u3057\uFF09";
+      $("fc-yomi").textContent = "";
+      $("fc-example").textContent = "\u610F\u5473: " + (w.japanese || "");
+      $("fc-example-ja").textContent = "";
+    } else if (fcIsEnToJa) {
       $("fc-front-word").textContent = w.english;
       if (MODE === "history") {
         const sameYear = learningPool().filter(x => x.english === w.english);
