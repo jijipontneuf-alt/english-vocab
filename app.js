@@ -871,8 +871,8 @@ const App = {
   },
 
   openFlashcardEnJa() { this.openFlashcard(unitMenuCategory, "en2ja"); },
-  openFlashcardJaEn() { this.openFlashcard(unitMenuCategory, "ja2en"); }
-  openFlashcardExample() { this.openFlashcard(unitMenuCategory, "en2ja", { exampleMode: true }); },,
+  openFlashcardJaEn() { this.openFlashcard(unitMenuCategory, "ja2en"); },
+  openFlashcardExample() { this.openFlashcard(unitMenuCategory, "en2ja", { exampleMode: true }); },
   openQuizForCategory() { this.openQuiz(unitMenuCategory); },
   openTimeAttackForCategory() { this.openTimeAttack(unitMenuCategory); },
 
