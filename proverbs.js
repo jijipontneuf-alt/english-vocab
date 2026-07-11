@@ -632,14 +632,6 @@ const PROVERBS = [
     "exampleJapanese": ""
   },
   {
-    "english": "二の足を踏む",
-    "japanese": "ためらう、しりごみする。",
-    "yomi": "",
-    "category": "な行",
-    "example": "",
-    "exampleJapanese": ""
-  },
-  {
     "english": "二兎を追うものは一兎をも得ず",
     "japanese": "二つのものを両方得ようとしてどちらも手に入れることができない。",
     "yomi": "",
@@ -658,14 +650,6 @@ const PROVERBS = [
   {
     "english": "喉元過ぎれば熱さを忘れる",
     "japanese": "苦しいこともそのことが過ぎてしまえば、すっかり忘れてしまう。",
-    "yomi": "",
-    "category": "な行",
-    "example": "",
-    "exampleJapanese": ""
-  },
-  {
-    "english": "寝耳に水",
-    "japanese": "思いがけないことを突然聞くこと。",
     "yomi": "",
     "category": "な行",
     "example": "",
@@ -693,14 +677,6 @@ const PROVERBS = [
     "yomi": "",
     "category": "な行",
     "example": "類: 弱り目にたたり目",
-    "exampleJapanese": ""
-  },
-  {
-    "english": "流れに棹さす",
-    "japanese": "全体の勢いに乗り、さらに進める。",
-    "yomi": "",
-    "category": "な行",
-    "example": "注: 「流れに逆らう」の意味で使うのは誤り。",
     "exampleJapanese": ""
   },
   {
@@ -740,7 +716,7 @@ const PROVERBS = [
     "japanese": "なんの手ごたえも効きめもないこと。",
     "yomi": "",
     "category": "な行",
-    "example": "",
+    "example": "類: のれんに腕押し、柳に風",
     "exampleJapanese": ""
   },
   {

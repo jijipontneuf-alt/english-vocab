@@ -3220,16 +3220,6 @@ const IDIOMS = [
     "bigCategory": "その他の慣用句"
   },
   {
-    "english": "幕を下ろす",
-    "japanese": "物事を終わりにする。",
-    "yomi": "",
-    "category": "その他ま行",
-    "superCategory": "その他の慣用句",
-    "example": "",
-    "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
-  },
-  {
     "english": "待てど暮らせど",
     "japanese": "いくら待ち続けても。",
     "yomi": "",
@@ -3306,16 +3296,6 @@ const IDIOMS = [
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
     "example": "②練習して、手話をものにした。",
-    "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
-  },
-  {
-    "english": "矢面に立つ",
-    "japanese": "非難・攻撃の対象となる。",
-    "yomi": "",
-    "category": "その他ま行",
-    "superCategory": "その他の慣用句",
-    "example": "",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句"
   },
