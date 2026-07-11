@@ -401,7 +401,7 @@ const PROVERBS = [
   },
   {
     "english": "千里の道も一歩から",
-    "japanese": "大事なことのためには、手近なことから着実に始めるべき。",
+    "japanese": "手近なことから着実に始めるべき。",
     "yomi": "",
     "category": "さ行",
     "example": "",
@@ -473,7 +473,7 @@ const PROVERBS = [
   },
   {
     "english": "袖振り合うも他生の縁",
-    "japanese": "ちょっとした出会いも偶然ではなく、そうなるめぐりあわせて起こるものだ。",
+    "japanese": "ちょっとした出会いも偶然ではなく、そうなるめぐりあわせで起こるものだ。",
     "yomi": "",
     "category": "さ行",
     "example": "",
@@ -577,7 +577,7 @@ const PROVERBS = [
   },
   {
     "english": "立つ鳥あとを濁さず",
-    "japanese": "その場を去る者は、見苦しくないようにあとの残り物に、意外といい物がある。後始末をしていくべきだ。",
+    "japanese": "その場を去る者は、見苦しくないように後始末をしていくべきだ。",
     "yomi": "",
     "category": "た行",
     "example": "",
@@ -602,6 +602,14 @@ const PROVERBS = [
   {
     "english": "鉄は熱いうちに打て",
     "japanese": "人は若いうちに鍛えたほうがよい。何事も時機が大切であるという教え。",
+    "yomi": "",
+    "category": "た行",
+    "example": "",
+    "exampleJapanese": ""
+  },
+  {
+    "english": "所変われば品変わる",
+    "japanese": "地方地方によって、風俗・習慣・言語などが異なるということ。",
     "yomi": "",
     "category": "た行",
     "example": "",
@@ -714,6 +722,30 @@ const PROVERBS = [
   {
     "english": "能ある鷹は爪を隠す",
     "japanese": "実力のある者は、やたらにそれを見せびらかさない。",
+    "yomi": "",
+    "category": "な行",
+    "example": "",
+    "exampleJapanese": ""
+  },
+  {
+    "english": "習うより慣れろ",
+    "japanese": "物事は人に教えられるより、実際に自分で繰り返し練習するほうがよく身につく。",
+    "yomi": "",
+    "category": "な行",
+    "example": "",
+    "exampleJapanese": ""
+  },
+  {
+    "english": "ぬかに釘",
+    "japanese": "なんの手ごたえも効きめもないこと。",
+    "yomi": "",
+    "category": "な行",
+    "example": "",
+    "exampleJapanese": ""
+  },
+  {
+    "english": "濡れ手で粟",
+    "japanese": "労せずして利益を得ること。",
     "yomi": "",
     "category": "な行",
     "example": "",

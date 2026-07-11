@@ -10,6 +10,16 @@ const IDIOMS = [
     "bigCategory": "からだに関する慣用句"
   },
   {
+    "english": "へそで茶をわかす",
+    "japanese": "おかしくてたまらない。",
+    "yomi": "",
+    "category": "へそ",
+    "superCategory": "からだに関する慣用句",
+    "example": "",
+    "exampleJapanese": "",
+    "bigCategory": "からだに関する慣用句"
+  },
+  {
     "english": "口が重い",
     "japanese": "あまりしゃべらない。",
     "yomi": "",
@@ -211,7 +221,7 @@ const IDIOMS = [
   },
   {
     "english": "手を焼く",
-    "japanese": "処理に困ってしまう。手こずる。",
+    "japanese": "処理に困ってもてあます。手こずる。",
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
@@ -1050,7 +1060,7 @@ const IDIOMS = [
     "bigCategory": "からだに関する慣用句"
   },
   {
-    "english": "身にかける",
+    "english": "股にかける",
     "japanese": "広い範囲で活動する。",
     "yomi": "",
     "category": "身",
@@ -1161,7 +1171,7 @@ const IDIOMS = [
   },
   {
     "english": "顔が売れる",
-    "japanese": "名が広く世に知られる。",
+    "japanese": "有名になる。広く世に知られる。",
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
@@ -1171,7 +1181,7 @@ const IDIOMS = [
   },
   {
     "english": "顔が立つ",
-    "japanese": "名誉が保たれる。面目が立つ。",
+    "japanese": "名誉が保たれる。",
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
@@ -1191,7 +1201,7 @@ const IDIOMS = [
   },
   {
     "english": "顔にどろを塗る",
-    "japanese": "恥をかかせる。面目を失わせる。",
+    "japanese": "人に恥をかかせる。",
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
@@ -1201,7 +1211,7 @@ const IDIOMS = [
   },
   {
     "english": "顔を出す",
-    "japanese": "人前に出る。出席する。",
+    "japanese": "人前に出る。",
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
@@ -1381,7 +1391,7 @@ const IDIOMS = [
   },
   {
     "english": "歯が浮く",
-    "japanese": "お世辞などで不快になる。",
+    "japanese": "見えすいたお世辞などで不快になる。",
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
@@ -1440,7 +1450,7 @@ const IDIOMS = [
     "bigCategory": "顔・頭の近くの部分"
   },
   {
-    "english": "頬を集める",
+    "english": "額を集める",
     "japanese": "顔を近づけて相談する。",
     "yomi": "",
     "category": "頬",
@@ -1531,7 +1541,7 @@ const IDIOMS = [
   },
   {
     "english": "首をすくめる",
-    "japanese": "驚きや恐れて、思わず首を縮める。",
+    "japanese": "驚きや恐れで、思わず首を縮める。",
     "yomi": "",
     "category": "首",
     "superCategory": "からだに関する慣用句",
@@ -1571,7 +1581,7 @@ const IDIOMS = [
   },
   {
     "english": "牛の歩み",
-    "japanese": "進み具合が遅いこと。",
+    "japanese": "進み具合の遅いこと。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1611,7 +1621,7 @@ const IDIOMS = [
   },
   {
     "english": "尻尾を出す",
-    "japanese": "ごまかしや隠し事がばれる。",
+    "japanese": "ごまかしや隠しごとがばれる。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1651,7 +1661,7 @@ const IDIOMS = [
   },
   {
     "english": "狐につままれる",
-    "japanese": "わけが分からずぽかんとする。",
+    "japanese": "わけがわからずぽかんとする。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1721,7 +1731,7 @@ const IDIOMS = [
   },
   {
     "english": "狸寝入り",
-    "japanese": "眠ったふりをする。",
+    "japanese": "眠ったふりをすること。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1741,7 +1751,7 @@ const IDIOMS = [
   },
   {
     "english": "飛ぶ鳥を落とす勢い",
-    "japanese": "たいへんな勢いが盛んな様子。",
+    "japanese": "たいへん勢いが盛んな様子。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1751,7 +1761,7 @@ const IDIOMS = [
   },
   {
     "english": "鳶に油揚げをさらわれる",
-    "japanese": "大切なものを不意に奪われる。",
+    "japanese": "大事なものを不意に奪われる。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1811,7 +1821,7 @@ const IDIOMS = [
   },
   {
     "english": "猫をかぶる",
-    "japanese": "本性を隠しておとなしいふりをする。",
+    "japanese": "本性を隠し、おとなしいふりをする。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1821,7 +1831,7 @@ const IDIOMS = [
   },
   {
     "english": "羽を伸ばす",
-    "japanese": "のびのびと自由にふるまうこと。",
+    "japanese": "のびのびと自由にふるまう。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1831,7 +1841,7 @@ const IDIOMS = [
   },
   {
     "english": "袋のねずみ",
-    "japanese": "追い詰められて逃げられないこと。",
+    "japanese": "追いつめられて逃げられないこと。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1841,7 +1851,7 @@ const IDIOMS = [
   },
   {
     "english": "虫がいい",
-    "japanese": "自分勝手で都合がよいことばかり考える。",
+    "japanese": "自分勝手で人の都合を考えない。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1861,7 +1871,7 @@ const IDIOMS = [
   },
   {
     "english": "虫が好かない",
-    "japanese": "なんとなく好きになれない。",
+    "japanese": "何となく好きになれない。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1881,7 +1891,7 @@ const IDIOMS = [
   },
   {
     "english": "わしづかみ",
-    "japanese": "乱暴につかみ取ること。",
+    "japanese": "乱暴につかみとること。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -1891,7 +1901,7 @@ const IDIOMS = [
   },
   {
     "english": "瓜二つ",
-    "japanese": "顔や姿がそっくりである。",
+    "japanese": "そっくりなこと。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1901,7 +1911,7 @@ const IDIOMS = [
   },
   {
     "english": "ごぼう抜き",
-    "japanese": "競走などで一気に何人も抜くこと。",
+    "japanese": "競走などで一気に何人も追い抜くこと。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1921,7 +1931,7 @@ const IDIOMS = [
   },
   {
     "english": "竹を割ったよう",
-    "japanese": "さっぱりしてこだわらない様子。",
+    "japanese": "さっぱりしていてこだわらない様子。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1941,7 +1951,7 @@ const IDIOMS = [
   },
   {
     "english": "根に持つ",
-    "japanese": "うらみをいつまでも忘れない。",
+    "japanese": "うらむ気持ちをいつまでも忘れない。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1951,7 +1961,7 @@ const IDIOMS = [
   },
   {
     "english": "根掘り葉掘り",
-    "japanese": "細かいことまでしつこくたずねる。",
+    "japanese": "細かいことをしつこくたずねる様子。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1961,7 +1971,7 @@ const IDIOMS = [
   },
   {
     "english": "根も葉もない",
-    "japanese": "根拠がまったくない。",
+    "japanese": "まったく根拠がない。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1971,7 +1981,7 @@ const IDIOMS = [
   },
   {
     "english": "根を下ろす",
-    "japanese": "新しい思想やものごとが定着する。",
+    "japanese": "新しい思想やものごとなどが定着する。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1981,7 +1991,7 @@ const IDIOMS = [
   },
   {
     "english": "根を張る",
-    "japanese": "深く広がって動かしにくくなる。",
+    "japanese": "深く広がり、動かしがたくなっている。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -1991,7 +2001,7 @@ const IDIOMS = [
   },
   {
     "english": "花を咲かせる",
-    "japanese": "にぎやかにする。栄える。",
+    "japanese": "①にぎやかにする。②栄える。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
@@ -2192,16 +2202,6 @@ const IDIOMS = [
   {
     "english": "行きがけの駄賃",
     "japanese": "あることのついでに他のことをすること。",
-    "yomi": "",
-    "category": "その他あ行",
-    "superCategory": "その他の慣用句",
-    "example": "",
-    "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
-  },
-  {
-    "english": "息が切れる",
-    "japanese": "せわしく呼吸をする。",
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
@@ -2670,7 +2670,7 @@ const IDIOMS = [
     "bigCategory": "その他の慣用句"
   },
   {
-    "english": "計を立てる",
+    "english": "煙を立てる",
     "japanese": "生計を立てる。",
     "yomi": "",
     "category": "その他か行",
@@ -3070,6 +3070,16 @@ const IDIOMS = [
     "bigCategory": "その他の慣用句"
   },
   {
+    "english": "荷が重い",
+    "japanese": "責任や負担が大きすぎる。",
+    "yomi": "",
+    "category": "その他な行",
+    "superCategory": "その他の慣用句",
+    "example": "",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句"
+  },
+  {
     "english": "はかりに掛ける",
     "japanese": "どちらが得か、はかりに掛けて比べる。",
     "yomi": "",
@@ -3310,6 +3320,16 @@ const IDIOMS = [
     "bigCategory": "その他の慣用句"
   },
   {
+    "english": "墓穴を掘る",
+    "japanese": "自分自身で失敗の原因を作る。",
+    "yomi": "",
+    "category": "その他ま行",
+    "superCategory": "その他の慣用句",
+    "example": "",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句"
+  },
+  {
     "english": "矢継ぎ早",
     "japanese": "次々に行うこと。",
     "yomi": "",
@@ -3352,6 +3372,26 @@ const IDIOMS = [
   {
     "english": "らちがあかない",
     "japanese": "はかどらない。物事のきまりがつかない。",
+    "yomi": "",
+    "category": "その他や行",
+    "superCategory": "その他の慣用句",
+    "example": "",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句"
+  },
+  {
+    "english": "痩せても枯れても",
+    "japanese": "どんなに落ちぶれても。",
+    "yomi": "",
+    "category": "その他や行",
+    "superCategory": "その他の慣用句",
+    "example": "",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句"
+  },
+  {
+    "english": "矢も盾もたまらず",
+    "japanese": "いちずに思いつめて、自分をおさえきれない様子。",
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
