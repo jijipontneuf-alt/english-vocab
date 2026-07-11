@@ -1006,6 +1006,25 @@ const App = {
     this._renderFC();
   },
 
+  _setExampleBadge(w) {
+    ["fc-front", "fc-back"].forEach((pid) => {
+      const parent = document.getElementById(pid);
+      if (!parent) return;
+      if (getComputedStyle(parent).position === "static") parent.style.position = "relative";
+      let b = parent.querySelector(".ex-src-badge");
+      if (!w) { if (b) b.style.display = "none"; return; }
+      if (!b) {
+        b = document.createElement("div");
+        b.className = "ex-src-badge";
+        b.style.cssText = "position:absolute;top:10px;right:10px;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;color:#fff;z-index:5;box-shadow:0 1px 4px rgba(0,0,0,0.25);";
+        parent.appendChild(b);
+      }
+      b.style.display = "";
+      if (w.exampleAI) { b.textContent = "AI作成"; b.style.background = "#3b82f6"; }
+      else { b.textContent = "\u30AA\u30EA\u30B8\u30CA\u30EB"; b.style.background = "#16a34a"; }
+    });
+  },
+
   _renderFC() {
     const w = fcWords[fcIdx];
     if (!w) return;
@@ -1039,8 +1058,11 @@ const App = {
       $("fc-back-word").textContent = w.english;
       $("fc-yomi").textContent = w.yomi || "";
     }
-    $("fc-example").textContent = w.example || "";
-    $("fc-example-ja").textContent = w.exampleJapanese || "";
+    if (!fcExampleMode) {
+      $("fc-example").textContent = w.example || "";
+      $("fc-example-ja").textContent = w.exampleJapanese || "";
+    }
+    this._setExampleBadge(fcExampleMode ? w : null);
     $("fc-counter").textContent = `${fcIdx + 1} / ${fcWords.length}`;
     const pct = (fcIdx / fcWords.length * 100).toFixed(1);
     $("fc-progress-fill").style.width = pct + "%";

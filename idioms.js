@@ -5,9 +5,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "へそ",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "弟はささいなことでへそを曲げて、口をきかなくなった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "へそで茶をわかす",
@@ -15,9 +16,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "へそ",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "あの下手な役者が主役だなんて、へそで茶をわかす話だ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "口が重い",
@@ -25,9 +27,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は口が重く、自分のことをめったに話さない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "口がかたい",
@@ -35,9 +38,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼女は口がかたいので、秘密を打ち明けても安心だ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "口が軽い",
@@ -45,9 +49,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "口が軽い人には、大事な話をしないほうがよい。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "口車に乗る",
@@ -55,9 +60,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "うまい話に口車に乗って、損をしてしまった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "口に合う",
@@ -65,9 +71,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "この土地の料理は、私の口によく合う。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "大口をたたく",
@@ -75,9 +82,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "練習もせずに優勝すると大口をたたく。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "開いた口がふさがらない",
@@ -85,9 +93,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "口",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "あまりの言い訳に、開いた口がふさがらなかった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "尻が重い",
@@ -95,9 +104,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "尻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "兄は尻が重く、なかなか手伝いに来ない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "尻に火がつく",
@@ -105,9 +115,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "尻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "提出日が近づき、ようやく尻に火がついた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "尻をぬぐう",
@@ -115,9 +126,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "尻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "弟の失敗の尻をぬぐうのは、いつも私だ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手がつけられない",
@@ -125,9 +137,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "火の勢いが強く、もう手がつけられない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手ぐすねを引く",
@@ -135,9 +148,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "相手チームは手ぐすねを引いて待ち構えていた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手に汗握る",
@@ -145,9 +159,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "手に汗握る接戦に、観客はわきあがった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手のひらを返す",
@@ -157,7 +172,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "手のひらを返すように対応がよくなった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "手を打つ",
@@ -165,9 +181,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "問題が大きくなる前に手を打つべきだ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手を貸す",
@@ -177,7 +194,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "忙しい母に手を貸す。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "手をこまぬく",
@@ -187,7 +205,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "手をこまぬいて人のするままにしていてはいけない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "手を抜く",
@@ -195,9 +214,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "どんな仕事でも手を抜いてはいけない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手を引く",
@@ -205,9 +225,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼はその計画から早々に手を引いた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手を広げる",
@@ -215,9 +236,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "事業の手を広げすぎて、失敗した。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "手を焼く",
@@ -225,9 +247,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "手",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "いたずらばかりする弟に手を焼いている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "爪をとぐ",
@@ -235,9 +258,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "爪",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "次の試合に向けて、ひそかに爪をといでいる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目の当たり",
@@ -245,9 +269,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "事故の瞬間を目の当たりにして、言葉を失った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目がくらむ",
@@ -257,7 +282,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "付録に目がくらんで、雑誌を買った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "目が高い（=目が利く）",
@@ -267,7 +293,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "この作品を選ぶなんて、お目が高い。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "目が飛び出る",
@@ -275,9 +302,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "値札を見て、目が飛び出るほど驚いた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目がない",
@@ -285,9 +313,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "姉は甘いものに目がない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目が回る",
@@ -297,7 +326,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "目が回るような一日。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "目先が利く",
@@ -305,9 +335,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は目先が利くので、商売がうまい。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目と鼻の先",
@@ -315,9 +346,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "学校は家から目と鼻の先にある。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目に余る",
@@ -325,9 +357,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼のわがままは目に余る。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目に入れても痛くない",
@@ -335,9 +368,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "祖父は孫が目に入れても痛くないほどかわいいらしい。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目に浮かぶ",
@@ -345,9 +379,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "手紙を読むと、故郷の風景が目に浮かぶ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目に物見せる",
@@ -355,9 +390,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "次こそは勝って、目に物見せてやる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目の色を変える",
@@ -367,7 +403,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "試験が迫り、目の色を変えて勉強する。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "目のかたきにする",
@@ -375,9 +412,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "なぜか彼は私を目のかたきにしている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目の毒",
@@ -385,9 +423,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "ショーウインドウの新製品は目の毒だ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目もくれない",
@@ -395,9 +434,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は寄り道にも目もくれず家へ帰った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目も当てられない",
@@ -405,9 +445,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "部屋は散らかり放題で、目も当てられない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を奪われる",
@@ -415,9 +456,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "満開の桜に目を奪われた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目をかける",
@@ -425,9 +467,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "監督は若い選手に目をかけている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目をこらす",
@@ -435,9 +478,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "暗がりの中、目をこらして相手を探した。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を皿にする",
@@ -445,9 +489,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "落とした指輪を、目を皿にして探した。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を三角にする",
@@ -455,9 +500,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "母は弟のいたずらに目を三角にして怒った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を通す",
@@ -465,9 +511,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "提出前に、書類にもう一度目を通す。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を留める",
@@ -475,9 +522,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "一枚の絵に目を留めて足を止めた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を光らす",
@@ -485,9 +533,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "先生が目を光らせているので、私語はできない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を引く",
@@ -495,9 +544,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "派手な看板が通行人の目を引いた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を細める",
@@ -505,9 +555,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "母は子の成長に目を細めた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "目を丸くする",
@@ -515,9 +566,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "突然の合格発表に、みんな目を丸くした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "瞳をこらす",
@@ -525,9 +577,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "星空に瞳をこらすと、天の川が見えてきた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "耳が痛い",
@@ -535,9 +588,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "耳",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "だらしないと注意され、耳が痛い話だった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "耳にたこができる",
@@ -545,9 +599,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "耳",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "その自慢話は、耳にたこができるほど聞いた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "耳を疑う",
@@ -555,9 +610,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "耳",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "突然の知らせに、思わず耳を疑った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "耳を貸す",
@@ -567,7 +623,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "彼の学説に耳を貸す者は少なかった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "耳を澄ます",
@@ -575,9 +632,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "耳",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "耳を澄ますと、小川のせせらぎが聞こえた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "耳をそろえる",
@@ -585,9 +643,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "耳",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "借りたお金を、耳をそろえて返した。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "小耳に挟む",
@@ -597,7 +656,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "友人のうわさを小耳に挟んだ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "肝がすわる",
@@ -605,9 +665,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肝",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は肝がすわっていて、大舞台でも動じない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肝に銘じる",
@@ -615,9 +676,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肝",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "先生の言葉を肝に銘じて努力する。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肝を冷やす",
@@ -625,9 +687,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肝",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "車が急に飛び出してきて肝を冷やした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肝をつぶす",
@@ -635,9 +698,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肝",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "突然の大きな物音に肝をつぶした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肩で風を切る",
@@ -645,9 +709,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肩",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "優勝した選手は、肩で風を切って歩いた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肩の荷が下りる",
@@ -655,9 +720,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肩",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "発表が無事に終わり、肩の荷が下りた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肩を入れる",
@@ -665,9 +731,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肩",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "監督は新人の育成に肩を入れている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "肩をすくめる",
@@ -677,7 +744,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "予想外の配役に、友人は肩をすくめた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "肩を並べる",
@@ -685,9 +753,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "肩",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "努力を重ね、ついに強豪校と肩を並べた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸が痛む",
@@ -697,7 +766,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "過去の悲劇に胸が痛む。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "胸がいっぱいになる",
@@ -705,9 +775,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "温かい言葉に、胸がいっぱいになった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸が躍る",
@@ -715,9 +786,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "明日の遠足を思うと胸が躍る。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸がしめつけられる",
@@ -725,9 +797,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "別れの場面に胸がしめつけられた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸がすく",
@@ -737,7 +810,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "チームの初勝利に、胸がすく思いがした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "胸が迫る",
@@ -745,9 +819,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "感動的な結末に胸が迫った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸を打つ",
@@ -755,9 +830,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼女の生き方は、多くの人の胸を打った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸をこがす",
@@ -765,9 +841,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "かなわぬ恋に胸をこがす。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸をつかれる",
@@ -777,7 +854,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "彼女のするどい指摘に胸をつかれた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "胸をなでおろす",
@@ -785,9 +863,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "無事の知らせに胸をなでおろした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸をはずませる",
@@ -795,9 +874,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "初めての海外旅行に胸をはずませる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "胸を張る",
@@ -805,9 +885,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "胸",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "全力を出したので、負けても胸を張れる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "脇が甘い",
@@ -817,7 +898,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "相撲で脇に腕を差し込まれると不利になることから。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "腕が立つ",
@@ -825,9 +907,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腕",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は料理の腕が立つ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腕が鳴る",
@@ -835,9 +918,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腕",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "大会を前にして腕が鳴る。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腕によりをかける",
@@ -845,9 +929,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腕",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "母は腕によりをかけて料理を作った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腕を上げる",
@@ -855,9 +940,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腕",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "毎日の練習で、ずいぶん腕を上げた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腕を振るう",
@@ -865,9 +951,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腕",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "得意の料理で腕を振るう。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腕を磨く",
@@ -875,9 +962,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腕",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "一流をめざして、日々腕を磨く。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腰を据える",
@@ -885,9 +973,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腰",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "腰を据えて研究に取り組む。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腰を抜かす",
@@ -895,9 +984,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腰",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "あまりの恐ろしさに腰を抜かした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腰が重い",
@@ -905,9 +995,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腰",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "兄は腰が重く、なかなか勉強を始めない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腹が黒い",
@@ -915,9 +1006,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "笑顔の裏で、彼は意外に腹が黒い。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腹に据えかねる",
@@ -925,9 +1017,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "度重なる無礼に、ついに腹に据えかねた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腹をさぐる",
@@ -935,9 +1028,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "相手の腹をさぐりながら話を進めた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "腹を割る",
@@ -945,9 +1039,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "一度、腹を割って話し合おう。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "小腹が立つ",
@@ -955,9 +1050,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "生意気な返事に、少し小腹が立った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "膝を打つ",
@@ -965,9 +1061,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "膝",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "うまい考えに、思わず膝を打った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足が出る",
@@ -975,9 +1072,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "予定より買いすぎて、足が出てしまった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足が向く",
@@ -985,9 +1083,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "気づくと、なじみの店に足が向いていた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足を洗う",
@@ -995,9 +1094,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "悪い仲間から足を洗って、まじめに働く。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足をすくう",
@@ -1005,9 +1105,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "油断していると、足をすくわれる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足を運ぶ",
@@ -1015,9 +1116,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "何度も足を運んで、ようやく話がまとまった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足を引っぱる",
@@ -1025,9 +1127,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "味方の足を引っぱらないよう努力する。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "足を棒にする",
@@ -1037,7 +1140,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "いなくなった子犬を足を棒にして捜し回る。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "きびすを返す",
@@ -1047,7 +1151,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "忘れ物に気づき、きびすを返して取りに戻る。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "二の足を踏む",
@@ -1055,9 +1160,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "足",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "値段が高くて、買うのに二の足を踏んだ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "股にかける",
@@ -1065,9 +1171,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "身",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "世界を股にかけて活躍する商人だ。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "身につまされる",
@@ -1075,9 +1182,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "身",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "同じ境遇の話に、身につまされた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "身にしみる",
@@ -1085,9 +1193,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "身",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "親のありがたさが身にしみる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "身の毛がよだつ",
@@ -1095,9 +1204,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "身",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "身の毛がよだつような怪談を聞いた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "身を粉にする（身を入れる）",
@@ -1105,9 +1215,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "身",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "家族のために、身を粉にして働く。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "頭が上がらない",
@@ -1115,9 +1226,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頭",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "世話になった先生には頭が上がらない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "頭がかたい",
@@ -1125,9 +1237,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頭",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "頭がかたい人は、新しい考えを受け入れにくい。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "頭が下がる",
@@ -1135,9 +1248,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頭",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼のひたむきな努力には頭が下がる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "頭にくる",
@@ -1145,9 +1259,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頭",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "約束を破られて頭にきた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "頭をかかえる",
@@ -1155,9 +1270,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頭",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "難しい問題に頭をかかえた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "顔から火が出る",
@@ -1165,9 +1281,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "みんなの前で転んで、顔から火が出る思いだった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "顔が売れる",
@@ -1175,9 +1292,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "テレビに出て、すっかり顔が売れた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "顔が立つ",
@@ -1185,9 +1303,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "君のおかげで、私の顔が立った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "顔が広い",
@@ -1195,9 +1314,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "父は顔が広く、知り合いが多い。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "顔にどろを塗る",
@@ -1205,9 +1325,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "勝手な行いは、親の顔にどろを塗ることになる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "顔を出す",
@@ -1215,9 +1336,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "忙しくても、会合には顔を出すようにしている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "大きな顔をする",
@@ -1225,9 +1347,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "少し勝ったくらいで大きな顔をするな。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "涼しい顔",
@@ -1237,7 +1360,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "彼は涼しい顔でうそをついている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "つらの皮が厚い",
@@ -1245,9 +1369,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "何度断られても平気とは、つらの皮が厚い。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "臆面もなく",
@@ -1257,7 +1382,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "遅刻したのに、臆面もなく笑っている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "骨が折れる",
@@ -1265,9 +1391,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "骨",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "慣れない作業は骨が折れる。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "骨（身）を惜しむ",
@@ -1277,7 +1404,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "骨を惜しまず働きなさい。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "鼻が高い",
@@ -1285,9 +1413,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "鼻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "弟が優勝して、兄として鼻が高い。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鼻で笑う",
@@ -1295,9 +1424,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "鼻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "私の意見を、彼は鼻で笑った。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鼻にかける",
@@ -1305,9 +1435,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "鼻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は成績のよさを鼻にかけている。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鼻もちならない",
@@ -1315,9 +1446,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "鼻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "気取った態度が鼻もちならない。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鼻を明かす",
@@ -1325,9 +1457,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "鼻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "実力で勝って、ライバルの鼻を明かした。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鼻を折る",
@@ -1335,9 +1468,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "鼻",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "生意気な相手の鼻を折ってやった。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "木で鼻をくくる",
@@ -1347,7 +1481,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "木で鼻をくくったような態度で断られた。",
     "exampleJapanese": "",
-    "bigCategory": "からだに関する慣用句"
+    "bigCategory": "からだに関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "まゆをひそめる",
@@ -1355,9 +1490,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "まゆ",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "下品な言葉に、周りの人がまゆをひそめた。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "まゆにつばをぬる",
@@ -1365,9 +1501,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "まゆ",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "うますぎる話には、まゆにつばをぬったほうがいい。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "喉から手が出る",
@@ -1375,9 +1512,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "喉",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "喉から手が出るほど、その本が欲しい。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "奥歯にものが挟まる",
@@ -1385,9 +1523,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "奥歯にものが挟まったような言い方はやめてほしい。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "歯が浮く",
@@ -1395,9 +1534,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "歯が浮くようなお世辞を言われた。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "歯が立たない",
@@ -1405,9 +1545,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "相手が強すぎて、まるで歯が立たない。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "歯がゆい",
@@ -1415,9 +1556,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "思うように上達せず、歯がゆい。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "歯切れがよい",
@@ -1425,9 +1567,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼の返事は、いつも歯切れがよい。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "歯に衣着せぬ",
@@ -1435,9 +1578,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "彼は歯に衣着せぬ物言いで知られている。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "舌を巻く",
@@ -1445,9 +1589,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "舌",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "見事な演奏に、審査員も舌を巻いた。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "額を集める",
@@ -1455,9 +1600,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頬",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "みんなで額を集めて対策を練った。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "頬を染める",
@@ -1465,9 +1611,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頬",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "ほめられて、彼女は頬を染めた。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "頬をふくらます",
@@ -1475,9 +1622,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頬",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "妹はしかられて、頬をふくらませた。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "かぶりを振る",
@@ -1487,7 +1635,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "私の提案に彼はかぶりを振った。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": false
   },
   {
     "english": "怒り心頭に発する",
@@ -1495,9 +1644,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頭",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "裏切りを知って、怒り心頭に発した。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "顎が落ちる",
@@ -1505,9 +1655,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顎",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "このケーキは、顎が落ちるほどおいしい。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "顎で使う",
@@ -1515,9 +1666,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顎",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "人を顎で使うような態度は感心しない。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "顎を出す",
@@ -1525,9 +1677,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "顎",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "きつい練習に、さすがに顎を出した。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "首をかしげる",
@@ -1537,7 +1690,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "政治家の説明に首をかしげる。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": false
   },
   {
     "english": "首をすくめる",
@@ -1547,7 +1701,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "いきなりの轟音に、皆が首をすくめた。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": false
   },
   {
     "english": "首を長くする",
@@ -1555,9 +1710,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "首",
     "superCategory": "からだに関する慣用句",
-    "example": "",
+    "example": "合格発表を、首を長くして待つ。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": true
   },
   {
     "english": "首をひねる",
@@ -1567,7 +1723,8 @@ const IDIOMS = [
     "superCategory": "からだに関する慣用句",
     "example": "弟の不可解な話に私は首をひねった。",
     "exampleJapanese": "",
-    "bigCategory": "顔・頭の近くの部分"
+    "bigCategory": "顔・頭の近くの部分",
+    "exampleAI": false
   },
   {
     "english": "蟻のはい出る隙もない",
@@ -1577,7 +1734,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "お祭りの会場は警察官だらけで、蟻のはい出る隙もなかった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "牛の歩み",
@@ -1587,7 +1745,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "工事は牛の歩みのようになかなか進まない。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鵜の目鷹の目",
@@ -1597,7 +1756,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "先生は鵜の目鷹の目でカンニングがないか見張っている。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鵜のみにする",
@@ -1607,7 +1767,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "友達の話を鵜のみにして、だまされてしまった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "馬が合う",
@@ -1617,7 +1778,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "初めて会ったのに、すぐに馬が合った。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "尻尾を出す",
@@ -1627,7 +1789,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "うそをついていたが、ついに尻尾を出してしまった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "蚊の鳴くような声",
@@ -1637,7 +1800,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "緊張して、蚊の鳴くような声しか出なかった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "烏の行水",
@@ -1647,7 +1811,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "弟はいつも烏の行水で、すぐにお風呂から出てくる。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "閑古鳥が鳴く",
@@ -1657,7 +1822,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "雨の日の遊園地は閑古鳥が鳴いていた。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "狐につままれる",
@@ -1667,7 +1833,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "突然テストが中止になり、狐につままれたような気分だった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "牙をむく",
@@ -1677,7 +1844,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "おとなしかった犬が急に牙をむいた。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "蜘蛛の子を散らす",
@@ -1687,7 +1855,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "サイレンが鳴ると、人々は蜘蛛の子を散らすように逃げた。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "犬猿の仲",
@@ -1697,7 +1866,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "あの二人は犬猿の仲で、いつもけんかしている。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鯖を読む",
@@ -1707,7 +1877,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "年齢を鯖を読んで、三つも若く言った。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "尻馬に乗る",
@@ -1717,7 +1888,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "友達の尻馬に乗って、自分も悪口を言ってしまった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "雀の涙",
@@ -1727,7 +1899,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "アルバイトの給料は雀の涙ほどだった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "狸寝入り",
@@ -1737,7 +1910,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "弟は狸寝入りをして、宿題から逃げようとした。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鶴の一声",
@@ -1747,7 +1921,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "結局、会長の鶴の一声で決まった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "飛ぶ鳥を落とす勢い",
@@ -1757,7 +1932,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "そのアイドルグループは飛ぶ鳥を落とす勢いで人気が出た。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "鳶に油揚げをさらわれる",
@@ -1767,7 +1943,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "せっかく見つけた席を、鳶に油揚げをさらわれるように取られた。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "虎の子",
@@ -1777,7 +1954,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "虎の子の貯金をはたいて、新しい自転車を買った。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "猫なで声",
@@ -1787,7 +1965,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "何かお願いがあるのか、妹が猫なで声で話しかけてきた。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "猫の手も借りたい",
@@ -1797,7 +1976,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "年末の大掃除は猫の手も借りたいほど忙しかった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "猫の額",
@@ -1807,7 +1987,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "うちの庭は猫の額ほどの広さしかない。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "猫も杓子も",
@@ -1817,7 +1998,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "最近は猫も杓子もスマートフォンを持っている。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "猫をかぶる",
@@ -1827,7 +2009,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "彼女は先生の前では猫をかぶっている。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "羽を伸ばす",
@@ -1837,7 +2020,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "試験が終わって、友達と羽を伸ばして遊んだ。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "袋のねずみ",
@@ -1847,7 +2031,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "行き止まりに追い込まれて、もう袋のねずみだ。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "虫がいい",
@@ -1857,7 +2042,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "手伝わないのにごほうびだけほしいなんて、虫がいい話だ。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "虫が知らせる",
@@ -1867,7 +2053,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "虫が知らせるものがあって、家に電話をかけた。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "虫が好かない",
@@ -1877,7 +2064,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "理由はないけれど、あの人はどうも虫が好かない。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "やぶへび",
@@ -1887,7 +2075,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "余計なことを言ったせいで、やぶへびになってしまった。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "わしづかみ",
@@ -1897,7 +2086,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "彼の演奏は観客の心をわしづかみにした。",
     "exampleJapanese": "",
-    "bigCategory": "動物に関する慣用句"
+    "bigCategory": "動物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "瓜二つ",
@@ -1907,7 +2097,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "あの双子は瓜二つで、見分けがつかない。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "ごぼう抜き",
@@ -1917,7 +2108,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "最後の直線で五人をごぼう抜きにした。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "高嶺の花",
@@ -1927,7 +2119,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "あの有名な絵は高嶺の花で、とても買えない。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "竹を割ったよう",
@@ -1937,7 +2130,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "彼は竹を割ったような性格で、みんなに好かれている。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "梨のつぶて",
@@ -1947,7 +2141,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "メールを送ったのに梨のつぶてで、返事がない。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "根に持つ",
@@ -1957,7 +2152,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "あの人は昔のことをいつまでも根に持っている。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "根掘り葉掘り",
@@ -1967,7 +2163,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "母に根掘り葉掘り質問された。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "根も葉もない",
@@ -1977,7 +2174,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "そんな根も葉もないうわさを信じてはいけない。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "根を下ろす",
@@ -1987,7 +2185,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "この町に引っ越してきて、ようやく根を下ろした。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "根を張る",
@@ -1997,7 +2196,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "その悪い習慣は社会に深く根を張っている。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "花を咲かせる",
@@ -2005,9 +2205,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
-    "example": "懐かしい思い出話に花を咲かせる。この芝居で、彼も花を咲かせることができた。",
+    "example": "①なつかしい思い出話に花を咲かせる。②この芝居で、彼も花を咲かせることができた。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "花を添える",
@@ -2017,7 +2218,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "優勝パーティーに有名人が出席して花を添えた。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "花を持たせる",
@@ -2027,7 +2229,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "年長者に花を持たせる。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "道草を食う",
@@ -2037,7 +2240,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "学校の帰りに道草を食って遅くなった。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "実を結ぶ",
@@ -2047,7 +2251,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "毎日の練習がついに実を結んで、優勝できた。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "柳に風",
@@ -2057,7 +2262,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "彼は文句を言われても柳に風と受け流す。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "やぶから棒",
@@ -2067,7 +2273,8 @@ const IDIOMS = [
     "superCategory": "動植物に関する慣用句",
     "example": "やぶから棒に質問されて、びっくりした。",
     "exampleJapanese": "",
-    "bigCategory": "植物に関する慣用句"
+    "bigCategory": "植物に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "言葉に余る",
@@ -2075,9 +2282,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "言葉",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "感謝の気持ちは、言葉に余るほどだ。",
     "exampleJapanese": "",
-    "bigCategory": "言葉に関する慣用句"
+    "bigCategory": "言葉に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "言葉に詰まる",
@@ -2087,7 +2295,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "彼に気持ちを聞かれ、言葉に詰まった。",
     "exampleJapanese": "",
-    "bigCategory": "言葉に関する慣用句"
+    "bigCategory": "言葉に関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "言葉を尽くす",
@@ -2095,9 +2304,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "言葉",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "言葉を尽くして説明したが、わかってもらえなかった。",
     "exampleJapanese": "",
-    "bigCategory": "言葉に関する慣用句"
+    "bigCategory": "言葉に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "言葉を濁す",
@@ -2105,9 +2315,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "言葉",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "都合が悪いのか、彼は言葉を濁した。",
     "exampleJapanese": "",
-    "bigCategory": "言葉に関する慣用句"
+    "bigCategory": "言葉に関する慣用句",
+    "exampleAI": true
   },
   {
     "english": "言葉を挟む",
@@ -2117,7 +2328,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "横から言葉を挟む。",
     "exampleJapanese": "",
-    "bigCategory": "言葉に関する慣用句"
+    "bigCategory": "言葉に関する慣用句",
+    "exampleAI": false
   },
   {
     "english": "相づちを打つ",
@@ -2125,9 +2337,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "話を聞きながら、うなずいて相づちを打つ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "挙げ句の果て",
@@ -2135,9 +2348,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "さんざん迷った挙げ句の果て、何も買わなかった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "後の祭り",
@@ -2145,9 +2359,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "今さら悔やんでも、後の祭りだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "油を売る",
@@ -2155,9 +2370,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "使いの途中で油を売っていて、しかられた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "油をしぼる",
@@ -2167,7 +2383,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "帰りが遅くなって父に油をしぼられた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "嵐の前の静けさ",
@@ -2175,9 +2392,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "試合前の会場は、嵐の前の静けさのようだった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "泡を食う",
@@ -2185,9 +2403,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "突然の呼び出しに、泡を食って駆けつけた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "暗礁に乗り上げる",
@@ -2195,9 +2414,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "話し合いは意見の対立で、暗礁に乗り上げた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "行きがけの駄賃",
@@ -2205,9 +2425,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "買い物の行きがけの駄賃に、手紙も出してきた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "息が詰まる",
@@ -2215,9 +2436,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "静まりかえった会場で、息が詰まりそうだった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "息を切らす",
@@ -2225,9 +2447,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "坂道を登って、息を切らして到着した。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "息を殺す",
@@ -2235,9 +2458,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "物音を立てぬよう、息を殺してひそんだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "息を呑む",
@@ -2247,7 +2471,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "初めて海で出会うイルカの姿に、息をのんだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "息を潜める",
@@ -2255,9 +2480,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "猫は獲物をねらって息を潜めていた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "息を吹き返す",
@@ -2265,9 +2491,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "資金援助で、会社は息を吹き返した。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "板につく",
@@ -2275,9 +2502,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "司会も、すっかり板についてきた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "一目を置く",
@@ -2287,7 +2515,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "囲碁で弱いほうが先に碁石を置くことから。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "一杯食う",
@@ -2295,9 +2524,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "まんまと敵の作戦に一杯食った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "色を失う",
@@ -2305,9 +2535,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "突然の悪い知らせに、みな色を失った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "裏表がない",
@@ -2317,7 +2548,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "あの人は裏表がない、信用できる人だ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "裏をかく",
@@ -2325,9 +2557,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "相手の裏をかいて、逆方向へ走った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "うわの空",
@@ -2335,9 +2568,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "心配事があるのか、彼は授業中もうわの空だった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "英気を養う",
@@ -2345,9 +2579,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "週末はゆっくり休んで英気を養う。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "襟を正す",
@@ -2355,9 +2590,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "校長の話に、生徒たちは襟を正して聞いた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "お茶を濁す",
@@ -2365,9 +2601,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "都合の悪い質問には、笑ってお茶を濁した。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "同じ土俵",
@@ -2377,7 +2614,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "同じ土俵で戦う。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "尾を引く",
@@ -2385,9 +2623,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "けんかのしこりが、いつまでも尾を引いた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "思うつぼ",
@@ -2397,7 +2636,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "ここであきらめたら、敵の思うつぼだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "影が薄い",
@@ -2405,9 +2645,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "おとなしい彼は、クラスでも影が薄い。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "影を潜める",
@@ -2415,9 +2656,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "一時流行した遊びも、最近は影を潜めた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "笠に着る",
@@ -2425,9 +2667,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "親の力を笠に着て、いばっている。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "風の便り",
@@ -2435,9 +2678,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "風の便りに、旧友の活躍を聞いた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "固唾をのむ",
@@ -2447,7 +2691,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "固唾をのんで合否の結果発表を見守る。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "肩を持つ",
@@ -2455,9 +2700,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "妹は、いつも弟の肩を持つ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "株が上がる",
@@ -2467,7 +2713,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "文化祭の発表で、吹奏楽部の株が上がった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "片棒をかつぐ",
@@ -2475,9 +2722,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "知らぬ間に、悪事の片棒をかつがされていた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "角が立つ",
@@ -2485,9 +2733,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "はっきり言いすぎると角が立つ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "かぶとを脱ぐ",
@@ -2495,9 +2744,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼の熱意には、さすがにかぶとを脱いだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "鎌を掛ける",
@@ -2505,9 +2755,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "鎌を掛けたら、うっかり本当のことを白状した。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "殻に閉じこもる",
@@ -2515,9 +2766,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "失敗して以来、殻に閉じこもってしまった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "堪忍袋の緒が切れる",
@@ -2525,9 +2777,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "度重なるいたずらに、ついに堪忍袋の緒が切れた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "間髪をいれず",
@@ -2537,7 +2790,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "質問に間髪をいれず答える。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "気が置けない",
@@ -2547,7 +2801,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "「油断ができない」という意味ではない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "きまりが悪い",
@@ -2555,9 +2810,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "うそがばれて、きまりが悪い思いをした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "気が気でない",
@@ -2567,7 +2823,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "明日の試合のことを思うと、気が気でない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "気が早い",
@@ -2575,9 +2832,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "まだ夏なのに冬服の話とは、気が早い。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "気が重い",
@@ -2587,7 +2845,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "雨の日が続くと気がめいってしまう。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "気がもめる（気をもむ）",
@@ -2595,9 +2854,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "結果がなかなか出ず、気がもめる。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "気にくわない",
@@ -2605,9 +2865,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼のなれなれしい態度が気にくわない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "気を配る",
@@ -2615,9 +2876,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "客が快適に過ごせるよう、細かく気を配る。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "琴線に触れる",
@@ -2625,9 +2887,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "その一言が、彼の琴線に触れた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "釘を刺す",
@@ -2635,9 +2898,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "遅刻しないよう、前もって釘を刺しておいた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "軍配が上がる",
@@ -2645,9 +2909,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "熱戦の末、赤組に軍配が上がった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "警鐘を鳴らす",
@@ -2655,9 +2920,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "専門家は環境破壊に警鐘を鳴らしている。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "桁が違う",
@@ -2665,9 +2931,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼の実力は、私たちとは桁が違う。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "煙を立てる",
@@ -2675,9 +2942,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "わずかな収入で、なんとか煙を立てている。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "けりがつく",
@@ -2687,7 +2955,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "和歌・俳句の最後に「けり」を使うことから。紛争にけりがつく。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "さじを投げる",
@@ -2695,9 +2964,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "医者もさじを投げるほどの難病だった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "じだんだを踏む",
@@ -2707,7 +2977,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "先を越され、じだんだを踏んで悔しがる。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "しのぎを削る",
@@ -2717,7 +2988,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "「しのぎ」とは、刀の刃と峰の中間の少し盛り上がった部分のこと。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "しびれを切らす",
@@ -2725,9 +2997,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "待ち合わせ相手が来ず、しびれを切らした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "重箱の隅を楊枝でほじくる（つつく）",
@@ -2735,9 +3008,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "重箱の隅を楊枝でほじくるような、細かい注意ばかりだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "雌雄を決する",
@@ -2745,9 +3019,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "決勝戦で、両校が雌雄を決する。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "数珠つなぎ",
@@ -2757,7 +3032,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "入場者が数珠つなぎに並んでいる。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "しらを切る",
@@ -2765,9 +3041,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "証拠があるのに、彼はしらを切り続けた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "心血を注ぐ",
@@ -2775,9 +3052,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "研究に心血を注いだ成果が実った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "砂をかむよう",
@@ -2785,9 +3063,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "一人きりの食事は、砂をかむようだった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "図に乗る",
@@ -2795,9 +3074,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "ほめられて図に乗り、調子に乗りすぎた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "隅に置けない",
@@ -2805,9 +3085,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼は、なかなか隅に置けない人物だ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "精を出す",
@@ -2817,7 +3098,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "部活の練習に精を出す。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "精も根も尽きる（果てる）",
@@ -2827,7 +3109,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "三日間の大会の運営で、精も根も尽きた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "せきを切ったように",
@@ -2835,9 +3118,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼女はせきを切ったように話し始めた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "底をつく",
@@ -2845,9 +3129,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "旅の費用が、とうとう底をついた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "反りが合わない",
@@ -2855,9 +3140,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "あの二人は、どうも反りが合わない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "世間ずれ",
@@ -2865,9 +3151,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "苦労してきた彼は、少し世間ずれしている。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "太鼓判を押す",
@@ -2875,9 +3162,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "品質は私が太鼓判を押します。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "高みの見物",
@@ -2885,9 +3173,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "人の苦労を高みの見物とは、ひどい。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "高をくくる",
@@ -2895,9 +3184,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "簡単だと高をくくって、痛い目にあった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "立て板に水",
@@ -2905,9 +3195,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼女は立て板に水のように話す。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "棚に上げる",
@@ -2915,9 +3206,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "自分のことは棚に上げて、人を責める。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "力を落とす",
@@ -2925,9 +3217,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "不合格の知らせに、彼はすっかり力を落とした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "力を貸す",
@@ -2935,9 +3228,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "困っている友に力を貸す。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "つじつまが合う",
@@ -2945,9 +3239,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "話のつじつまが合わず、うそが見破られた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "途方に暮れる",
@@ -2955,9 +3250,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "道に迷い、途方に暮れた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "取りつく島もない",
@@ -2965,9 +3261,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "忙しいと断られ、取りつく島もなかった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "取るに足らない",
@@ -2975,9 +3272,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他た行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "そんな取るに足らないことで悩むな。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "流れに棹さす",
@@ -2987,7 +3285,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "「流れに逆らう」の意味で使うのは誤り。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "煮え切らない",
@@ -2995,9 +3294,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼の煮え切らない態度に、いらいらした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "波風が立つ",
@@ -3005,9 +3305,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "余計な一言で、家庭に波風が立った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "斜めに読む",
@@ -3015,9 +3316,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "時間がないので、新聞を斜めに読んだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "涙をのむ",
@@ -3025,9 +3327,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "あと一歩で敗れ、涙をのんだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "二の句が継げない",
@@ -3035,9 +3338,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "あまりの言い分に、二の句が継げなかった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "二の舞",
@@ -3045,9 +3349,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "先輩の二の舞にならないよう気をつける。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "熱に浮かされる",
@@ -3055,9 +3360,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "熱に浮かされたように、ゲームに没頭した。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "音を上げる",
@@ -3065,9 +3371,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "きびしい練習に、とうとう音を上げた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "荷が重い",
@@ -3075,9 +3382,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "新人の私には、この大役は荷が重い。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "はかりに掛ける",
@@ -3085,9 +3393,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "損得をはかりに掛けて考える。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "薄氷を踏む",
@@ -3095,9 +3404,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "薄氷を踏む思いで、危機を乗り越えた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "話がはずむ",
@@ -3105,9 +3415,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "共通の趣味で話がはずんだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "話がつく",
@@ -3115,9 +3426,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "双方が譲り合い、無事に話がついた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "幅を利かせる",
@@ -3125,9 +3437,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "その地域では、彼が幅を利かせている。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "腫れ物にさわるよう",
@@ -3135,9 +3448,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "機嫌が悪く、腫れ物にさわるように接した。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "一筋縄ではいかない",
@@ -3145,9 +3459,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "あの相手は、一筋縄ではいかない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "火に油を注ぐ",
@@ -3155,9 +3470,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼の一言が、火に油を注ぐ結果になった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "火花を散らす",
@@ -3165,9 +3481,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "両者は優勝をかけて火花を散らした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "火蓋を切る",
@@ -3175,9 +3492,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "いよいよ選挙戦の火蓋が切られた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "拍子抜け",
@@ -3187,7 +3505,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "案外簡単にできたので、拍子抜けした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "膝を交える",
@@ -3195,9 +3514,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "膝を交えて、じっくり語り合った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "額に汗する",
@@ -3205,9 +3525,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "額に汗して働く姿は美しい。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "枚挙にいとまがない",
@@ -3215,9 +3536,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼の功績は枚挙にいとまがない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "待てど暮らせど",
@@ -3227,7 +3549,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "待てど暮らせど、返事が返ってこない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "水に流す",
@@ -3235,9 +3558,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "過ぎたことは水に流そう。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "水の泡",
@@ -3245,9 +3569,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "油断して、これまでの苦労が水の泡になった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "水をさす",
@@ -3255,9 +3580,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "せっかくの盛り上がりに水をさすな。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "水を向ける",
@@ -3265,9 +3591,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "こちらから水を向けると、彼は語り始めた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "身も蓋もない",
@@ -3275,9 +3602,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "そう言ってしまっては身も蓋もない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "名状しがたい",
@@ -3285,9 +3613,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "名状しがたい不安に襲われた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "ものにする",
@@ -3297,7 +3626,8 @@ const IDIOMS = [
     "superCategory": "その他の慣用句",
     "example": "②練習して、手話をものにした。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": false
   },
   {
     "english": "墓穴を掘る",
@@ -3305,9 +3635,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "余計な言い訳をして、自ら墓穴を掘った。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "矢継ぎ早",
@@ -3315,9 +3646,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "記者から矢継ぎ早に質問が飛んだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "山を張る",
@@ -3325,9 +3657,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "試験で山を張ったが、見事に外れた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "槍玉にあげる",
@@ -3335,9 +3668,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "彼一人を槍玉にあげるのは不公平だ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "弓を引く",
@@ -3345,9 +3679,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "恩ある人に弓を引くことはできない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "らちがあかない",
@@ -3355,9 +3690,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "言い争っていても、らちがあかない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "痩せても枯れても",
@@ -3365,9 +3701,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "痩せても枯れても、私は職人だ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "矢も盾もたまらず",
@@ -3375,9 +3712,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "知らせを聞き、矢も盾もたまらず駆けつけた。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "脇目も振らず",
@@ -3385,9 +3723,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "脇目も振らず勉強に打ち込んだ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "枠にはめる",
@@ -3395,9 +3734,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "子どもを枠にはめる教育には反対だ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "渡りに船",
@@ -3405,9 +3745,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "迷っていたところに誘われ、渡りに船だった。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "割に合わない",
@@ -3415,9 +3756,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "苦労のわりに報われず、割に合わない。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "輪をかける",
@@ -3425,8 +3767,9 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",
-    "example": "",
+    "example": "兄も乱暴だが、弟は輪をかけて乱暴だ。",
     "exampleJapanese": "",
-    "bigCategory": "その他の慣用句"
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   }
 ];
