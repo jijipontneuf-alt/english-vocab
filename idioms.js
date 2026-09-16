@@ -2838,7 +2838,7 @@ const IDIOMS = [
     "exampleAI": true
   },
   {
-    "english": "気が重い",
+    "english": "気がめいる",
     "japanese": "憂鬱な気分になる。",
     "yomi": "",
     "category": "その他か行",
@@ -2957,6 +2957,28 @@ const IDIOMS = [
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
     "exampleAI": false
+  },
+  {
+    "english": "心に刻む",
+    "japanese": "深く記憶する。",
+    "yomi": "",
+    "category": "その他か行",
+    "superCategory": "その他の慣用句",
+    "example": "恩師の言葉を心に刻んで生きていく。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "心を奪われる",
+    "japanese": "一つのことに気持ちが集中する。",
+    "yomi": "",
+    "category": "その他か行",
+    "superCategory": "その他の慣用句",
+    "example": "美しい夕焼けに心を奪われた。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
   },
   {
     "english": "さじを投げる",
@@ -3124,17 +3146,6 @@ const IDIOMS = [
     "exampleAI": true
   },
   {
-    "english": "底をつく",
-    "japanese": "貯えがなくなる。",
-    "yomi": "",
-    "category": "その他さ行",
-    "superCategory": "その他の慣用句",
-    "example": "旅の費用が、とうとう底をついた。",
-    "exampleJapanese": "",
-    "bigCategory": "その他の慣用句",
-    "exampleAI": true
-  },
-  {
     "english": "反りが合わない",
     "japanese": "仲がよくない。",
     "yomi": "",
@@ -3152,6 +3163,61 @@ const IDIOMS = [
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
     "example": "苦労してきた彼は、少し世間ずれしている。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "采配を振る",
+    "japanese": "多くの人に指図する。",
+    "yomi": "",
+    "category": "その他さ行",
+    "superCategory": "その他の慣用句",
+    "example": "監督が采配を振って、チームを勝利に導いた。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "砂上の楼閣",
+    "japanese": "実現させるのが不可能な物事。",
+    "yomi": "",
+    "category": "その他さ行",
+    "superCategory": "その他の慣用句",
+    "example": "準備不足の計画は砂上の楼閣にすぎない。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "沙汰の限り",
+    "japanese": "ひどすぎて、判断の範囲外である。",
+    "yomi": "",
+    "category": "その他さ行",
+    "superCategory": "その他の慣用句",
+    "example": "弱い者をいじめるなど、沙汰の限りだ。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "敷居が高い",
+    "japanese": "事情があって、その人の家に行きにくい。",
+    "yomi": "",
+    "category": "その他さ行",
+    "superCategory": "その他の慣用句",
+    "example": "迷惑をかけたので、あの家は敷居が高い。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "朱を入れる",
+    "japanese": "文章を直す。",
+    "yomi": "",
+    "category": "その他さ行",
+    "superCategory": "その他の慣用句",
+    "example": "先生が作文に朱を入れてくださった。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
     "exampleAI": true
@@ -3388,6 +3454,17 @@ const IDIOMS = [
     "exampleAI": true
   },
   {
+    "english": "寝耳に水",
+    "japanese": "思いがけないことを突然聞くこと。",
+    "yomi": "",
+    "category": "その他な行",
+    "superCategory": "その他の慣用句",
+    "example": "転校の話は、寝耳に水だった。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
     "english": "はかりに掛ける",
     "japanese": "どちらが得か、はかりに掛けて比べる。",
     "yomi": "",
@@ -3509,23 +3586,45 @@ const IDIOMS = [
     "exampleAI": false
   },
   {
-    "english": "膝を交える",
-    "japanese": "うちとけて話し合う。",
+    "english": "火を見るよりも明らか",
+    "japanese": "とてもはっきりしている様子。",
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "膝を交えて、じっくり語り合った。",
+    "example": "練習しなければ負けるのは、火を見るよりも明らかだ。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
     "exampleAI": true
   },
   {
-    "english": "額に汗する",
-    "japanese": "一生懸命に働く。",
+    "english": "懐がさびしい",
+    "japanese": "所持金がとぼしい。",
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "額に汗して働く姿は美しい。",
+    "example": "月末は懐がさびしくて、外食できない。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "腑に落ちない",
+    "japanese": "納得できない。",
+    "yomi": "",
+    "category": "その他は行",
+    "superCategory": "その他の慣用句",
+    "example": "彼の説明は、どうも腑に落ちない。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "棒に振る",
+    "japanese": "それまでの努力や苦心をむだにする。",
+    "yomi": "",
+    "category": "その他は行",
+    "superCategory": "その他の慣用句",
+    "example": "一度の失敗で、長年の努力を棒に振った。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
     "exampleAI": true
@@ -3636,6 +3735,17 @@ const IDIOMS = [
     "category": "その他ま行",
     "superCategory": "その他の慣用句",
     "example": "余計な言い訳をして、自ら墓穴を掘った。",
+    "exampleJapanese": "",
+    "bigCategory": "その他の慣用句",
+    "exampleAI": true
+  },
+  {
+    "english": "間が抜ける",
+    "japanese": "大事な点が抜け落ちている。",
+    "yomi": "",
+    "category": "その他ま行",
+    "superCategory": "その他の慣用句",
+    "example": "大事な日付を書き忘れるとは、間が抜けている。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
     "exampleAI": true
