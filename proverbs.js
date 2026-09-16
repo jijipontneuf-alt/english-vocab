@@ -25,7 +25,7 @@ const PROVERBS = [
   },
   {
     "english": "一寸の虫にも五分の魂",
-    "japanese": "小さくても、それ相応の根性をもっている。あなどってはいけない。",
+    "japanese": "小さくても、それ相応の根性をもっているので、あなどってはいけない。",
     "yomi": "",
     "category": "あ行",
     "example": "",
@@ -65,7 +65,7 @@ const PROVERBS = [
   },
   {
     "english": "急がば回れ",
-    "japanese": "急ぐときこそ、遠回りになっても安全な方法をとったほうがよい結果になる。",
+    "japanese": "急ぐときこそ、遠回りになっても安全で確実な方法をとったほうがよい結果になる。",
     "yomi": "",
     "category": "あ行",
     "example": "対: 善は急げ",
@@ -73,7 +73,7 @@ const PROVERBS = [
   },
   {
     "english": "悪事千里を走る",
-    "japanese": "悪い行いはすぐに知れわたる。",
+    "japanese": "悪い行いはすぐに知れわたる。悪事はとうてい隠し通せることではない。",
     "yomi": "",
     "category": "あ行",
     "example": "",
@@ -97,7 +97,7 @@ const PROVERBS = [
   },
   {
     "english": "犬も歩けば棒にあたる",
-    "japanese": "①しゃばると思わぬ災難にあうことがある。②出歩いていると思わぬ幸運にあうことがある。",
+    "japanese": "①でしゃばると思わぬ災難にあうことがある。②出歩いていると思わぬ幸運にあうことがある。",
     "yomi": "",
     "category": "あ行",
     "example": "本来は①の意味",
@@ -129,7 +129,7 @@ const PROVERBS = [
   },
   {
     "english": "縁の下の力持ち",
-    "japanese": "他人のために目立たないところで、苦労や努力をすること。また、その人。",
+    "japanese": "他人のために目立たないところで苦労や努力をすること。また、その人。",
     "yomi": "",
     "category": "あ行",
     "example": "",
@@ -169,7 +169,7 @@ const PROVERBS = [
   },
   {
     "english": "馬の耳に念仏",
-    "japanese": "馬に仏の教えを聞かせてもむだなように、いくら言ってもききめがないこと。",
+    "japanese": "馬に仏の教えを聞かせてもむだなように、効きめがないこと。",
     "yomi": "",
     "category": "あ行",
     "example": "類: 馬耳東風",
@@ -208,8 +208,16 @@ const PROVERBS = [
     "exampleJapanese": ""
   },
   {
+    "english": "医者の不養生",
+    "japanese": "専門家ほど自分のことをかえっておろそかにしがちだ。",
+    "yomi": "",
+    "category": "あ行",
+    "example": "類: 紺屋の白ばかま",
+    "exampleJapanese": ""
+  },
+  {
     "english": "かわいい子には旅をさせよ",
-    "japanese": "子を愛するのなら、世間に出して苦労させたほうがよい。甘やかすのではなく世間に出して苦労させよ。",
+    "japanese": "子を愛するのなら、甘やかすより世間に出して苦労させたほうがよい。",
     "yomi": "",
     "category": "か行",
     "example": "",
@@ -225,7 +233,7 @@ const PROVERBS = [
   },
   {
     "english": "光陰矢のごとし",
-    "japanese": "年月の過ぎ去るのは早く、過ぎ去った時間は戻らない。時間は大切にすべきだ。",
+    "japanese": "年月の過ぎ去るのは早く、過ぎ去った時間は戻らない。時間は大切にするべきだ。",
     "yomi": "",
     "category": "か行",
     "example": "",
@@ -233,7 +241,7 @@ const PROVERBS = [
   },
   {
     "english": "勝って兜の緒を締めよ",
-    "japanese": "成功しても安心せず、さらに心して物事に当たれ、という戒め。",
+    "japanese": "物事をなしとげても安心せず、さらに心を引きしめよ、といういましめ。",
     "yomi": "",
     "category": "か行",
     "example": "",
@@ -241,7 +249,7 @@ const PROVERBS = [
   },
   {
     "english": "壁に耳あり障子に目あり",
-    "japanese": "物事はもれやすいから秘密の話などは注意せよ、ということ。",
+    "japanese": "秘密の話などは、もれやすいから注意せよ、ということ。",
     "yomi": "",
     "category": "か行",
     "example": "",
@@ -316,20 +324,12 @@ const PROVERBS = [
     "japanese": "他人のために忙しくして、自分のことに手が回らないこと。",
     "yomi": "",
     "category": "か行",
-    "example": "類: 医者の不養生",
+    "example": "類: 医者の不養生（教科書では「医者の不養生」の類義語として掲載）",
     "exampleJapanese": ""
   },
   {
     "english": "聞いて極楽見て地獄",
-    "japanese": "話に聞いたのと実際とでは、たいへん違いがあること。",
-    "yomi": "",
-    "category": "か行",
-    "example": "",
-    "exampleJapanese": ""
-  },
-  {
-    "english": "聞くは一時の恥、聞かぬは一生の恥",
-    "japanese": "わからないことを聞くのは恥ずかしいが、聞かないでいるとずっと恥ずかしい思いをする。",
+    "japanese": "話に聞いたのと実際とでは、あまりに違いすぎること。",
     "yomi": "",
     "category": "か行",
     "example": "",
@@ -362,14 +362,6 @@ const PROVERBS = [
   {
     "english": "郷に入っては郷に従え",
     "japanese": "その土地に行ったら、その土地の風俗・習慣に従うのがよい。",
-    "yomi": "",
-    "category": "か行",
-    "example": "",
-    "exampleJapanese": ""
-  },
-  {
-    "english": "飼い犬に手を噛まれる",
-    "japanese": "ふだんかわいがっていた者から裏切られる。",
     "yomi": "",
     "category": "か行",
     "example": "",
@@ -481,7 +473,7 @@ const PROVERBS = [
   },
   {
     "english": "親しき中（仲）にも礼儀あり",
-    "japanese": "どんなに親しい間柄でも、礼儀を忘れてはならない。",
+    "japanese": "どんなに親しい間柄でも、最低限度の礼儀を忘れてはならない。",
     "yomi": "",
     "category": "さ行",
     "example": "",
@@ -489,7 +481,7 @@ const PROVERBS = [
   },
   {
     "english": "釈迦に説法",
-    "japanese": "釈迦に対して仏の道を説くように、知っている人に教えることのおろかさ。",
+    "japanese": "釈迦に対して仏の道を説くように、よく知っている人に教えることのおろかさ。",
     "yomi": "",
     "category": "さ行",
     "example": "",
@@ -564,7 +556,7 @@ const PROVERBS = [
     "japanese": "思いがけない幸運にあうこと。",
     "yomi": "",
     "category": "た行",
-    "example": "対: まかぬ種は生えぬ",
+    "example": "※「棚ぼた」とも。 対: まかぬ種は生えぬ",
     "exampleJapanese": ""
   },
   {
@@ -585,10 +577,10 @@ const PROVERBS = [
   },
   {
     "english": "蓼食う虫も好き好き",
-    "japanese": "人の好みはさまざまで、一概にはまとめられない。",
+    "japanese": "人の好みはさまざまで、一概には言えないこと。",
     "yomi": "",
     "category": "た行",
-    "example": "",
+    "example": "※蓼は苦みのある植物。",
     "exampleJapanese": ""
   },
   {
@@ -636,12 +628,12 @@ const PROVERBS = [
     "japanese": "二つのものを両方得ようとしてどちらも手に入れることができない。",
     "yomi": "",
     "category": "な行",
-    "example": "類: 虻蜂取らず",
+    "example": "類: 虻蜂取らず（教科書では「虻蜂取らず」の類義語として掲載）",
     "exampleJapanese": ""
   },
   {
     "english": "二階から目薬",
-    "japanese": "思うようにならず効きめがないこと。",
+    "japanese": "やり方がまわりくどくて効きめがない。",
     "yomi": "",
     "category": "な行",
     "example": "",
@@ -665,7 +657,7 @@ const PROVERBS = [
   },
   {
     "english": "残り物には福がある",
-    "japanese": "人がわれ先にと争って取り残ったあとの残り物に、意外といい物がある。",
+    "japanese": "人がわれ先にと争って取り合ったあとの残り物に、意外といい物がある。",
     "yomi": "",
     "category": "な行",
     "example": "",
@@ -681,7 +673,7 @@ const PROVERBS = [
   },
   {
     "english": "猫に小判",
-    "japanese": "価値のあるものでも、その価値がわからない者にとっては無意味である。",
+    "japanese": "どんなに価値のあるものでも、その価値のわからない者にとっては無意味である。",
     "yomi": "",
     "category": "な行",
     "example": "類: 豚に真珠",
@@ -732,7 +724,7 @@ const PROVERBS = [
     "japanese": "ありえないことが起こること。冗談で言ったことが現実になること。",
     "yomi": "",
     "category": "は行",
-    "example": "※駒=馬",
+    "example": "※駒＝馬。",
     "exampleJapanese": ""
   },
   {
@@ -769,7 +761,7 @@ const PROVERBS = [
   },
   {
     "english": "人の口に戸は立てられぬ",
-    "japanese": "世間があれこれうわさをするのは防ぎようがない。",
+    "japanese": "世間があれこれうわさをするのは、防ぎようがない。",
     "yomi": "",
     "category": "は行",
     "example": "",
@@ -809,10 +801,10 @@ const PROVERBS = [
   },
   {
     "english": "百聞は一見に如かず",
-    "japanese": "他人から何度も聞くよりも、自分の目で実際に見るほうが確かである。",
+    "japanese": "他人から何度も聞くよりも、自分の目で実際に見る（体験する）ほうが確かである。",
     "yomi": "",
     "category": "は行",
-    "example": "現地に行こう。百聞は一見にしかずだ。",
+    "example": "現地に行こう。百聞は一見にしかず、だ。",
     "exampleJapanese": ""
   },
   {
@@ -825,7 +817,7 @@ const PROVERBS = [
   },
   {
     "english": "腹が減っては戦ができぬ",
-    "japanese": "おなかがすいていてはよい仕事ができないということ。",
+    "japanese": "おなかがすいていては、よい仕事ができないということ。",
     "yomi": "",
     "category": "は行",
     "example": "",
@@ -864,6 +856,14 @@ const PROVERBS = [
     "exampleJapanese": ""
   },
   {
+    "english": "骨折り損のくたびれもうけ",
+    "japanese": "苦労したのになんの成果も得られず、疲れだけが残ること。",
+    "yomi": "",
+    "category": "は行",
+    "example": "",
+    "exampleJapanese": ""
+  },
+  {
     "english": "まかぬ種は生えぬ",
     "japanese": "何もしないでいては、よい結果は得られない。",
     "yomi": "",
@@ -889,7 +889,7 @@ const PROVERBS = [
   },
   {
     "english": "元の木阿弥",
-    "japanese": "一度よい状態になったものが、また元の悪い状態にもどってしまうこと。",
+    "japanese": "一度よい状態になったものが、また悪い状態にもどってしまうこと。",
     "yomi": "",
     "category": "ま行",
     "example": "",
@@ -921,7 +921,7 @@ const PROVERBS = [
   },
   {
     "english": "負けるが勝ち",
-    "japanese": "相手と争わずに負けておくことが、結局は得になるということ。",
+    "japanese": "相手とむりに争わずに負けておくことが、結局は得になるということ。",
     "yomi": "",
     "category": "ま行",
     "example": "",
@@ -929,7 +929,7 @@ const PROVERBS = [
   },
   {
     "english": "身から出たさび",
-    "japanese": "自分の悪い行いが原因となって、自分が苦しむこと。",
+    "japanese": "自分の悪い行いが原因となって、自分に都合の悪い結果を招くこと。",
     "yomi": "",
     "category": "ま行",
     "example": "類: 自業自得",
@@ -937,7 +937,7 @@ const PROVERBS = [
   },
   {
     "english": "門前の小僧習わぬ経を読む",
-    "japanese": "知らない間に身につくこと。いつも見聞きしているものは、知らない間に身につくこと。",
+    "japanese": "いつも見聞きしているものは、知らない間に身につくこと。",
     "yomi": "",
     "category": "ま行",
     "example": "",
@@ -946,6 +946,14 @@ const PROVERBS = [
   {
     "english": "餅は餅屋",
     "japanese": "何事もその道の専門家にまかせるのがいちばん確実だ。",
+    "yomi": "",
+    "category": "ま行",
+    "example": "",
+    "exampleJapanese": ""
+  },
+  {
+    "english": "水清ければ魚棲まず",
+    "japanese": "あまりに人格や考え方が潔癖すぎると、かえって人から親しまれない。",
     "yomi": "",
     "category": "ま行",
     "example": "",
@@ -1009,7 +1017,7 @@ const PROVERBS = [
   },
   {
     "english": "論語読みの論語知らず",
-    "japanese": "書物の上の知識だけで、本当の精神を理解せず、さらにこれを実行しない者。",
+    "japanese": "書物の上の知識だけで、その本当の精神を理解せず、さらにこれを実行しない者。",
     "yomi": "",
     "category": "ら行",
     "example": "",

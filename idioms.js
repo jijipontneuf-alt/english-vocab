@@ -280,7 +280,7 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "付録に目がくらんで、雑誌を買った。",
+    "example": "付録に目がくらんで雑誌を買った。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句",
     "exampleAI": false
@@ -291,7 +291,7 @@ const IDIOMS = [
     "yomi": "",
     "category": "目",
     "superCategory": "からだに関する慣用句",
-    "example": "この作品を選ぶなんて、お目が高い。",
+    "example": "この作品を選ぶなんて、お目が高い人だ。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句",
     "exampleAI": false
@@ -628,7 +628,7 @@ const IDIOMS = [
   },
   {
     "english": "耳を澄ます",
-    "japanese": "聞くことに集中する（=耳を傾ける）。",
+    "japanese": "聞くことに集中する。（耳を傾ける）",
     "yomi": "",
     "category": "耳",
     "superCategory": "からだに関する慣用句",
@@ -661,7 +661,7 @@ const IDIOMS = [
   },
   {
     "english": "肝がすわる",
-    "japanese": "何があっても落ち着いている。",
+    "japanese": "何かあっても落ち着いている。",
     "yomi": "",
     "category": "肝",
     "superCategory": "からだに関する慣用句",
@@ -679,7 +679,8 @@ const IDIOMS = [
     "example": "先生の言葉を肝に銘じて努力する。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句",
-    "exampleAI": true
+    "exampleAI": true,
+    "note": "×命じる"
   },
   {
     "english": "肝を冷やす",
@@ -981,7 +982,7 @@ const IDIOMS = [
   },
   {
     "english": "腰を抜かす",
-    "japanese": "驚きで足腰が立たなくなる。",
+    "japanese": "非常に驚く。驚きで足腰が立たなくなる。",
     "yomi": "",
     "category": "腰",
     "superCategory": "からだに関する慣用句",
@@ -1014,7 +1015,7 @@ const IDIOMS = [
   },
   {
     "english": "腹に据えかねる",
-    "japanese": "怒りをおさえることができない。",
+    "japanese": "怒りをこらえることができない。",
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
@@ -1025,7 +1026,7 @@ const IDIOMS = [
   },
   {
     "english": "腹をさぐる",
-    "japanese": "人の気持ちをそれとなくうかがう。",
+    "japanese": "人の考えや気持ちをそれとなくうかがう。",
     "yomi": "",
     "category": "腹",
     "superCategory": "からだに関する慣用句",
@@ -1359,7 +1360,7 @@ const IDIOMS = [
     "yomi": "",
     "category": "顔",
     "superCategory": "からだに関する慣用句",
-    "example": "彼は涼しい顔でうそをついている。",
+    "example": "うそがばれても、彼は涼しい顔だ。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句",
     "exampleAI": false
@@ -1524,10 +1525,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "奥歯にものが挟まったような言い方はやめてほしい。",
+    "example": "奥歯にものが挟まった話し方をする。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分",
-    "exampleAI": true
+    "exampleAI": false
   },
   {
     "english": "歯が浮く",
@@ -1557,10 +1558,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "歯",
     "superCategory": "からだに関する慣用句",
-    "example": "思うように上達せず、歯がゆい。",
+    "example": "後輩の練習を見ていて歯がゆくなった。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分",
-    "exampleAI": true
+    "exampleAI": false
   },
   {
     "english": "歯切れがよい",
@@ -1586,7 +1587,7 @@ const IDIOMS = [
   },
   {
     "english": "舌を巻く",
-    "japanese": "非常に驚き、感嘆する。",
+    "japanese": "非常に驚く。非常に感嘆する。",
     "yomi": "",
     "category": "舌",
     "superCategory": "からだに関する慣用句",
@@ -1601,10 +1602,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "頬",
     "superCategory": "からだに関する慣用句",
-    "example": "みんなで額を集めて対策を練った。",
+    "example": "地区の代表たちが額を集める。",
     "exampleJapanese": "",
     "bigCategory": "顔・頭の近くの部分",
-    "exampleAI": true
+    "exampleAI": false
   },
   {
     "english": "頬を染める",
@@ -2048,7 +2049,7 @@ const IDIOMS = [
   },
   {
     "english": "虫が知らせる",
-    "japanese": "なんとなく悪い予感がする。",
+    "japanese": "なんとなく（悪い）予感がする。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -2070,7 +2071,7 @@ const IDIOMS = [
   },
   {
     "english": "やぶへび",
-    "japanese": "余計なことをして災難にあうこと。",
+    "japanese": "余計なことをして、災難にあうこと。",
     "yomi": "",
     "category": "動物",
     "superCategory": "動植物に関する慣用句",
@@ -2246,7 +2247,7 @@ const IDIOMS = [
   },
   {
     "english": "実を結ぶ",
-    "japanese": "良い結果を生む。",
+    "japanese": "よい結果を生む。",
     "yomi": "",
     "category": "草花",
     "superCategory": "動植物に関する慣用句",
