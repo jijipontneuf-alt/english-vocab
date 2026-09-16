@@ -1039,7 +1039,7 @@ const App = {
       $("fc-back-word").textContent = w.example || "\uFF08\u4F8B\u6587\u306A\u3057\uFF09";
       $("fc-yomi").textContent = "";
       $("fc-example").textContent = "\u610F\u5473: " + (w.japanese || "");
-      $("fc-example-ja").textContent = "";
+      $("fc-example-ja").textContent = w.note || "";
     } else if (fcIsEnToJa) {
       $("fc-front-word").textContent = w.english;
       if (MODE === "history") {
@@ -1060,7 +1060,7 @@ const App = {
     }
     if (!fcExampleMode) {
       $("fc-example").textContent = w.example || "";
-      $("fc-example-ja").textContent = w.exampleJapanese || "";
+      $("fc-example-ja").textContent = w.exampleJapanese || w.note || "";
     }
     this._setExampleBadge(fcExampleMode ? w : null);
     $("fc-counter").textContent = `${fcIdx + 1} / ${fcWords.length}`;

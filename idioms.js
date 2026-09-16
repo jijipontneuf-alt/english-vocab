@@ -896,10 +896,11 @@ const IDIOMS = [
     "yomi": "",
     "category": "脇",
     "superCategory": "からだに関する慣用句",
-    "example": "相撲で脇に腕を差し込まれると不利になることから。",
+    "example": "守りの脇が甘く、相手に得点を許した。",
     "exampleJapanese": "",
     "bigCategory": "からだに関する慣用句",
-    "exampleAI": false
+    "exampleAI": true,
+    "note": "語源: 相撲で脇に腕を差し込まれると不利になることから。"
   },
   {
     "english": "腕が立つ",
@@ -2410,7 +2411,7 @@ const IDIOMS = [
   },
   {
     "english": "暗礁に乗り上げる",
-    "japanese": "会議や交渉などのついてに行き詰まる。",
+    "japanese": "会議や交渉などが行き詰まる。",
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
@@ -2491,10 +2492,10 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "資金援助で、会社は息を吹き返した。",
+    "example": "自動車業界が息を吹き返す。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": true
+    "exampleAI": false
   },
   {
     "english": "板につく",
@@ -2513,10 +2514,11 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
-    "example": "囲碁で弱いほうが先に碁石を置くことから。",
+    "example": "先輩は彼の実力に一目を置いている。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": false
+    "exampleAI": true,
+    "note": "語源: 囲碁で弱いほうが先に碁石を置くことから。"
   },
   {
     "english": "一杯食う",
@@ -2531,7 +2533,7 @@ const IDIOMS = [
   },
   {
     "english": "色を失う",
-    "japanese": "驚いて顔が青くなる。",
+    "japanese": "驚きで顔が青くなる。",
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
@@ -2630,7 +2632,7 @@ const IDIOMS = [
   },
   {
     "english": "思うつぼ",
-    "japanese": "予期した状態。",
+    "japanese": "思いどおり。予期した状態。",
     "yomi": "",
     "category": "その他あ行",
     "superCategory": "その他の慣用句",
@@ -2695,17 +2697,6 @@ const IDIOMS = [
     "exampleAI": false
   },
   {
-    "english": "肩を持つ",
-    "japanese": "ひいきにする。味方をする。",
-    "yomi": "",
-    "category": "その他か行",
-    "superCategory": "その他の慣用句",
-    "example": "妹は、いつも弟の肩を持つ。",
-    "exampleJapanese": "",
-    "bigCategory": "その他の慣用句",
-    "exampleAI": true
-  },
-  {
     "english": "株が上がる",
     "japanese": "周囲からの評価が高くなる。",
     "yomi": "",
@@ -2718,7 +2709,7 @@ const IDIOMS = [
   },
   {
     "english": "片棒をかつぐ",
-    "japanese": "（悪い）計画に加わり力をかす。",
+    "japanese": "（悪い）計画に加わり協力する。",
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
@@ -2799,10 +2790,11 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "「油断ができない」という意味ではない。",
+    "example": "休日は気が置けない仲間と楽しく過ごす。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": false
+    "exampleAI": false,
+    "note": "注: 「油断ができない」という意味ではない。"
   },
   {
     "english": "きまりが悪い",
@@ -2927,7 +2919,7 @@ const IDIOMS = [
   },
   {
     "english": "桁が違う",
-    "japanese": "程度や数量にたいへん違いがある。",
+    "japanese": "程度や数量にたいへんな違いがある。",
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
@@ -2953,10 +2945,11 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他か行",
     "superCategory": "その他の慣用句",
-    "example": "和歌・俳句の最後に「けり」を使うことから。紛争にけりがつく。",
+    "example": "紛争にけりがつく。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": false
+    "exampleAI": false,
+    "note": "語源: 和歌・俳句の最後に「けり」を使うことから。"
   },
   {
     "english": "心に刻む",
@@ -2982,7 +2975,7 @@ const IDIOMS = [
   },
   {
     "english": "さじを投げる",
-    "japanese": "実現させるのが不可能な物事をあきらめる。",
+    "japanese": "見込みがないとあきらめる。",
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
@@ -3008,10 +3001,11 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
-    "example": "「しのぎ」とは、刀の刃と峰の中間の少し盛り上がった部分のこと。",
+    "example": "両チームは優勝をかけてしのぎを削った。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": false
+    "exampleAI": true,
+    "note": "※「しのぎ」とは、刀の刃と峰との中間の少し盛り上がった部分のこと。"
   },
   {
     "english": "しびれを切らす",
@@ -3070,7 +3064,7 @@ const IDIOMS = [
   },
   {
     "english": "心血を注ぐ",
-    "japanese": "全力をあげて何かに取り組む。",
+    "japanese": "できる限り最大限のことをする。",
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
@@ -3158,7 +3152,7 @@ const IDIOMS = [
   },
   {
     "english": "世間ずれ",
-    "japanese": "実社会で苦労して、ずるくなること。",
+    "japanese": "実社会で苦労して、抜け目がなくなること。",
     "yomi": "",
     "category": "その他さ行",
     "superCategory": "その他の慣用句",
@@ -3349,14 +3343,15 @@ const IDIOMS = [
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
-    "example": "「流れに逆らう」の意味で使うのは誤り。",
+    "example": "好調の流れに棹さして、事業を広げた。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": false
+    "exampleAI": true,
+    "note": "注: 「流れに逆らう」の意味で使うのは誤り。"
   },
   {
     "english": "煮え切らない",
-    "japanese": "はっきりしない。どっちつかずである。",
+    "japanese": "はっきりしない。どっちつかず。",
     "yomi": "",
     "category": "その他な行",
     "superCategory": "その他の慣用句",
@@ -3466,14 +3461,14 @@ const IDIOMS = [
   },
   {
     "english": "はかりに掛ける",
-    "japanese": "どちらが得か、はかりに掛けて比べる。",
+    "japanese": "どちらが得になるかを比べる。",
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
-    "example": "損得をはかりに掛けて考える。",
+    "example": "どちらに味方すると得か、はかりに掛ける。",
     "exampleJapanese": "",
     "bigCategory": "その他の慣用句",
-    "exampleAI": true
+    "exampleAI": false
   },
   {
     "english": "薄氷を踏む",
@@ -3554,7 +3549,7 @@ const IDIOMS = [
   },
   {
     "english": "火花を散らす",
-    "japanese": "戦いなどを激しく争う。",
+    "japanese": "激しく争う。",
     "yomi": "",
     "category": "その他は行",
     "superCategory": "その他の慣用句",
@@ -3752,7 +3747,7 @@ const IDIOMS = [
   },
   {
     "english": "矢継ぎ早",
-    "japanese": "次々に行うこと。",
+    "japanese": "ものごとを次から次へと行うこと。",
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
@@ -3763,7 +3758,7 @@ const IDIOMS = [
   },
   {
     "english": "山を張る",
-    "japanese": "万一の的中を考えにして何かをする。",
+    "japanese": "万一の的中をあてにして何かをする。",
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
@@ -3774,7 +3769,7 @@ const IDIOMS = [
   },
   {
     "english": "槍玉にあげる",
-    "japanese": "ある人を攻撃の対象とする。",
+    "japanese": "ある人を特に非難、攻撃の対象とする。",
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
@@ -3785,7 +3780,7 @@ const IDIOMS = [
   },
   {
     "english": "弓を引く",
-    "japanese": "権力者に反抗する。",
+    "japanese": "権力者に反抗する。そむく。",
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
@@ -3796,7 +3791,7 @@ const IDIOMS = [
   },
   {
     "english": "らちがあかない",
-    "japanese": "はかどらない。物事のきまりがつかない。",
+    "japanese": "はかどらず決着がつかない。",
     "yomi": "",
     "category": "その他や行",
     "superCategory": "その他の慣用句",
@@ -3829,7 +3824,7 @@ const IDIOMS = [
   },
   {
     "english": "脇目も振らず",
-    "japanese": "一つのことだけに熱中する。",
+    "japanese": "一つのことだけに一生懸命になる。",
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",
@@ -3851,7 +3846,7 @@ const IDIOMS = [
   },
   {
     "english": "渡りに船",
-    "japanese": "ちょうど都合のよいことに出会う。",
+    "japanese": "ちょうど都合のよいことに出会うこと。",
     "yomi": "",
     "category": "その他わ行",
     "superCategory": "その他の慣用句",

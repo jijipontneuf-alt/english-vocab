@@ -140,7 +140,7 @@ const PROVERBS = [
     "japanese": "二つのものを両方得ようとしてどちらも手に入れることができない。",
     "yomi": "",
     "category": "あ行",
-    "example": "類: 二兎を追う者は一兎をも得ず",
+    "example": "類: 二兎を追うものは一兎をも得ず",
     "exampleJapanese": ""
   },
   {
@@ -260,7 +260,7 @@ const PROVERBS = [
     "japanese": "どんな名人でも失敗することがある。",
     "yomi": "",
     "category": "か行",
-    "example": "類: 猿も木から落ちる、河童の川流れ",
+    "example": "類: 猿も木から落ちる、河童の川流れ（教科書では「猿も木から落ちる」の類義語として掲載）",
     "exampleJapanese": ""
   },
   {
@@ -300,7 +300,7 @@ const PROVERBS = [
     "japanese": "幸運はいつかやって来るから、あせらずに待つのがよい。",
     "yomi": "",
     "category": "か行",
-    "example": "類: 待てば海路の日和あり ※本来は否定的な意味なので使い方に注意。",
+    "example": "類: 待てば海路の日和あり",
     "exampleJapanese": ""
   },
   {
@@ -548,7 +548,7 @@ const PROVERBS = [
     "japanese": "時間というものは金銭と同じように貴重なものである。浪費してはならない。",
     "yomi": "",
     "category": "た行",
-    "example": "(英: Time is money)",
+    "example": "",
     "exampleJapanese": ""
   },
   {
@@ -684,7 +684,7 @@ const PROVERBS = [
     "japanese": "価値のあるものでも、その価値がわからない者にとっては無意味である。",
     "yomi": "",
     "category": "な行",
-    "example": "類: 豚に真珠、馬の耳に念仏",
+    "example": "類: 豚に真珠",
     "exampleJapanese": ""
   },
   {
