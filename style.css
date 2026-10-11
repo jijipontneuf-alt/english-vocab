@@ -93,6 +93,10 @@ html, body {
   background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
   box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
 }
+.mode-btn.active.kobun {
+  background: linear-gradient(135deg, #854D0E 0%, #CA8A04 100%);
+  box-shadow: 0 2px 8px rgba(133, 77, 14, 0.25);
+}
 .mode-btn.active.proverb {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
   box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
@@ -126,6 +130,9 @@ html, body {
 }
 .home-header.idiom {
   background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
+}
+.home-header.kobun {
+  background: linear-gradient(135deg, #854D0E 0%, #CA8A04 100%);
 }
 .home-header.proverb {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
@@ -189,6 +196,10 @@ body.mode-jhs .mode-tab.active {
 body.mode-idiom .mode-tab.active {
   background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
   box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+}
+body.mode-kobun .mode-tab.active {
+  background: linear-gradient(135deg, #854D0E 0%, #CA8A04 100%);
+  box-shadow: 0 2px 8px rgba(133, 77, 14, 0.25);
 }
 body.mode-proverb .mode-tab.active {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
@@ -367,6 +378,10 @@ body.mode-jhs .bp-pill.active {
 body.mode-idiom .bp-pill.active {
   background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
   box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+}
+body.mode-kobun .bp-pill.active {
+  background: linear-gradient(135deg, #854D0E 0%, #CA8A04 100%);
+  box-shadow: 0 2px 8px rgba(133, 77, 14, 0.25);
 }
 body.mode-proverb .bp-pill.active {
   background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
@@ -806,3 +821,8 @@ body.mode-proverb .bp-pill.active {
   body { background: #CBD5E1; }
   .screen { box-shadow: 0 0 40px rgba(0,0,0,0.15); }
 }
+
+/* ─── 古文単語 ─── */
+.wr-yomi { font-size: 0.72rem; font-weight: 500; color: var(--sub); margin-left: 8px; }
+.wr-note { font-size: 0.72rem; color: #B45309; margin-top: 3px; }
+body.mode-kobun .card-example-ja { white-space: pre-line; }

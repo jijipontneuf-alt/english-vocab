@@ -12,6 +12,7 @@ function dataForMode(m) {
   if (m === "jhs")     return typeof WORDS_JHS  !== "undefined" ? WORDS_JHS  : [];
   if (m === "idiom")   return typeof IDIOMS    !== "undefined" ? IDIOMS    : [];
   if (m === "proverb") return typeof PROVERBS  !== "undefined" ? PROVERBS  : [];
+  if (m === "kobun")   return typeof KOBUN_ITEMS !== "undefined" ? KOBUN_ITEMS : [];
   if (m === "history") return typeof HISTORY_ITEMS !== "undefined" ? HISTORY_ITEMS : [];
   if (m === "geo-periodic") return typeof GEOGRAPHY_PERIODIC_ITEMS !== "undefined" ? GEOGRAPHY_PERIODIC_ITEMS : [];
   if (m === "geo-national") return typeof GEOGRAPHY_NATIONAL_ITEMS !== "undefined" ? GEOGRAPHY_NATIONAL_ITEMS : [];
@@ -85,6 +86,22 @@ const MODE_CONFIG = {
     listTitle: "ことわざ一覧",
     listSub: "全カテゴリ",
     flashSub: "全ことわざ",
+  },
+  kobun: {
+    subtitle: "古文単語（高校受験）",
+    sectionTitle: "重要度別",
+    progressKey: "kobun_progress_v1",
+    logo: "古",
+    promptLabel: "古語 → 意味",
+    reverseLabel: "意味 → 古語",
+    speakLang: "ja-JP",
+    headerClass: "kobun",
+    unit: "語",
+    itemName: "古文単語",
+    totalLabel: "総単語数",
+    listTitle: "古文単語一覧",
+    listSub: "全重要度",
+    flashSub: "全単語",
   },
   history: {
     subtitle: "中学歴史 年表問題",
@@ -301,6 +318,7 @@ const Store = (() => {
 })();
 
 // ─── Speech ──────────────────────────────────
+function speakText(w) { return w ? (w.speak || w.english) : ""; }
 function speak(text) {
   if (!window.speechSynthesis) return;
   window.speechSynthesis.cancel();
@@ -556,9 +574,22 @@ const IDIOM_SUPER_CATS = [
   "その他の慣用句",
 ];
 function isIdiomSuper(cat) { return MODE === "idiom" && IDIOM_SUPER_CATS.includes(cat); }
+// 古文単語のまとめカテゴリ（重要度の細目と重なりあり）
+const KOBUN_ORDER = ["★5 最重要", "★4 重要", "★3・★2 基本"];
+function isKobunSuper(cat) {
+  return MODE === "kobun" && typeof KOBUN_SUPER_CATS !== "undefined" && KOBUN_SUPER_CATS.includes(cat);
+}
+function isSuperCategory(cat) { return isIdiomSuper(cat) || isKobunSuper(cat); }
+function inCategory(w, cat) {
+  if (isIdiomSuper(cat)) return w.superCategory === cat;
+  if (MODE === "kobun") {
+    if (cat === "★4以上 まとめ") return w.stars >= 4;
+    if (cat === "現代語と意味が違う語") return !!w.falseFriend;
+  }
+  return w.category === cat;
+}
 function wordsInCategory(cat) {
-  if (isIdiomSuper(cat)) return WORDS_ACTIVE.filter(w => w.superCategory === cat);
-  return WORDS_ACTIVE.filter(w => w.category === cat);
+  return WORDS_ACTIVE.filter(w => inCategory(w, cat));
 }
 function catIcon(cat) {
   if (MODE === "history") return "🗓";
@@ -587,6 +618,11 @@ function catIcon(cat) {
     if (BODY_ICON[cat]) return BODY_ICON[cat];
     if (cat.startsWith("その他")) return "🗂";
     return "🎭";
+  }
+  if (MODE === "kobun") {
+    const ICONS = {"★5 最重要":"🌸","★4 重要":"🍁","★3・★2 基本":"🍃",
+                   "★4以上 まとめ":"📜","現代語と意味が違う語":"⚠️"};
+    return ICONS[cat] || "📜";
   }
   if (MODE === "proverb") {
     const ICONS = {"あ行":"🅰️","か行":"🅱️","さ行":"🆎","た行":"🆑","な行":"🆒",
@@ -645,6 +681,9 @@ function getCategories(source = WORDS_ACTIVE) {
     });
     return [...IDIOM_SUPER_CATS, ...fineSorted];
   }
+  if (MODE === "kobun") {
+    return [...KOBUN_ORDER.filter(c => cats.includes(c)), ...KOBUN_SUPER_CATS];
+  }
   if (MODE === "proverb") {
     const ORDER = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"];
     return cats.sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
@@ -694,15 +733,15 @@ const App = {
     $("home-logo").textContent = cfg.logo;
     $("category-section-title").textContent = cfg.sectionTitle;
     const header = document.querySelector(".home-header");
-    header.classList.remove("jhs", "idiom", "proverb", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private");
+    header.classList.remove("jhs", "idiom", "proverb", "kobun", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private");
     if (cfg.headerClass) header.classList.add(cfg.headerClass);
-    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb", "mode-history", "mode-geo-periodic", "mode-geo-national", "mode-geo-aichi-public", "mode-geo-aichi-private");
+    document.body.classList.remove("mode-high", "mode-jhs", "mode-idiom", "mode-proverb", "mode-kobun", "mode-history", "mode-geo-periodic", "mode-geo-national", "mode-geo-aichi-public", "mode-geo-aichi-private");
     document.body.classList.add(`mode-${MODE}`);
-    const modes = ["high", "jhs", "idiom", "proverb", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private"];
+    const modes = ["high", "jhs", "idiom", "proverb", "kobun", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private"];
     for (const m of modes) {
       const btn = $(`mode-btn-${m}`);
       btn.classList.toggle("active", MODE === m);
-      btn.classList.remove("jhs", "idiom", "proverb", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private");
+      btn.classList.remove("jhs", "idiom", "proverb", "kobun", "history", "geo-periodic", "geo-national", "geo-aichi-public", "geo-aichi-private");
       if (MODE === m && MODE_CONFIG[m].headerClass) btn.classList.add(MODE_CONFIG[m].headerClass);
     }
 
@@ -728,7 +767,7 @@ const App = {
     getCategories().forEach(cat => {
       const count = wordsInCategory(cat).length;
       const icon = catIcon(cat);
-      const isSuper = isIdiomSuper(cat);
+      const isSuper = isSuperCategory(cat);
       grid.innerHTML += `
         <div class="cat-card${isSuper ? " cat-card-super" : ""}" onclick="App._openCategoryMenu('${cat.replace(/'/g, "\\'")}')">
           <div class="cat-icon">${icon}</div>
@@ -893,8 +932,8 @@ const App = {
     const q = $("search-input").value.toLowerCase();
     const cat = $("cat-filter").value;
     const filtered = learningPool().filter(w =>
-      (!cat || w.category === cat) &&
-      (!q || w.english.toLowerCase().includes(q) || w.japanese.includes(q))
+      (!cat || inCategory(w, cat)) &&
+      (!q || w.english.toLowerCase().includes(q) || w.japanese.includes(q) || (w.yomi || "").includes(q))
     );
     this._renderWordList(filtered);
   },
@@ -921,8 +960,9 @@ const App = {
         <div class="word-row" onclick="App._toggleExample(${i})">
           <div class="wr-top">
             <div class="wr-left">
-              <div class="wr-en">${w.english}</div>
+              <div class="wr-en">${w.english}${MODE === "kobun" && w.yomi ? `<span class="wr-yomi">${w.yomi}</span>` : ""}</div>
               <div class="wr-ja">${w.japanese}</div>
+              ${MODE === "kobun" && w.note ? `<div class="wr-note">※ ${w.note}</div>` : ""}
             </div>
             <div class="wr-right">
               <span class="wr-badge">${w.category}</span>
@@ -1060,7 +1100,9 @@ const App = {
     }
     if (!fcExampleMode) {
       $("fc-example").textContent = w.example || "";
-      $("fc-example-ja").textContent = w.exampleJapanese || w.note || "";
+      $("fc-example-ja").textContent = MODE === "kobun"
+        ? [w.exampleJapanese, w.note ? `※ ${w.note}` : ""].filter(Boolean).join("\n")
+        : (w.exampleJapanese || w.note || "");
     }
     this._setExampleBadge(fcExampleMode ? w : null);
     $("fc-counter").textContent = `${fcIdx + 1} / ${fcWords.length}`;
@@ -1073,7 +1115,7 @@ const App = {
   flipCard() {
     fcFlipped = !fcFlipped;
     $("fc-card").classList.toggle("flipped", fcFlipped);
-    if (fcFlipped && fcWords[fcIdx]) speak(fcWords[fcIdx].english);
+    if (fcFlipped && fcWords[fcIdx]) speak(speakText(fcWords[fcIdx]));
   },
 
   fcNext() {
@@ -1087,7 +1129,7 @@ const App = {
     this.fcNext();
   },
   speakCurrent() {
-    if (fcWords[fcIdx]) speak(fcWords[fcIdx].english);
+    if (fcWords[fcIdx]) speak(speakText(fcWords[fcIdx]));
   },
 
   // ── QUIZ ─────────────────────────────────
@@ -1173,7 +1215,7 @@ const App = {
 
   speakQuizWord() {
     const w = quizWords[quizIdx];
-    if (w) speak(w.english);
+    if (w) speak(speakText(w));
   },
 
   _quizAnswer(key) {
